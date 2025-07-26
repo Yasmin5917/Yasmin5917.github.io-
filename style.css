@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-  background-color: #1e293b; /* iets lichter dan body */
+  background-color: #1e293b;
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -78,7 +78,7 @@ table {
 }
 
 thead {
-  background-color: #2563eb; /* blauw */
+  background-color: #2563eb;
   color: white;
   text-align: left;
 }
@@ -121,3 +121,4 @@ footer {
     padding: 0.75rem;
   }
 }
+
