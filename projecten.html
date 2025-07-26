@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jouw Naam | Projecten</title>
+  <title>Projecten</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo" class="logo" />
-    <p>Professionele websites met vertrouwen en stijl</p>
+    <div class="header-content">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <p>Professionele websites met vertrouwen en stijl</p>
+    </div>
   </header>
 
   <nav>
@@ -22,20 +24,21 @@
 
   <main class="container">
     <section>
-      <h2>Projecten</h2>
-      <p>Hier zie je een selectie van mijn recente projecten:</p>
-      <ul>
-        <li>Website voor lokale bakkerij — modern en mobielvriendelijk</li>
-        <li>Portfolio website voor fotograaf — strak en overzichtelijk</li>
-        <li>Webshop voor handgemaakte sieraden — eenvoudig te beheren</li>
-      </ul>
+      <h2>Mijn Projecten</h2>
+      <div class="projecten-grid">
+        <div class="project-card">
+          <h3>Kapperssite</h3>
+          <p>Een moderne website voor een kapper in Amsterdam. Gericht op online boekingen en strakke uitstraling.</p>
+          <a href="https://voorbeeldkapper.nl" target="_blank" class="project-link">Bekijk project</a>
+        </div>
+        <!-- Voeg hier meer projecten toe indien nodig -->
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025 <span class="naam">(Jouw naam)</span>. Alle rechten voorbehouden.</p>
   </footer>
 
 </body>
 </html>
-
