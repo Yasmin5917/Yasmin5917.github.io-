@@ -1,89 +1,123 @@
 /* Algemene instellingen */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1f2937; /* Donkerblauwgrijs */
-  color: #f1f5f9; /* Lichtgrijs voor tekst */
+  background-color: #0f172a; /* donkerblauw-grijs */
+  color: #f1f5f9; /* lichtgrijs */
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background-color: #111827; /* Nog iets donkerder */
-  color: #f9fafb;
+  background-color: #1e293b; /* iets lichter dan body */
   padding: 2rem 1rem;
   text-align: center;
-  border-bottom: 3px solid #2563eb;
 }
 
 .header-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .logo {
+  width: 60px;
   height: 60px;
-  margin-bottom: 1rem;
 }
 
 /* Navigatie */
 nav {
-  background-color: #1e40af; /* Blauw */
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  background-color: #111827;
+  padding: 1rem;
+  text-align: center;
 }
 
 nav a {
-  color: #fff;
-  padding: 1rem;
+  color: #f1f5f9;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+  margin: 0 1rem;
+  font-weight: 500;
 }
 
 nav a:hover,
 nav a.active {
-  background-color: #2563eb;
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
 }
 
 /* Container hoofdinhoud */
 .container {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Secties */
 section {
-  margin-bottom: 2rem;
-  background-color: #374151;
-  padding: 2rem;
-  border-radius: 8px;
+  margin-bottom: 2.5rem;
 }
 
-h2 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #93c5fd;
+h1, h2 {
+  color: #f8fafc;
 }
 
 p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* Tabel stijlen */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #2563eb; /* blauw */
+  color: white;
+  text-align: left;
+}
+
+th, td {
+  padding: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+}
+
+tbody tr:hover {
+  background-color: #334155;
 }
 
 /* Footer */
 footer {
-  background-color: #111827;
-  color: #d1d5db;
+  background-color: #1e293b;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  th, td {
+    padding: 0.75rem;
+  }
 }
