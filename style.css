@@ -9,26 +9,15 @@ body {
 
 /* Header */
 header {
+  text-align: center;
+  padding: 40px 20px 20px;
   background: #162139;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-  padding: 20px 40px;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  height: 50px; /* pas aan naar gewenste grootte */
-  width: auto;
-}
-
-header p {
+h1, h2 {
+  margin: 0 0 15px;
   color: #ffffff;
-  font-size: 1.3em;
-  margin: 0;
 }
 
 /* Navigatie */
@@ -62,64 +51,9 @@ nav a.active {
   padding: 0 20px;
 }
 
-/* Secties */
-section {
-  margin-bottom: 40px;
-}
-
-h2 {
-  margin-bottom: 15px;
-  color: #a8c0ff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #a3b0d1;
-  background-color: #162139;
-  margin-top: 50px;
-}
-
-/* Responsiveness */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .logo {
-    height: 40px;
-  }
-  .price-table {
+/* Prijzentabel */
+.price-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  background-color: #2a3a66;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.price-table thead tr {
-  background-color: #4862b3;
-}
-
-.price-table th,
-.price-table td {
-  padding: 15px 20px;
-  text-align: left;
-  border-bottom: 1px solid #3f4f7f;
-}
-
-.price-table tbody tr:hover {
-  background-color: #3651a4;
-}
-
-}
+  box-sha
