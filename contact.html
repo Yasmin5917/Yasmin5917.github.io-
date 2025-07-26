@@ -2,35 +2,47 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - (Jouw Naam)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jouw Naam | Contact</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
-    <h1>(Jouw Naam)</h1>
-    <p>Neem contact op</p>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <p>Professionele websites met vertrouwen en stijl</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="projecten.html">Projecten</a>
     <a href="prijzen.html">Prijzen</a>
-    <a href="contact.html">Contact</a>
+    <a href="projecten.html">Projecten</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 
-  <div class="container">
-    <h2>Contactgegevens</h2>
+  <main class="container">
+    <section>
+      <h2>Contact</h2>
+      <p>Heb je vragen of wil je een project bespreken? Neem gerust contact op!</p>
+      <form action="mailto:jouw.email@voorbeeld.nl" method="post" enctype="text/plain">
+        <label for="naam">Naam:</label><br />
+        <input type="text" id="naam" name="naam" required /><br /><br />
 
-    <div class="contact-info">
-      <p><strong>E-mail:</strong> jouw@email.com</p>
-      <p><strong>WhatsApp:</strong> 06-12345678</p>
-      <p><strong>Instagram:</strong> @jouwnaam</p>
-    </div>
-  </div>
+        <label for="email">E-mail:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="bericht">Bericht:</label><br />
+        <textarea id="bericht" name="bericht" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Verstuur</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    &copy; (Jouw Naam) - 2025
+    <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
   </footer>
+
 </body>
 </html>
+
