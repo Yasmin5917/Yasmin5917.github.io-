@@ -1,91 +1,120 @@
+/* Algemene stijl */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0b1f3a; /* donkerblauw */
-  color: #ffffff;
   margin: 0;
   padding: 0;
+  background-color: #0d1b2a; /* Donkerblauw */
+  color: #f0f0f0;
 }
 
+a {
+  color: #4da3ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
 header {
-  background-color: #06162b;
-  padding: 30px 20px;
+  background-color: #1b263b;
+  padding: 40px 20px;
   text-align: center;
+  color: #f0f0f0;
 }
 
 header h1 {
-  margin: 0;
+  margin-bottom: 10px;
   font-size: 2.5em;
 }
 
-header p {
-  font-size: 1.2em;
-  color: #aab8cc;
-}
-
+/* Navigatiebalk */
 nav {
-  background-color: #092747;
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  gap: 30px;
+  background-color: #1b263b;
+  padding: 15px;
+  text-align: center;
 }
 
 nav a {
+  margin: 0 15px;
   color: #ffffff;
-  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #00aaff;
+  color: #4da3ff;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.projects, table, .contact-info {
-  background-color: #142a4f;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00000033;
+/* Projecten */
+.projects {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 40px;
 }
 
 .project {
-  margin-bottom: 20px;
+  background-color: #ffffff;
+  color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
 }
 
 .project a {
-  color: #00cfff;
-  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  color: #1a73e8;
   font-weight: bold;
 }
 
-.project a:hover {
-  text-decoration: underline;
-}
-
+/* Tabel (voor prijslijst) */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  color: #ffffff;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #222;
 }
 
 th, td {
-  padding: 12px;
+  padding: 15px;
   text-align: left;
-  border-bottom: 1px solid #395b8d;
+  border-bottom: 1px solid #ddd;
 }
 
+thead {
+  background-color: #1a237e;
+  color: white;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Footer */
 footer {
+  margin-top: 60px;
   text-align: center;
   padding: 20px;
-  background-color: #06162b;
-  color: #777;
   font-size: 0.9em;
-  margin-top: 40px;
+  background-color: #1b263b;
+  color: #ccc;
 }
