@@ -97,4 +97,29 @@ footer {
   .logo {
     height: 40px;
   }
+  .price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  background-color: #2a3a66;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.price-table thead tr {
+  background-color: #4862b3;
+}
+
+.price-table th,
+.price-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #3f4f7f;
+}
+
+.price-table tbody tr:hover {
+  background-color: #3651a4;
+}
+
 }
