@@ -1,90 +1,138 @@
-/* Algemene layout */
+/* Algemene stijlen */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    background-color: #f4f6f9;
-    color: #2c3e50;
-    line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f8fb;
+  color: #333;
 }
 
 /* Header */
 header {
-    text-align: center;
-    margin-bottom: 50px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
-h1 {
-    margin-bottom: 10px;
-    font-size: 2.8em;
-    color: #1a1a1a;
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/* Navigatie */
+nav {
+  background-color: #1a73e8;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Secties */
+section {
+  margin-bottom: 50px;
 }
 
 h2 {
-    color: #2c3e50;
-    font-size: 1.4em;
-    margin-top: 0;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-/* Projecten overzicht */
+/* Projecten */
 .projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-/* Projectkaartjes */
 .project {
-    background: #ffffff;
-    padding: 20px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+.project h3 {
+  margin-top: 0;
 }
 
-.project p {
-    margin-bottom: 10px;
-}
-
-/* Links */
 .project a {
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: 600;
-    font-size: 1em;
-    transition: color 0.2s ease;
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: bold;
 }
 
 .project a:hover {
-    color: #1e40af;
+  text-decoration: underline;
 }
 
-/* Knopstijl (optioneel gebruiken voor links of buttons) */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2563eb;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
+/* Prijslijst */
+#pricing table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.button:hover {
-    background-color: #1e40af;
+#pricing th, #pricing td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+#pricing thead {
+  background-color: #1a73e8;
+  color: white;
+}
+
+#pricing tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#pricing tbody tr:hover {
+  background-color: #e3f0ff;
 }
 
 /* Footer */
 footer {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 0.95em;
-    color: #7f8c8d;
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Mobiele weergave */
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
