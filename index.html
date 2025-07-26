@@ -1,37 +1,179 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(Jouw naam) | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>(Jouw naam) - Portfolio</title>
+  <style>
+    /* Algemeen */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f3f7;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #34495e;
+      padding: 15px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .navbar .container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #ecf0f1;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-decoration: none;
+      letter-spacing: 1.5px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-links li a:hover {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    /* Header content */
+    .header-content {
+      padding: 60px 20px 50px;
+      text-align: center;
+      color: #ecf0f1;
+      background-color: #34495e;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    .header-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .header-content .subtitle {
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #bdc3c7;
+    }
+
+    /* Secties */
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      margin-top: 0;
+      color: #34495e;
+    }
+
+    /* Projecten grid */
+    .projects {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .project {
+      background: #f9f9f9;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #ccc;
+      transition: box-shadow 0.3s ease;
+    }
+    .project:hover {
+      box-shadow: 0 0 15px #27ae60;
+    }
+    .project a {
+      text-decoration: none;
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      margin: 40px 0;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+  </style>
 </head>
 <body>
-    <header>
-        <h1>(Jouw naam)</h1>
-        <h2>(Bijv. Webontwikkelaar • Front-end Designer)</h2>
-        <p>Welkom op mijn portfolio! Hier vind je enkele van mijn recente projecten.</p>
-    </header>
 
-    <section class="projects">
-        <div class="project">
-            <h3>Voorbeeldsite Kapsalon</h3>
-            <p>Een professionele website gebouwd voor een kapsalon met moderne styling en responsive design.</p>
-            <a href="(link naar jouw WordPress kapsalon-site)" target="_blank">Bekijk project</a>
-        </div>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">(Jouw naam)</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projecten</a></li>
+          <li><a href="#about">Over mij</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <!-- Je kunt hieronder extra projecten toevoegen -->
-        <!--
-        <div class="project">
-            <h3>(Titel van project)</h3>
-            <p>(Korte beschrijving van project)</p>
-            <a href="(link naar project)" target="_blank">Bekijk project</a>
-        </div>
-        -->
-    </section>
+    <div class="header-content" id="home">
+      <h1>(Jouw naam)</h1>
+      <p class="subtitle">(Bijv. Front-end Developer • Creatieve Webbouwer)</p>
+    </div>
+  </header>
 
-    <footer>
-        &copy; (Jouw naam) | Portfolio - Gemaakt met HTML & CSS
-    </footer>
+  <section id="projects" class="projects">
+    <h2>Projecten</h2>
+    <div class="project">
+      <a href="https://voorbeeldproject1.nl" target="_blank" rel="noopener noreferrer">Project 1</a>
+      <p>Korte beschrijving van project 1.</p>
+    </div>
+    <div class="project">
+      <a href="https://voorbeeldproject2.nl" target="_blank" rel="noopener noreferrer">Project 2</a>
+      <p>Korte beschrijving van project 2.</p>
+    </div>
+    <!-- Voeg meer projecten toe als je wilt -->
+  </section>
+
+  <section id="about">
+    <h2>Over mij</h2>
+    <p>Hier vertel je iets over jezelf, je vaardigheden, ervaring, en wat je belangrijk vindt.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: jouw.email@example.com</p>
+    <p>Telefoon: 06-12345678</p>
+    <!-- Optioneel: contactformulier hier -->
+  </section>
+
+  <footer>
+    &copy; 2025 (Jouw naam). Alle rechten voorbehouden.
+  </footer>
+
 </body>
 </html>
