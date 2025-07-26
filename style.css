@@ -1,87 +1,66 @@
-/* Algemene stijlen */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b1f3a; /* donkerblauw */
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  background-color: #f4f8fb;
-  color: #333;
 }
 
-/* Header */
 header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 20px 0;
+  background-color: #06162b;
+  padding: 30px 20px;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2.5em;
 }
 
 header p {
-  font-size: 1.1rem;
-  margin-top: 5px;
+  font-size: 1.2em;
+  color: #aab8cc;
 }
 
-/* Navigatie */
 nav {
-  background-color: #1a73e8;
+  background-color: #092747;
   display: flex;
   justify-content: center;
-  gap: 30px;
   padding: 15px 0;
+  gap: 30px;
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #00aaff;
 }
 
-/* Container */
 .container {
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
-/* Secties */
-section {
-  margin-bottom: 50px;
-}
-
-h2 {
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-/* Projecten */
-.projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.projects, table, .contact-info {
+  background-color: #142a4f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000033;
 }
 
 .project {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.project h3 {
-  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .project a {
+  color: #00cfff;
   text-decoration: none;
-  color: #1a73e8;
   font-weight: bold;
 }
 
@@ -89,50 +68,24 @@ h2 {
   text-decoration: underline;
 }
 
-/* Prijslijst */
-#pricing table {
+table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-top: 20px;
+  color: #ffffff;
 }
 
-#pricing th, #pricing td {
-  padding: 15px 20px;
+th, td {
+  padding: 12px;
   text-align: left;
+  border-bottom: 1px solid #395b8d;
 }
 
-#pricing thead {
-  background-color: #1a73e8;
-  color: white;
-}
-
-#pricing tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-#pricing tbody tr:hover {
-  background-color: #e3f0ff;
-}
-
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #2c3e50;
-  color: white;
+  background-color: #06162b;
+  color: #777;
   font-size: 0.9em;
-}
-
-/* Mobiele weergave */
-@media (max-width: 768px) {
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+  margin-top: 40px;
 }
