@@ -3,176 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>(Jouw naam) - Portfolio</title>
+  <title>[Jouw Naam] Portfolio</title>
   <style>
     /* Algemeen */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f0f3f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      background-color: #f5f8fa;
       color: #333;
     }
 
-    /* Navbar */
-    .navbar {
-      background-color: #34495e;
-      padding: 15px 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    .navbar .container {
-      max-width: 900px;
-      margin: 0 auto;
+    /* Menu */
+    nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      color: #ecf0f1;
-      font-weight: 700;
-      font-size: 1.5rem;
-      text-decoration: none;
-      letter-spacing: 1.5px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
+      justify-content: center;
       gap: 30px;
-      margin: 0;
-      padding: 0;
+      margin-bottom: 40px;
+      background-color: #2980b9;
+      padding: 15px 0;
+      border-radius: 8px;
     }
-    .nav-links li a {
-      color: #ecf0f1;
+
+    nav a {
+      color: white;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
-    .nav-links li a:hover {
-      background-color: #27ae60;
+
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.8rem;
+      color: #2c3e50;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* Projecten */
+    .projects {
+      display: grid;
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .project {
+      background: white;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    /* Prijslijst */
+    #pricing {
+      margin-bottom: 60px;
+    }
+
+    #pricing h2 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #2980b9;
       color: white;
     }
 
-    /* Header content */
-    .header-content {
-      padding: 60px 20px 50px;
-      text-align: center;
-      color: #ecf0f1;
-      background-color: #34495e;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-    }
-    .header-content h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .header-content .subtitle {
-      font-size: 1.4rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      color: #bdc3c7;
-    }
-
-    /* Secties */
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    section h2 {
-      margin-top: 0;
-      color: #34495e;
-    }
-
-    /* Projecten grid */
-    .projects {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .project {
-      background: #f9f9f9;
+    th, td {
       padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #ccc;
-      transition: box-shadow 0.3s ease;
+      text-align: left;
     }
-    .project:hover {
-      box-shadow: 0 0 15px #27ae60;
+
+    tbody tr:nth-child(even) {
+      background-color: #f4f8fb;
     }
-    .project a {
-      text-decoration: none;
-      color: #27ae60;
-      font-weight: bold;
+
+    tbody tr:hover {
+      background-color: #d6e9ff;
+      cursor: default;
+    }
+
+    /* Over mij */
+    #about {
+      margin-bottom: 50px;
+      background: white;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #about h2 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     /* Footer */
     footer {
-      margin: 40px 0;
       text-align: center;
-      font-size: 0.9em;
-      color: #555;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 40px;
+      padding-bottom: 20px;
     }
-
   </style>
 </head>
 <body>
 
-  <header>
-    <nav class="navbar">
-      <div class="container">
-        <a href="#" class="logo">(Jouw naam)</a>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projecten</a></li>
-          <li><a href="#about">Over mij</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+  <nav>
+    <a href="#projects">Projecten</a>
+    <a href="#pricing">Prijzen</a>
+    <a href="#about">Over mij</a>
+  </nav>
 
-    <div class="header-content" id="home">
-      <h1>(Jouw naam)</h1>
-      <p class="subtitle">(Bijv. Front-end Developer • Creatieve Webbouwer)</p>
-    </div>
+  <header>
+    <h1>[Jouw Naam]</h1>
+    <p>Webdesigner & WordPress specialist</p>
   </header>
 
   <section id="projects" class="projects">
-    <h2>Projecten</h2>
     <div class="project">
-      <a href="https://voorbeeldproject1.nl" target="_blank" rel="noopener noreferrer">Project 1</a>
-      <p>Korte beschrijving van project 1.</p>
+      <a href="http://www.kappertest.nl" target="_blank">Voorbeeld website kapper</a>
+      <p>Een responsive website voor een lokale kapper met reserveringssysteem.</p>
     </div>
     <div class="project">
-      <a href="https://voorbeeldproject2.nl" target="_blank" rel="noopener noreferrer">Project 2</a>
-      <p>Korte beschrijving van project 2.</p>
+      <a href="[Link naar project 2]" target="_blank">Portfolio website</a>
+      <p>Een overzichtelijke portfolio website voor een fotograaf.</p>
     </div>
-    <!-- Voeg meer projecten toe als je wilt -->
+    <div class="project">
+      <a href="[Link naar project 3]" target="_blank">E-commerce demo</a>
+      <p>Een demo webshop met betaalfunctionaliteiten.</p>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Prijslijst</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Dienst</th>
+          <th>Prijs</th>
+          <th>Omschrijving</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basis WordPress Website</td>
+          <td>€200 - €500</td>
+          <td>Tot 5 pagina's, responsive, standaard thema</td>
+        </tr>
+        <tr>
+          <td>Custom Design</td>
+          <td>€500 - €800</td>
+          <td>Uniek ontwerp, afgestemd op klantwensen</td>
+        </tr>
+        <tr>
+          <td>Website Onderhoud</td>
+          <td>€20 - €50 / maand</td>
+          <td>Updates, backups en kleine aanpassingen</td>
+        </tr>
+        <tr>
+          <td>E-commerce Webshop</td>
+          <td>€800 - €1500</td>
+          <td>Webshop met betaalmogelijkheden en productbeheer</td>
+        </tr>
+        <tr>
+          <td>SEO Optimalisatie</td>
+          <td>€100 - €150</td>
+          <td>Basale zoekmachineoptimalisatie</td>
+        </tr>
+        <tr>
+          <td>Extra Functionaliteiten</td>
+          <td>Op aanvraag</td>
+          <td>Boekingssystemen, meertaligheid, etc.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section id="about">
     <h2>Over mij</h2>
-    <p>Hier vertel je iets over jezelf, je vaardigheden, ervaring, en wat je belangrijk vindt.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: jouw.email@example.com</p>
-    <p>Telefoon: 06-12345678</p>
-    <!-- Optioneel: contactformulier hier -->
+    <p>
+      Hallo! Ik ben [Jouw Naam], een beginnend webdesigner gespecialiseerd in het maken van mooie en gebruiksvriendelijke WordPress websites.  
+      Ik help kleine ondernemers aan een professionele online aanwezigheid.  
+      Neem gerust contact op als je een website nodig hebt!
+    </p>
   </section>
 
   <footer>
-    &copy; 2025 (Jouw naam). Alle rechten voorbehouden.
+    &copy; 2025 [Jouw Naam]. Alle rechten voorbehouden.
   </footer>
 
 </body>
