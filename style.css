@@ -9,15 +9,26 @@ body {
 
 /* Header */
 header {
-  text-align: center;
-  padding: 40px 20px 20px;
   background: #162139;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  padding: 20px 40px;
 }
 
-h1, h2 {
-  margin: 0 0 15px;
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 50px; /* pas aan naar gewenste grootte */
+  width: auto;
+}
+
+header p {
   color: #ffffff;
+  font-size: 1.3em;
+  margin: 0;
 }
 
 /* Navigatie */
@@ -51,57 +62,14 @@ nav a.active {
   padding: 0 20px;
 }
 
-/* Prijzentabel */
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  background-color: #2a3a66;
-  border-radius: 10px;
-  overflow: hidden;
+/* Secties */
+section {
+  margin-bottom: 40px;
 }
 
-.price-table thead tr {
-  background-color: #4862b3;
-}
-
-.price-table th,
-.price-table td {
-  padding: 15px 20px;
-  text-align: left;
-  border-bottom: 1px solid #3f4f7f;
-}
-
-.price-table tbody tr:hover {
-  background-color: #3651a4;
-}
-
-/* Projecten sectie */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.project {
-  background: #2a3a66;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-}
-
-.project a {
-  text-decoration: none;
-  color: #a3c0ff;
-  font-weight: bold;
-  font-size: 1.1em;
+h2 {
+  margin-bottom: 15px;
+  color: #a8c0ff;
 }
 
 /* Footer */
@@ -121,7 +89,12 @@ footer {
     margin: 10px 0;
   }
   
-  .projects {
-    grid-template-columns: 1fr;
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo {
+    height: 40px;
   }
 }
