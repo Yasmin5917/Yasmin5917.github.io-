@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home | Jouw Website</title>
+  <title>Contact | (Jouw naam)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark">
+<body>
 
   <header>
     <div class="header-content">
@@ -16,32 +16,34 @@
   </header>
 
   <nav>
-    <a href="index.html" class="active">Home</a>
+    <a href="index.html">Home</a>
     <a href="prijzen.html">Prijzen</a>
     <a href="projecten.html">Projecten</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 
   <main class="container">
     <section>
-      <h2>Welkom!</h2>
-      <p>Ik help ondernemers aan professionele websites die vertrouwen uitstralen en resultaat opleveren. 
-      Met oog voor design, snelheid en gebruiksvriendelijkheid werk ik samen met jou aan een moderne, functionele website.</p>
-    </section>
+      <h2>Contact</h2>
+      <p>Heb je vragen of wil je samenwerken? Neem gerust contact met mij op via onderstaand formulier.</p>
 
-    <section>
-      <h2>Wat ik doe</h2>
-      <ul>
-        <li>Responsieve websites bouwen die goed werken op mobiel en desktop</li>
-        <li>Webshops met betaalsystemen</li>
-        <li>SEO-optimalisatie zodat jouw site gevonden wordt</li>
-        <li>Onderhoud en support</li>
-      </ul>
+      <form action="#" method="post">
+        <label for="naam">Naam</label>
+        <input type="text" id="naam" name="naam" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="bericht">Bericht</label>
+        <textarea id="bericht" name="bericht" rows="6" required></textarea>
+
+        <button type="submit">Verstuur</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025 <span class="naam">(Jouw naam)</span>. Alle rechten voorbehouden.</p>
   </footer>
 
 </body>
