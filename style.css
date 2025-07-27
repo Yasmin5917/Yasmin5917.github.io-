@@ -152,3 +152,39 @@ footer {
 .naam {
   color: #ffd700;
 }
+.projecten-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #ffd700;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
