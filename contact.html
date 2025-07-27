@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jouw Naam | Contact</title>
+  <title>Contact | Jouw Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="dark">
 
   <header>
-    <img src="logo.png" alt="Logo" class="logo" />
-    <p>Professionele websites met vertrouwen en stijl</p>
+    <div class="header-content">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <p>Professionele websites met vertrouwen en stijl</p>
+    </div>
   </header>
 
   <nav>
@@ -23,26 +25,32 @@
   <main class="container">
     <section>
       <h2>Contact</h2>
-      <p>Heb je vragen of wil je een project bespreken? Neem gerust contact op!</p>
-      <form action="mailto:jouw.email@voorbeeld.nl" method="post" enctype="text/plain">
-        <label for="naam">Naam:</label><br />
-        <input type="text" id="naam" name="naam" required /><br /><br />
+      <p>Heb je interesse in een samenwerking of heb je een vraag? Neem gerust contact met mij op via onderstaand formulier of stuur een e-mail.</p>
 
-        <label for="email">E-mail:</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
+      <form action="mailto:jouw@email.com" method="POST" enctype="text/plain">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required />
 
-        <label for="bericht">Bericht:</label><br />
-        <textarea id="bericht" name="bericht" rows="5" required></textarea><br /><br />
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-        <button type="submit">Verstuur</button>
+        <label for="bericht">Bericht:</label>
+        <textarea id="bericht" name="bericht" rows="6" required></textarea>
+
+        <button type="submit">Verzenden</button>
       </form>
+
+      <div class="contact-info">
+        <p><strong>E-mail:</strong> jouw@email.com</p>
+        <p><strong>Telefoon:</strong> 06-12345678</p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/jouwbedrijf" target="_blank">@jouwbedrijf</a></p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025. Alle rechten voorbehouden.</p>
   </footer>
 
 </body>
 </html>
-
