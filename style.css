@@ -79,10 +79,19 @@ nav a.active {
 }
 
 .nav-logo {
-  height: 80px; /* bijvoorbeeld: vergroot hier het logo */
+  height: 80px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
+
+/* Zorg dat navigatielinks niet verschuiven */
+.nav-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 
 
 
