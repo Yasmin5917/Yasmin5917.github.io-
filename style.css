@@ -58,7 +58,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Zorgt dat logo en links op één lijn blijven */
-  padding: 10px 40px;
+  padding: 5px 40px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -71,6 +71,7 @@ nav a {
   border-radius: 6px;
   transition: background-color 0.3s ease;
   font-weight: 600;
+  font-size: 1.1rem; /* Pas deze waarde aan naar wens */
 }
 
 nav a:hover,
