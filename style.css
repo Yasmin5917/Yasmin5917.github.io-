@@ -48,16 +48,19 @@ nav {
   background-color: #222;
   width: 100%;
   border-bottom: 2px solid #333;
+  /* Voeg deze toe indien nodig */
+  overflow: hidden;
 }
+
 
 /* Navigatie-inhoud gecentreerd */
 .nav-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Zorgt dat logo en links op één lijn blijven */
+  padding: 10px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Navigatie links */
@@ -76,8 +79,9 @@ nav a.active {
 }
 
 .nav-logo {
-  height: 80px; /* pas eventueel aan */
+  height: 80px; /* bijvoorbeeld: vergroot hier het logo */
   width: auto;
+  object-fit: contain;
 }
 
 
