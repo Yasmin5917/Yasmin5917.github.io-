@@ -10,6 +10,10 @@ body {
   background-color: #121212;
   color: #f0f0f0;
   line-height: 1.6;
+}
+
+/* Nieuwe wrapper om content gecentreerd te houden */
+.page-wrapper {
   max-width: 1000px;
   margin: 30px auto;
   padding: 0 20px;
@@ -39,18 +43,20 @@ header p {
   color: #ccc;
 }
 
-/* Navigatie */
+/* Navigatie - nu schermbreed */
 nav {
   background-color: #222;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: center;
   padding: 15px 40px;
   border-bottom: 2px solid #333;
   width: 100%;
 }
 
-
+/* Navigatielinks */
 nav a {
   color: #fff;
   text-decoration: none;
@@ -62,13 +68,6 @@ nav a {
 nav a:hover,
 nav a.active {
   background-color: #444;
-}
-
-/* Container */
-.container {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 20px;
 }
 
 /* Algemene sectiestyling */
@@ -198,8 +197,7 @@ footer {
 }
 
 /* ===== Werkwijze pagina specifieke stijlen ===== */
-/* Specifieke styling voor de werkwijze pagina */
-.werkwijze-page .container h1 {
+.werkwijze-page h1 {
   color: #ffd700;
   margin-bottom: 30px;
   font-weight: 700;
@@ -238,5 +236,3 @@ footer {
   border-bottom: 1px solid #444;
   padding-bottom: 18px;
 }
-
-
