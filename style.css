@@ -78,12 +78,13 @@ nav a.active {
   background-color: #444;
 }
 
-.nav-logo {
+.nav-logo img {
   height: 80px;
   width: auto;
   object-fit: contain;
   display: block;
 }
+
 
 /* Zorg dat navigatielinks niet verschuiven */
 .nav-links {
