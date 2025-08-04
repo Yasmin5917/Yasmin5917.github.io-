@@ -44,12 +44,14 @@ header p {
 }
 
 /* Navigatie - nu schermbreed */
+/* Navigatiebalk over de hele breedte */
 nav {
   background-color: #222;
   width: 100%;
   border-bottom: 2px solid #333;
 }
 
+/* Navigatie-inhoud gecentreerd */
 .nav-inner {
   max-width: 1000px;
   margin: 0 auto;
@@ -59,20 +61,21 @@ nav {
   align-items: center;
 }
 
-
-/* Navigatielinks */
+/* Navigatie links */
 nav a {
   color: #fff;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 6px;
   transition: background-color 0.3s ease;
+  font-weight: 600;
 }
 
 nav a:hover,
 nav a.active {
   background-color: #444;
 }
+
 
 /* Algemene sectiestyling */
 section {
