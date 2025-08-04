@@ -79,6 +79,12 @@ nav a.active {
   background-color: #444;
 }
 
+.nav-logo img {
+  height: 60px; /* pas eventueel aan */
+  width: auto;
+}
+
+
 
 /* Algemene sectiestyling */
 section {
