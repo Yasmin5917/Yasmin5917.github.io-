@@ -36,10 +36,6 @@ header {
 }
 
 
-.logo {
-  width: 200px;
-  height: auto;
-}
 
 header p {
   font-size: 1.2em;
@@ -80,7 +76,7 @@ nav a.active {
 }
 
 .nav-logo {
-  height: 100px; /* pas eventueel aan */
+  height: 80px; /* pas eventueel aan */
   width: auto;
 }
 
