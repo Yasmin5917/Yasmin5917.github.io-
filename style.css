@@ -29,13 +29,16 @@ header {
 
 .header-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: flex-start; /* Logo + slogan links uitlijnen */
+  gap: 20px;
+  padding: 10px 20px;
 }
+
 
 .logo {
   width: 80px;
-  margin-bottom: 10px;
+  height: auto;
 }
 
 header p {
