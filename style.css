@@ -46,15 +46,19 @@ header p {
 /* Navigatie - nu schermbreed */
 nav {
   background-color: #222;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  padding: 15px 40px;
-  border-bottom: 2px solid #333;
   width: 100%;
+  border-bottom: 2px solid #333;
 }
+
+.nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 /* Navigatielinks */
 nav a {
