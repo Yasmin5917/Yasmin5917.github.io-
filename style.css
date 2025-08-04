@@ -196,33 +196,45 @@ footer {
 }
 
 /* ===== Werkwijze pagina specifieke stijlen ===== */
-body.werkwijze-page {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px;
-  background-color: #121212; /* blijft hetzelfde */
-  color: #f0f0f0;
-  line-height: 1.6;
+/* Specifieke styling voor de werkwijze pagina */
+.werkwijze-page .container h1 {
+  color: #ffd700;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
-.werkwijze-page ol {
-  padding-left: 20px;
-  border-left: 4px solid #ffd700;
+.werkwijze-list {
   list-style: decimal inside;
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  padding-left: 0;
+  border-left: 4px solid #ffd700;
+  margin-left: 10px;
 }
 
-.werkwijze-page li {
+.werkwijze-list li {
   margin-bottom: 25px;
   padding-left: 15px;
+  position: relative;
 }
 
-.werkwijze-page .step-title {
+.werkwijze-list li::marker {
   font-weight: 700;
-  font-size: 1.2em;
-  margin-bottom: 8px;
   color: #ffd700;
+  font-size: 1.4rem;
 }
 
-.werkwijze-page li:last-child {
-  margin-bottom: 0;
+.werkwijze-list .step-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 8px;
 }
+
+.werkwijze-list li:not(:last-child) {
+  border-bottom: 1px solid #444;
+  padding-bottom: 18px;
+}
+
+
