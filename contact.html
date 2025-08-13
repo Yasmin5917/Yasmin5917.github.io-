@@ -3,57 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Jouw Website</title>
+  <title>Contact | Jouw Naam</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="dark">
+<body>
 
-
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">
-      <img src="logo.png" alt="Logo" class="logo" />
-    </div>
-    <div class="nav-links">
+<!-- Navigatie -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Logo" />
+    </a>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="werkwijze.html">Werkwijze</a>
       <a href="prijzen.html">Prijzen</a>
       <a href="projecten.html">Projecten</a>
-      <a href="contact.html">Contact</a>
-    </div>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
   </div>
-</nav>
+</header>
 
-  <main>
-   <div class="page-wrapper">
-    <section>
-      <h2>Contact</h2>
-      <p>Heb je interesse in een samenwerking of heb je een vraag? Neem gerust contact met mij op via onderstaand formulier of stuur een e-mail.</p>
+<!-- Hero sectie -->
+<section class="hero small-hero">
+  <div class="container hero-content">
+    <h1>Neem contact op</h1>
+    <p>Heb je een vraag of wil je samenwerken? Vul het formulier in of stuur me een bericht.</p>
+  </div>
+</section>
 
-      <form action="mailto:jouw@email.com" method="POST" enctype="text/plain">
-        <label for="naam">Naam:</label>
-        <input type="text" id="naam" name="naam" required />
+<!-- Contact sectie -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      
+      <!-- Formulier -->
+      <div class="contact-form">
+        <form action="mailto:jouw@email.com" method="POST" enctype="text/plain">
+          <label for="naam">Naam</label>
+          <input type="text" id="naam" name="naam" placeholder="Jouw naam" required>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required />
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
 
-        <label for="bericht">Bericht:</label>
-        <textarea id="bericht" name="bericht" rows="6" required></textarea>
+          <label for="bericht">Bericht</label>
+          <textarea id="bericht" name="bericht" placeholder="Typ hier je bericht..." rows="6" required></textarea>
 
-        <button type="submit">Verzenden</button>
-      </form>
+          <button type="submit" class="btn-primary">Verzenden</button>
+        </form>
+      </div>
 
+      <!-- Contactinfo -->
       <div class="contact-info">
-        <p><strong>E-mail:</strong> jouw@email.com</p>
-        <p><strong>Telefoon:</strong> 06-12345678</p>
+        <h2>Contactgegevens</h2>
+        <p><strong>E-mail:</strong> <a href="mailto:jouw@email.com">jouw@email.com</a></p>
+        <p><strong>Telefoon:</strong> <a href="tel:0612345678">06-12345678</a></p>
         <p><strong>Instagram:</strong> <a href="https://instagram.com/jouwbedrijf" target="_blank">@jouwbedrijf</a></p>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025. Alle rechten voorbehouden.</p>
-  </footer>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
+  </div>
+</footer>
 
 </body>
 </html>
