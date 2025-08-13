@@ -1,32 +1,28 @@
-/* ============================= */
-/* Algemene instellingen */
-/* ============================= */
+/* --- Basis instellingen --- */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
 }
 
 body {
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  color: #222;
+  color: #333;
   background-color: #f9f9f9;
 }
 
+/* --- Container --- */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ============================= */
-/* Navigatie */
-/* ============================= */
+/* --- Navigatie --- */
 .navbar {
-  background-color: #ffffff;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -36,187 +32,126 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
 }
 
-.logo img {
-  height: 90px;
-  width: auto;
+.nav-inner .logo img {
+  height: 60px; /* Logo iets groter */
 }
 
-/* Navigatielinks */
 .nav-links a {
+  margin-left: 2rem;
   text-decoration: none;
-  color: #222;
-  margin-left: 20px;
+  color: #333;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #f06c00; /* Accentkleur */
+  color: #007BFF;
 }
 
-/* Mobile nav */
-@media (max-width: 768px) {
-  .nav-inner {
-    flex-direction: column;
-  }
-  
-  .nav-links {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .nav-links a {
-    margin: 8px 0;
-  }
-
-  .logo img {
-    height: 70px;
-  }
-}
-
-/* ============================= */
-/* Hero sectie */
-/* ============================= */
+/* --- Hero sectie --- */
 .hero {
-  background-color: #f06c00;
-  color: #fff;
-  padding: 100px 0;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  padding: 6rem 0;
   text-align: center;
+  color: #fff;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .btn-primary {
-  text-decoration: none;
-  background-color: #222;
+  display: inline-block;
+  background-color: #007BFF;
   color: #fff;
-  padding: 12px 25px;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
   font-weight: 600;
   transition: background 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #444;
+  background-color: #0056b3;
 }
 
-/* ============================= */
-/* Secties */
-/* ============================= */
+/* --- Secties --- */
 .section {
-  padding: 80px 0;
+  padding: 4rem 0;
 }
 
 .bg-light {
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
 }
 
 .section h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .section p {
   max-width: 800px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 1rem auto;
   text-align: center;
-  font-size: 1.1rem;
 }
 
+/* --- Icon lijst --- */
 .icon-list {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 2rem;
 }
 
 .icon-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  background-color: #fff;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  font-size: 1.1rem;
 }
 
-.icon-list li:hover {
-  transform: translateY(-5px);
+.icon-list li i {
+  color: #007BFF;
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
 }
 
-/* ============================= */
-/* Footer */
-/* ============================= */
+/* --- Footer --- */
 .footer {
-  background-color: #222;
+  background-color: #333;
   color: #fff;
+  padding: 2rem 0;
   text-align: center;
-  padding: 30px 0;
+  font-size: 0.9rem;
 }
 
-/* ============================= */
-/* Werkwijze lijst */
-/* ============================= */
-.werkwijze-list {
-  list-style: none;
-  counter-reset: step-counter;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.werkwijze-list li {
-  position: relative;
-  background-color: #fff;
-  padding: 25px 20px 25px 60px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.werkwijze-list li::before {
-  counter-increment: step-counter;
-  content: counter(step-counter);
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #f06c00;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 30px;
-  font-weight: bold;
-}
-
-.step-title {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* ============================= */
-/* Responsiveness algemene secties */
+/* --- Responsive --- */
 @media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -227,14 +162,6 @@ body {
 
   .icon-list {
     flex-direction: column;
-    gap: 20px;
-  }
-
-  .werkwijze-list li {
-    padding-left: 50px;
-  }
-
-  .werkwijze-list li::before {
-    left: 10px;
+    align-items: center;
   }
 }
