@@ -7,21 +7,21 @@
 
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0f0f1a; /* donkerblauw-grijs */
+  background-color: #0f0f1a;
   color: #e0e0e0;
   line-height: 1.6;
 }
 
 /* Container voor max breedte */
-.container {
+.container, .page-wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 /* ===== Navigatie ===== */
-.navbar {
-  background-color: #1a1a2e; /* donkerblauw */
+nav {
+  background-color: #1a1a2e;
   padding: 15px 0;
   border-bottom: 2px solid #162447;
   position: sticky;
@@ -33,18 +33,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: #e0e0e0;
   text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 8px 14px;
+  border-radius: 6px;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -63,9 +66,9 @@ body {
 /* ===== Hero sectie ===== */
 .hero {
   background: linear-gradient(to right, #0f0f1a88, #0f0f1a88), url('banner.jpg') center/cover no-repeat;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px;
 }
 
 .hero-content {
@@ -74,79 +77,118 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #3da9fc; /* lichtblauw */
+  color: #3da9fc;
 }
 
 .hero p {
-  font-size: 1.3rem;
-  margin-bottom: 35px;
-  color: #b0b0b0;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc;
 }
 
 .btn-primary {
   background-color: #3dfcba; /* mintgroen */
   color: #0f0f1a;
-  padding: 14px 28px;
-  border-radius: 8px;
+  padding: 12px 25px;
+  border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #35d9a4;
+  background-color: #35d9a0;
 }
 
 /* ===== Secties ===== */
 .section {
-  padding: 80px 0;
-  border-bottom: 1px solid #162447; /* subtiele scheiding */
+  padding: 60px 0;
 }
 
 .bg-light {
-  background-color: #1e1e3f; /* lichtere sectie kleur */
+  background-color: #1a1a2e;
 }
 
 .section h2 {
-  color: #3dfcba; /* mintgroen */
-  margin-bottom: 25px;
-  font-size: 2.2rem;
+  color: #3dfcba;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .section p {
-  font-size: 1.15rem;
-  color: #d0d0d0;
+  font-size: 1.1rem;
+  color: #ccc;
 }
 
-/* ===== Icon list ===== */
-.icon-list {
+/* ===== Werkwijze lijst ===== */
+.werkwijze-list {
   list-style: none;
   display: grid;
-  gap: 18px;
+  gap: 20px;
   padding: 0;
 }
 
-.icon-list li {
-  display: flex;
-  align-items: center;
-  font-size: 1.15rem;
-  color: #d0d0d0;
+.werkwijze-list li {
+  background-color: #1e1e3f;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.icon-list i {
-  color: #3dfcba; /* mintgroen */
+.werkwijze-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.step-title {
+  color: #3dfcba;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* ===== Prijzen sectie ===== */
+.prijs-card {
+  background-color: #1e1e3f;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prijs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.prijs-card h3 {
+  color: #3da9fc;
+  margin-bottom: 15px;
   font-size: 1.5rem;
-  margin-right: 12px;
+}
+
+.prijs-card p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.prijs-card .prijs {
+  font-size: 2rem;
+  color: #3dfcba;
+  margin: 15px 0;
+  font-weight: 700;
 }
 
 /* ===== Footer ===== */
-.footer {
+footer {
   background-color: #1a1a2e;
   color: #888;
   text-align: center;
-  padding: 25px;
+  padding: 25px 20px;
   border-top: 2px solid #162447;
   font-size: 0.9rem;
 }
@@ -155,14 +197,19 @@ body {
 @media (max-width: 768px) {
   .nav-inner {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
-  
+
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .section {
-    padding: 50px 0;
+    padding: 40px 0;
+  }
+
+  .werkwijze-list li,
+  .prijs-card {
+    padding: 15px;
   }
 }
