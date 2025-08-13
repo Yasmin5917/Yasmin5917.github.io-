@@ -6,13 +6,14 @@
   font-family: 'Arial', sans-serif;
 }
 
+/* DARK THEME */
 body.dark {
   background-color: #121212; /* Donkere achtergrond */
   color: #e0e0e0;           /* Lichte tekst */
 }
 
 /* NAVIGATIE */
-.navbar {
+body.dark nav {
   background-color: #1f1f1f;
   padding: 15px 20px;
   display: flex;
@@ -21,12 +22,12 @@ body.dark {
   border-bottom: 2px solid #333;
 }
 
-.navbar .logo img {
+body.dark nav .nav-logo img {
   height: 60px; /* Groter logo */
   width: auto;
 }
 
-.nav-links a {
+body.dark .nav-links a {
   color: #e0e0e0;
   text-decoration: none;
   margin-left: 20px;
@@ -34,31 +35,31 @@ body.dark {
   transition: color 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: #ffcc00; /* Accentkleur voor actieve pagina of hover */
+body.dark .nav-links a:hover,
+body.dark .nav-links a.active {
+  color: #ffcc00; /* Accentkleur voor hover of actief */
 }
 
 /* PAGINA CONTAINER */
-.container {
+body.dark .page-wrapper {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 /* WERKWIJZE LIJST */
-.werkwijze-list {
+body.dark .werkwijze-list {
   list-style-type: decimal;
   margin-top: 20px;
   padding-left: 20px;
 }
 
-.werkwijze-list li {
+body.dark .werkwijze-list li {
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
-.werkwijze-list .step-title {
+body.dark .werkwijze-list .step-title {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 5px;
@@ -66,7 +67,7 @@ body.dark {
 }
 
 /* FOOTER */
-.footer {
+body.dark footer {
   background-color: #1f1f1f;
   text-align: center;
   padding: 20px;
@@ -76,15 +77,15 @@ body.dark {
 }
 
 /* LINKS, KOPPEN EN HOVER */
-a {
+body.dark a {
   color: #e0e0e0;
 }
 
-a:hover {
+body.dark a:hover {
   color: #ffcc00;
 }
 
-h1 {
+body.dark h1 {
   margin-bottom: 30px;
   font-size: 2rem;
   text-align: center;
@@ -92,19 +93,19 @@ h1 {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .nav-links {
+  body.dark .nav-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
   }
 
-  .navbar {
+  body.dark nav {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .navbar .logo img {
+  body.dark nav .nav-logo img {
     height: 50px; /* Iets kleiner voor mobiel */
   }
 }
