@@ -12,7 +12,16 @@ body {
   line-height: 1.6;
 }
 
-/* Container voor max breedte */
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Container voor max breedte ===== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -20,7 +29,7 @@ body {
 }
 
 /* ===== Navigatie ===== */
-.navbar {
+nav {
   background-color: #1e1e1e;
   padding: 15px 0;
   border-bottom: 2px solid #333;
@@ -33,6 +42,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .nav-links {
@@ -42,7 +54,6 @@ body {
 
 .nav-links a {
   color: #fff;
-  text-decoration: none;
   padding: 8px 14px;
   border-radius: 6px;
   font-weight: 600;
@@ -55,36 +66,69 @@ body {
   color: #000;
 }
 
-.logo img {
+.nav-logo img {
   height: 60px;
   width: auto;
 }
 
-/* ===== Hero sectie ===== */
-.hero {
-  background: linear-gradient(to right, #00000088, #00000088), url('banner.jpg') center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
+/* ===== Pagina wrapper ===== */
+.page-wrapper {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.hero-content {
-  max-width: 700px;
-  margin: 0 auto;
+/* ===== Werkwijze lijst ===== */
+.werkwijze-list {
+  list-style: none;
+  counter-reset: step-counter;
+  padding-left: 0;
+  margin-top: 30px;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #ffd700;
-}
-
-.hero p {
-  font-size: 1.2rem;
+.werkwijze-list li {
+  position: relative;
+  padding-left: 50px;
   margin-bottom: 30px;
-  color: #ddd;
 }
 
+.werkwijze-list li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffd700;
+  color: #000;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.step-title {
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #1e1e1e;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #333;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* ===== Buttons ===== */
 .btn-primary {
   background-color: #ffd700;
   color: #000;
@@ -102,10 +146,6 @@ body {
 /* ===== Secties ===== */
 .section {
   padding: 60px 0;
-}
-
-.bg-light {
-  background-color: #1a1a1a;
 }
 
 .section h2 {
@@ -140,25 +180,26 @@ body {
   margin-right: 10px;
 }
 
-/* ===== Footer ===== */
-.footer {
-  background-color: #1e1e1e;
-  color: #888;
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid #333;
-  font-size: 0.9rem;
-}
-
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .nav-inner {
     flex-direction: column;
     gap: 10px;
   }
-  
-  .hero h1 {
-    font-size: 2rem;
+
+  .werkwijze-list li {
+    padding-left: 40px;
+  }
+
+  .werkwijze-list li::before {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .page-wrapper {
+    margin: 40px auto;
+    padding: 0 15px;
   }
 
   .section {
