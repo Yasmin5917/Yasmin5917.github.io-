@@ -6,68 +6,86 @@
   <title>Home | Jouw Naam</title>
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Google Fonts voor een modernere look -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- Font Awesome iconen -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-Xx6S5HylQWDENk+hzVPsYm2S+hmtwSmbpbnf5a37+uQq59HDmdmQKMQqNYAfRxHRr1Jxa6roSw3tVXzMyQep9g=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">
-      <img src="logo.png" alt="Logo" class="logo" />
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
+<!-- Navigatie -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Logo" />
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
       <a href="werkwijze.html">Werkwijze</a>
       <a href="prijzen.html">Prijzen</a>
       <a href="projecten.html">Projecten</a>
       <a href="contact.html">Contact</a>
-    </div>
+    </nav>
   </div>
-</nav>
+</header>
 
+<!-- Hero sectie -->
+<section class="hero">
+  <div class="container hero-content">
+    <h1>Professionele Websites die Resultaat Opleveren</h1>
+    <p>Van simpele landingspagina’s tot complete webshops — ik help jouw bedrijf groeien met een moderne, gebruiksvriendelijke website.</p>
+    <a href="contact.html" class="btn-primary">Neem contact op</a>
+  </div>
+</section>
 
+<!-- Welkom sectie -->
+<section class="section">
+  <div class="container">
+    <h2>Welkom!</h2>
+    <p>
+      Ik help ondernemers met professionele websites die vertrouwen uitstralen en resultaat opleveren. 
+      Of je nu een basiswebsite nodig hebt of een uitgebreide webshop: ik zorg voor een duidelijke, moderne en gebruiksvriendelijke oplossing.
+    </p>
+  </div>
+</section>
 
-  <main>
-   <div class="page-wrapper">
-    <section>
-      <h2>Welkom!</h2>
-      <p>
-        Ik help ondernemers met professionele websites die vertrouwen uitstralen en resultaat opleveren. 
-        Of je nu een basis website nodig hebt of een uitgebreide webshop: ik zorg voor een duidelijke, moderne en gebruiksvriendelijke oplossing.
-      </p>
-    </section>
+<!-- Over mij -->
+<section class="section bg-light">
+  <div class="container">
+    <h2>Over mij</h2>
+    <p>
+      Ik ben een beginnende webdesigner met oog voor design, snelheid en gebruiksvriendelijkheid. 
+      Ik werk met WordPress en zorg ervoor dat jouw website goed werkt op zowel mobiel als laptop.
+      Samen maken we een website waar jij trots op bent!
+    </p>
+  </div>
+</section>
 
-    <section>
-      <h2>Over mij</h2>
-      <p>
-        Ik ben een beginnende webdesigner met oog voor design, snelheid en gebruiksvriendelijkheid. 
-        Ik werk met WordPress en zorg ervoor dat jouw website goed werkt op zowel mobiel als laptop.
-        Samen maken we een website waar jij trots op bent!
-      </p>
-    </section>
+<!-- Waarom kiezen voor mij -->
+<section class="section">
+  <div class="container">
+    <h2>Waarom kiezen voor mij?</h2>
+    <ul class="icon-list">
+      <li><i class="fas fa-user-check"></i> Persoonlijke aanpak</li>
+      <li><i class="fas fa-mobile-alt"></i> Mobielvriendelijk design</li>
+      <li><i class="fas fa-euro-sign"></i> Betaalbare tarieven</li>
+      <li><i class="fas fa-bolt"></i> Snelle oplevering</li>
+    </ul>
+  </div>
+</section>
 
-    <section>
-      <h2>Waarom kiezen voor mij?</h2>
-      <ul class="icon-list">
-        <li><i class="fas fa-user-check"></i> Persoonlijke aanpak</li>
-        <li><i class="fas fa-mobile-alt"></i> Mobielvriendelijk design</li>
-        <li><i class="fas fa-euro-sign"></i> Betaalbare tarieven</li>
-        <li><i class="fas fa-bolt"></i> Snelle oplevering</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
     <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>
-
