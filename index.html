@@ -1,240 +1,77 @@
-/* ============================= */
-/* Algemene instellingen */
-/* ============================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  line-height: 1.6;
-  color: #222;
-  background-color: #f9f9f9;
-}
+    <!-- ============================= -->
+    <!-- Navigatie -->
+    <!-- ============================= -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="werkwijze.html">Werkwijze</a>
+                <a href="prijzen.html">Prijzen</a>
+                <a href="projecten.html">Projecten</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    <!-- ============================= -->
+    <!-- Hero Sectie -->
+    <!-- ============================= -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welkom bij Mijn Website</h1>
+            <p>Wij bieden de beste oplossingen voor jouw project. Ontdek onze werkwijze en diensten.</p>
+            <a href="contact.html" class="btn-primary">Neem contact op</a>
+        </div>
+    </section>
 
-/* ============================= */
-/* Navigatie */
-/* ============================= */
-.navbar {
-  background-color: #ffffff;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    <!-- ============================= -->
+    <!-- Werkwijze Sectie -->
+    <!-- ============================= -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2>Onze Werkwijze</h2>
+            <ul class="werkwijze-list">
+                <li>
+                    <div class="step-title">Stap 1: Idee</div>
+                    <p>We bespreken jouw wensen en ideeën om tot een helder plan te komen.</p>
+                </li>
+                <li>
+                    <div class="step-title">Stap 2: Planning</div>
+                    <p>We maken een concreet plan van aanpak met tijdlijnen en doelen.</p>
+                </li>
+                <li>
+                    <div class="step-title">Stap 3: Uitvoering</div>
+                    <p>Ons team gaat aan de slag om het project tot een succes te maken.</p>
+                </li>
+                <li>
+                    <div class="step-title">Stap 4: Oplevering</div>
+                    <p>We leveren het project op en zorgen voor nazorg en support.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    <!-- ============================= -->
+    <!-- Footer -->
+    <!-- ============================= -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+        </div>
+    </footer>
 
-.logo img {
-  height: 90px;
-  width: auto;
-}
-
-/* Navigatielinks */
-.nav-links a {
-  text-decoration: none;
-  color: #222;
-  margin-left: 20px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #f06c00; /* Accentkleur */
-}
-
-/* Mobile nav */
-@media (max-width: 768px) {
-  .nav-inner {
-    flex-direction: column;
-  }
-  
-  .nav-links {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .nav-links a {
-    margin: 8px 0;
-  }
-
-  .logo img {
-    height: 70px;
-  }
-}
-
-/* ============================= */
-/* Hero sectie */
-/* ============================= */
-.hero {
-  background-color: #f06c00;
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.btn-primary {
-  text-decoration: none;
-  background-color: #222;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #444;
-}
-
-/* ============================= */
-/* Secties */
-/* ============================= */
-.section {
-  padding: 80px 0;
-}
-
-.bg-light {
-  background-color: #f4f4f4;
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.section p {
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.icon-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.icon-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  background-color: #fff;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.icon-list li:hover {
-  transform: translateY(-5px);
-}
-
-/* ============================= */
-/* Footer */
-/* ============================= */
-.footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 30px 0;
-}
-
-/* ============================= */
-/* Werkwijze lijst */
-/* ============================= */
-.werkwijze-list {
-  list-style: none;
-  counter-reset: step-counter;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.werkwijze-list li {
-  position: relative;
-  background-color: #fff;
-  padding: 25px 20px 25px 60px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.werkwijze-list li::before {
-  counter-increment: step-counter;
-  content: counter(step-counter);
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #f06c00;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 30px;
-  font-weight: bold;
-}
-
-.step-title {
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* ============================= */
-/* Responsiveness algemene secties */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .icon-list {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .werkwijze-list li {
-    padding-left: 50px;
-  }
-
-  .werkwijze-list li::before {
-    left: 10px;
-  }
-}
+</body>
+</html>
