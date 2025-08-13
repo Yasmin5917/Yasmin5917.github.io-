@@ -1,170 +1,110 @@
-/* --- Basis instellingen --- */
+/* ALGEMENE RESET */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: #f1f1f1; /* lichtere tekst voor dark mode */
-  background-color: #121212; /* donker achtergrond */
+body.dark {
+  background-color: #121212; /* Donkere achtergrond */
+  color: #e0e0e0;           /* Lichte tekst */
 }
 
-/* --- Container --- */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* --- Navigatie --- */
+/* NAVIGATIE */
 .navbar {
-  background-color: #1e1e1e; /* donkerder menu */
-  border-bottom: 1px solid #333;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-inner {
+  background-color: #1f1f1f;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  border-bottom: 2px solid #333;
 }
 
-.nav-inner .logo img {
-  height: 60px; /* logo iets groter */
+.navbar .logo img {
+  height: 60px; /* Groter logo */
+  width: auto;
 }
 
 .nav-links a {
-  margin-left: 2rem;
+  color: #e0e0e0;
   text-decoration: none;
-  color: #f1f1f1;
-  font-weight: 600;
+  margin-left: 20px;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #1e90ff; /* accentkleur blauw */
+  color: #ffcc00; /* Accentkleur voor actieve pagina of hover */
 }
 
-/* --- Hero sectie --- */
-.hero {
-  background: url('hero-bg.jpg') center/cover no-repeat;
-  padding: 6rem 0;
-  text-align: center;
-  color: #f1f1f1;
+/* PAGINA CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+/* WERKWIJZE LIJST */
+.werkwijze-list {
+  list-style-type: decimal;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
-.hero p {
+.werkwijze-list li {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.werkwijze-list .step-title {
+  font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5px;
+  color: #ffcc00; /* Accentkleur voor titels */
 }
 
-.btn-primary {
-  display: inline-block;
-  background-color: #1e90ff;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-/* --- Secties --- */
-.section {
-  padding: 4rem 0;
-}
-
-.bg-light {
-  background-color: #1e1e1e; /* donkere achtergrond voor lichte secties */
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: #f1f1f1;
-}
-
-.section p {
-  max-width: 800px;
-  margin: 0 auto 1rem auto;
-  text-align: center;
-  color: #ddd;
-}
-
-/* --- Icon lijst --- */
-.icon-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  margin-top: 2rem;
-}
-
-.icon-list li {
-  display: flex;
-  align-items: center;
-  font-size: 1.1rem;
-  color: #ddd;
-}
-
-.icon-list li i {
-  color: #1e90ff;
-  margin-right: 0.75rem;
-  font-size: 1.5rem;
-}
-
-/* --- Footer --- */
+/* FOOTER */
 .footer {
-  background-color: #1e1e1e;
-  color: #bbb;
-  padding: 2rem 0;
+  background-color: #1f1f1f;
   text-align: center;
-  font-size: 0.9rem;
+  padding: 20px;
+  border-top: 2px solid #333;
+  color: #888;
+  margin-top: 50px;
 }
 
-/* --- Responsive --- */
+/* LINKS, KOPPEN EN HOVER */
+a {
+  color: #e0e0e0;
+}
+
+a:hover {
+  color: #ffcc00;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .nav-inner {
-    flex-direction: column;
-  }
-
   .nav-links {
-    margin-top: 1rem;
-  }
-
-  .nav-links a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .icon-list {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .logo img {
+    height: 50px; /* Iets kleiner voor mobiel */
   }
 }
