@@ -1,73 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prijzen | Jouw Website</title>
+  <title>Prijzen | Jouw Naam</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="dark">
+<body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">
-      <img src="logo.png" alt="Logo" class="logo" />
-    </div>
-    <div class="nav-links">
+<!-- Navigatie -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Logo" />
+    </a>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="werkwijze.html">Werkwijze</a>
-      <a href="prijzen.html">Prijzen</a>
+      <a href="prijzen.html" class="active">Prijzen</a>
       <a href="projecten.html">Projecten</a>
       <a href="contact.html">Contact</a>
-    </div>
+    </nav>
   </div>
-</nav>
+</header>
 
+<!-- Hero -->
+<section class="hero small-hero">
+  <div class="container hero-content">
+    <h1>Prijzen & Pakketten</h1>
+    <p>Kies het pakket dat het beste past bij jouw wensen en budget.</p>
+  </div>
+</section>
 
-  <main>
-   <div class="page-wrapper">
-    <section>
-      <h2>Prijzen</h2>
-      <p>Hieronder vind je een overzicht van mijn meest voorkomende diensten en hun prijzen.</p>
+<!-- Prijzen tabel -->
+<section class="section">
+  <div class="container">
+    <p>Hieronder vind je een overzicht van mijn meest voorkomende diensten en hun prijzen.</p>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Dienst</th>
-            <th>Beschrijving</th>
-            <th>Prijs</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Basis website</td>
-            <td>Tot 5 pagina’s, mobielvriendelijk, contactformulier</td>
-            <td>€499</td>
-          </tr>
-          <tr>
-            <td>Uitgebreide website</td>
-            <td>Tot 10 pagina’s, SEO-optimalisatie, blogsectie</td>
-            <td>€749</td>
-          </tr>
-          <tr>
-            <td>Webshop</td>
-            <td>Incl. betalingssysteem, tot 20 producten, support</td>
-            <td>€999</td>
-          </tr>
-          <tr>
-            <td>Onderhoudsabonnement</td>
-            <td>Updates, beveiliging, kleine aanpassingen (per maand)</td>
-            <td>€39</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Dienst</th>
+          <th>Beschrijving</th>
+          <th>Prijs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basis website</td>
+          <td>Tot 5 pagina’s, mobielvriendelijk, contactformulier</td>
+          <td>€499</td>
+        </tr>
+        <tr>
+          <td>Uitgebreide website</td>
+          <td>Tot 10 pagina’s, SEO-optimalisatie, blogsectie</td>
+          <td>€749</td>
+        </tr>
+        <tr>
+          <td>Webshop</td>
+          <td>Incl. betalingssysteem, tot 20 producten, support</td>
+          <td>€999</td>
+        </tr>
+        <tr>
+          <td>Onderhoudsabonnement</td>
+          <td>Updates, beveiliging, kleine aanpassingen (per maand)</td>
+          <td>€39</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025. Alle rechten voorbehouden.</p>
-  </footer>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
+  </div>
+</footer>
 
 </body>
 </html>
