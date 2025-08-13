@@ -1,55 +1,89 @@
-/* Globale instellingen */
+/* ============================= */
+/* Algemene instellingen */
+/* ============================= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
 
 body {
   line-height: 1.6;
-  color: #333;
+  color: #222;
   background-color: #f9f9f9;
 }
 
-/* Container voor uitlijning */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* ============================= */
 /* Navigatie */
+/* ============================= */
 .navbar {
-  background-color: #fff;
+  background-color: #ffffff;
+  padding: 15px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
 }
 
+.logo img {
+  height: 90px;
+  width: auto;
+}
+
+/* Navigatielinks */
 .nav-links a {
-  margin-left: 1.5rem;
   text-decoration: none;
-  color: #333;
+  color: #222;
+  margin-left: 20px;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
-.nav-links a.active,
-.nav-links a:hover {
-  color: #007BFF;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f06c00; /* Accentkleur */
 }
 
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    margin: 8px 0;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+}
+
+/* ============================= */
 /* Hero sectie */
+/* ============================= */
 .hero {
-  background: linear-gradient(135deg, #6C63FF, #00C6FF);
+  background-color: #f06c00;
   color: #fff;
   padding: 100px 0;
   text-align: center;
@@ -57,68 +91,150 @@ body {
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .btn-primary {
-  background-color: #007BFF;
-  color: #fff;
-  padding: 0.8rem 2rem;
-  border-radius: 5px;
   text-decoration: none;
+  background-color: #222;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
   font-weight: 600;
+  transition: background 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #444;
 }
 
+/* ============================= */
 /* Secties */
+/* ============================= */
 .section {
   padding: 80px 0;
-  text-align: center;
 }
 
 .bg-light {
-  background-color: #f1f1f1;
+  background-color: #f4f4f4;
 }
 
-/* Over mij, Waarom kiezen voor mij */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
 .icon-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 2rem;
+  margin-top: 30px;
 }
 
 .icon-list li {
-  flex: 1 1 200px;
-  max-width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 25px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
+  transition: transform 0.3s;
 }
 
-.icon-list i {
-  font-size: 2rem;
-  color: #007BFF;
+.icon-list li:hover {
+  transform: translateY(-5px);
+}
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* ============================= */
+/* Werkwijze lijst */
+/* ============================= */
+.werkwijze-list {
+  list-style: none;
+  counter-reset: step-counter;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.werkwijze-list li {
+  position: relative;
+  background-color: #fff;
+  padding: 25px 20px 25px 60px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.werkwijze-list li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f06c00;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.step-title {
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
-/* Footer */
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-  font-size: 0.9rem;
+/* ============================= */
+/* Responsiveness algemene secties */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .icon-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .werkwijze-list li {
+    padding-left: 50px;
+  }
+
+  .werkwijze-list li::before {
+    left: 10px;
+  }
 }
