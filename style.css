@@ -1,5 +1,5 @@
 /* ============================= */
-/* ALGEMENE RESET & BASIS STYLING */
+/* ALGEMENE RESET & FONTS */
 /* ============================= */
 * {
   margin: 0;
@@ -8,25 +8,40 @@
   font-family: 'Arial', sans-serif;
 }
 
+/* ============================= */
+/* BODY DARK & LIGHT THEME */
+/* ============================= */
 body {
-  background-color: #f9f9f9;
+  background-color: #fff;
   color: #333;
-  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 /* ============================= */
-/* NAVBAR */
+/* NAVBAR MODERN + DARK MODE */
 /* ============================= */
 nav.navbar {
-  background-color: #fff;
-  padding: 20px 40px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+body.dark nav.navbar {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 nav.navbar .logo img {
@@ -36,7 +51,8 @@ nav.navbar .logo img {
 
 nav.navbar .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 30px;
+  align-items: center;
 }
 
 nav.navbar .nav-links a {
@@ -47,6 +63,10 @@ nav.navbar .nav-links a {
   transition: color 0.3s, transform 0.2s;
 }
 
+body.dark nav.navbar .nav-links a {
+  color: #e0e0e0;
+}
+
 nav.navbar .nav-links a:hover,
 nav.navbar .nav-links a.active {
   color: #ffcc00;
@@ -54,105 +74,24 @@ nav.navbar .nav-links a.active {
 }
 
 /* ============================= */
-/* HERO SECTIE */
+/* RESPONSIVE NAVBAR (MOBIEL) */
 /* ============================= */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-bg.jpg') center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 120px 20px;
+nav.navbar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.hero .btn-primary {
-  background-color: #ffcc00;
-  color: #333;
-  padding: 12px 30px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.hero .btn-primary:hover {
-  background-color: #e6b800;
-  transform: translateY(-2px);
-}
-
-/* ============================= */
-/* SECTIES */
-/* ============================= */
-.section {
-  padding: 80px 20px;
-}
-
-.bg-light {
-  background-color: #f4f4f4;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-/* ============================= */
-/* WERKWIJZE LIJST */
-/* ============================= */
-.werkwijze-list {
-  list-style-type: decimal;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-left: 20px;
-}
-
-.werkwijze-list li {
-  margin-bottom: 30px;
-}
-
-.werkwijze-list .step-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #ffcc00;
-}
-
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-footer.footer {
+nav.navbar .menu-toggle div {
+  width: 25px;
+  height: 3px;
   background-color: #333;
-  color: #ddd;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 50px;
-  font-size: 0.9rem;
+  transition: 0.3s;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-@media (max-width: 992px) {
-  nav.navbar {
-    padding: 15px 20px;
-  }
-
-  nav.navbar .logo img {
-    height: 60px;
-  }
-
-  nav.navbar .nav-links {
-    gap: 15px;
-  }
+body.dark nav.navbar .menu-toggle div {
+  background-color: #e0e0e0;
 }
 
 @media (max-width: 768px) {
@@ -164,29 +103,16 @@ footer.footer {
   nav.navbar .nav-links {
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    display: none; /* wordt getoggled met JS */
+    gap: 15px;
     margin-top: 15px;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+  nav.navbar .nav-links.show {
+    display: flex;
   }
 
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  nav.navbar .logo img {
-    height: 50px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
+  nav.navbar .menu-toggle {
+    display: flex;
   }
 }
