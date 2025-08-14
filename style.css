@@ -1,118 +1,109 @@
-/* ============================= */
-/* ALGEMENE RESET & FONTS */
-/* ============================= */
-* {
+/* Algemene instellingen */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-/* ============================= */
-/* BODY DARK & LIGHT THEME */
-/* ============================= */
-body {
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark {
   background-color: #121212;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
-/* ============================= */
-/* NAVBAR MODERN + DARK MODE */
-/* ============================= */
-nav.navbar {
-  width: 100%;
+/* Navbar */
+.navbar {
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+}
+
+.nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #fff;
-  transition: background-color 0.3s;
 }
 
-body.dark nav.navbar {
-  background-color: #1f1f1f;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+.logo img {
+  height: 50px;
 }
 
-nav.navbar .logo img {
-  height: 70px;
-  width: auto;
-}
-
-nav.navbar .nav-links {
+.nav-links {
+  list-style: none; /* verwijdert bolletjes */
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 30px;
-  align-items: center;
+  gap: 20px;
 }
 
-nav.navbar .nav-links a {
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s, transform 0.2s;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark nav.navbar .nav-links a {
-  color: #e0e0e0;
+.nav-links a:hover {
+  background-color: #ffffff;
+  color: #121212;
+  border-radius: 5px;
 }
 
-nav.navbar .nav-links a:hover,
-nav.navbar .nav-links a.active {
-  color: #ffcc00;
-  transform: translateY(-2px);
+.nav-links a.active {
+  border-bottom: 2px solid #ffffff;
 }
 
-/* ============================= */
-/* RESPONSIVE NAVBAR (MOBIEL) */
-/* ============================= */
-nav.navbar .menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+/* Main content */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-nav.navbar .menu-toggle div {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  transition: 0.3s;
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-body.dark nav.navbar .menu-toggle div {
-  background-color: #e0e0e0;
+/* Werkwijze lijst */
+.werkwijze-list {
+  counter-reset: step-counter;
+  list-style: none; /* verwijdert bolletjes */
+  padding-left: 0;
 }
 
-@media (max-width: 768px) {
-  nav.navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.werkwijze-list li {
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+}
 
-  nav.navbar .nav-links {
-    flex-direction: column;
-    width: 100%;
-    display: none; /* wordt getoggled met JS */
-    gap: 15px;
-    margin-top: 15px;
-  }
+.werkwijze-list li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  color: #121212;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
-  nav.navbar .nav-links.show {
-    display: flex;
-  }
+.step-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
-  nav.navbar .menu-toggle {
-    display: flex;
-  }
+/* Footer */
+.footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  color: #ffffff;
 }
