@@ -5,6 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mooie nav styling */
+        body.dark nav {
+            background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        body.dark .nav-logo img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+        body.dark .nav-logo img:hover {
+            transform: scale(1.05);
+        }
+
+        body.dark .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        body.dark .nav-links a {
+            position: relative;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        /* Onderlijntje bij hover */
+        body.dark .nav-links a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffcc00;
+            transition: width 0.3s ease;
+        }
+
+        body.dark .nav-links a:hover::after,
+        body.dark .nav-links a.active::after {
+            width: 100%;
+        }
+
+        body.dark .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Mobiel */
+        @media (max-width: 768px) {
+            body.dark nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            body.dark .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body class="dark">
     
