@@ -8,12 +8,12 @@
 
 /* DARK THEME */
 body.dark {
-  background-color: #121212; /* Donkere achtergrond */
-  color: #e0e0e0;           /* Lichte tekst */
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 /* NAVIGATIE */
-body.dark nav {
+body.dark nav.navbar {
   background-color: #1f1f1f;
   padding: 15px 20px;
   display: flex;
@@ -22,8 +22,8 @@ body.dark nav {
   border-bottom: 2px solid #333;
 }
 
-body.dark nav .nav-logo img {
-  height: 60px; /* Groter logo */
+body.dark nav .logo img {
+  height: 60px;
   width: auto;
 }
 
@@ -37,11 +37,11 @@ body.dark .nav-links a {
 
 body.dark .nav-links a:hover,
 body.dark .nav-links a.active {
-  color: #ffcc00; /* Accentkleur voor hover of actief */
+  color: #ffcc00;
 }
 
-/* PAGINA CONTAINER */
-body.dark .page-wrapper {
+/* CONTAINER */
+body.dark .container {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
@@ -49,7 +49,6 @@ body.dark .page-wrapper {
 
 /* WERKWIJZE LIJST */
 body.dark .werkwijze-list {
-  list-style-type: decimal;
   margin-top: 20px;
   padding-left: 20px;
 }
@@ -63,7 +62,7 @@ body.dark .werkwijze-list .step-title {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #ffcc00; /* Accentkleur voor titels */
+  color: #ffcc00;
 }
 
 /* FOOTER */
@@ -76,7 +75,7 @@ body.dark footer {
   margin-top: 50px;
 }
 
-/* LINKS, KOPPEN EN HOVER */
+/* LINKS EN KOPPEN */
 body.dark a {
   color: #e0e0e0;
 }
@@ -100,12 +99,12 @@ body.dark h1 {
     margin-top: 10px;
   }
 
-  body.dark nav {
+  body.dark nav.navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  body.dark nav .nav-logo img {
-    height: 50px; /* Iets kleiner voor mobiel */
+  body.dark nav .logo img {
+    height: 50px;
   }
 }
