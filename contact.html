@@ -1,77 +1,32 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Jouw Naam</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
 <!-- Navigatie -->
 <header class="navbar">
-  <div class="container nav-inner">
-    <a href="index.html" class="logo">
+  <div class="logo">
+    <a href="index.html">
       <img src="logo.png" alt="Logo" />
     </a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="werkwijze.html">Werkwijze</a>
-      <a href="prijzen.html">Prijzen</a>
-      <a href="projecten.html">Projecten</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
   </div>
+
+  <div class="menu-toggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="werkwijze.html">Werkwijze</a></li>
+    <li><a href="prijzen.html">Prijzen</a></li>
+    <li><a href="projecten.html">Projecten</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="contact.html" class="btn-cta">Afspraak maken</a></li>
+  </ul>
 </header>
 
-<!-- Hero sectie -->
-<section class="hero small-hero">
-  <div class="container hero-content">
-    <h1>Neem contact op</h1>
-    <p>Heb je een vraag of wil je samenwerken? Vul het formulier in of stuur me een bericht.</p>
-  </div>
-</section>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-<!-- Contact sectie -->
-<section class="section">
-  <div class="container">
-    <div class="contact-grid">
-      
-      <!-- Formulier -->
-      <div class="contact-form">
-        <form action="mailto:jouw@email.com" method="POST" enctype="text/plain">
-          <label for="naam">Naam</label>
-          <input type="text" id="naam" name="naam" placeholder="Jouw naam" required>
-
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
-
-          <label for="bericht">Bericht</label>
-          <textarea id="bericht" name="bericht" placeholder="Typ hier je bericht..." rows="6" required></textarea>
-
-          <button type="submit" class="btn-primary">Verzenden</button>
-        </form>
-      </div>
-
-      <!-- Contactinfo -->
-      <div class="contact-info">
-        <h2>Contactgegevens</h2>
-        <p><strong>E-mail:</strong> <a href="mailto:jouw@email.com">jouw@email.com</a></p>
-        <p><strong>Telefoon:</strong> <a href="tel:0612345678">06-12345678</a></p>
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/jouwbedrijf" target="_blank">@jouwbedrijf</a></p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Jouw Naam. Alle rechten voorbehouden.</p>
-  </div>
-</footer>
-
-</body>
-</html>
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
