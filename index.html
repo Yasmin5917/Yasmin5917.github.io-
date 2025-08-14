@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Website</title>
+    <title>Mijn Website - Oplossingen voor jouw project</title>
+    <meta name="description" content="Wij bieden de beste oplossingen voor jouw project. Ontdek onze werkwijze en diensten.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,18 +12,20 @@
     <!-- ============================= -->
     <!-- Navigatie -->
     <!-- ============================= -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Hoofdnavigatie">
         <div class="container nav-inner">
             <div class="logo">
-                <img src="logo.png" alt="Logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Bedrijfslogo Mijn Website">
+                </a>
             </div>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="werkwijze.html">Werkwijze</a>
-                <a href="prijzen.html">Prijzen</a>
-                <a href="projecten.html">Projecten</a>
-                <a href="contact.html">Contact</a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="werkwijze.html">Werkwijze</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -43,24 +46,24 @@
     <section class="section bg-light">
         <div class="container">
             <h2>Onze Werkwijze</h2>
-            <ul class="werkwijze-list">
+            <ol class="werkwijze-list">
                 <li>
-                    <div class="step-title">Stap 1: Idee</div>
+                    <h3 class="step-title">Stap 1: Idee</h3>
                     <p>We bespreken jouw wensen en ideeën om tot een helder plan te komen.</p>
                 </li>
                 <li>
-                    <div class="step-title">Stap 2: Planning</div>
+                    <h3 class="step-title">Stap 2: Planning</h3>
                     <p>We maken een concreet plan van aanpak met tijdlijnen en doelen.</p>
                 </li>
                 <li>
-                    <div class="step-title">Stap 3: Uitvoering</div>
+                    <h3 class="step-title">Stap 3: Uitvoering</h3>
                     <p>Ons team gaat aan de slag om het project tot een succes te maken.</p>
                 </li>
                 <li>
-                    <div class="step-title">Stap 4: Oplevering</div>
+                    <h3 class="step-title">Stap 4: Oplevering</h3>
                     <p>We leveren het project op en zorgen voor nazorg en support.</p>
                 </li>
-            </ul>
+            </ol>
         </div>
     </section>
 
@@ -69,7 +72,7 @@
     <!-- ============================= -->
     <footer class="footer">
         <div class="container">
-            &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+            <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
         </div>
     </footer>
 
