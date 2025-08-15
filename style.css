@@ -1,196 +1,179 @@
-/* Algemene reset en basis */
+/* Algemene instellingen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f0f4f8;
+    background-color: #f5f5f5;
     color: #333;
-    line-height: 1.6;
 }
 
-/* Header / Navbar */
+/* Header */
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.95);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 10px 50px;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    transition: box-shadow 0.3s ease;
 }
 
-header .logo {
-    height: 60px; /* grotere logo */
-    cursor: pointer;
+header.scrolled {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 50px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 30px;
+    list-style: none;
+    gap: 25px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #333;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #00aaff;
+    color: #0077ff;
 }
 
-/* Hero / Background homepage */
+/* Hero sectie */
 .hero {
-    height: 100vh;
-    background: url('background.jpg') center/cover no-repeat;
+    background: url('hero.jpg') center/cover no-repeat;
+    height: 80vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #fff;
+    justify-content: center;
     text-align: center;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
 }
 
 /* Secties */
 section {
-    padding: 100px 50px;
+    padding: 60px 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 
-/* Werkwijze */
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.step {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
+h1, h2 {
+    margin-bottom: 40px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
 }
 
-.step:hover {
-    transform: translateY(-10px);
+/* Steps & Prijzen & Projecten */
+.steps, .projects, .prices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Prijzen */
-.prices {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.price-card {
-    background: #e0f7fa;
-    border: 2px solid #00aaff;
-    padding: 30px;
-    border-radius: 15px;
+.step, .project-card, .price-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1 1 250px;
     text-align: center;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.price-card:hover {
+.step:hover, .project-card:hover, .price-card:hover {
     transform: translateY(-10px);
-    background: #b2ebf2;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Projecten */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s;
-}
-
-.project-card:hover img {
-    transform: scale(1.1);
-}
-
-/* Contact */
+/* Contact formulier */
 .contact-form {
-    background: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid #00aaff;
-    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
 .contact-form button {
-    padding: 15px 30px;
-    background: #00aaff;
-    color: #fff;
+    padding: 12px;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
+    background-color: #0077ff;
+    color: white;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background: #0077aa;
+    background-color: #005bb5;
 }
 
 /* Footer */
 footer {
-    background: #111;
-    color: #fff;
     text-align: center;
-    padding: 30px 50px;
-    margin-top: 50px;
+    padding: 25px;
+    background-color: #222;
+    color: white;
 }
 
-/* Animaties */
+/* Fade-in animatie */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
 }
 
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
 }
