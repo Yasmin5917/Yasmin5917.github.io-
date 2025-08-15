@@ -7,53 +7,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Logo"></a>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="prijzen.html" class="active">Prijzen</a></li>
-                    <li><a href="projecten.html">Projecten</a></li>
-                    <li><a href="werkwijze.html">Werkwijze</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="werkwijze.html">Werkwijze</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="container">
+    <section class="pricing-page">
         <h1>Onze Prijzen</h1>
-        <div class="prijzen-grid">
-            <div class="prijs-card">
-                <h2>Basis</h2>
-                <p>€49 / maand</p>
-                <p>Beschrijving van basisdiensten.</p>
-            </div>
-            <div class="prijs-card">
-                <h2>Standaard</h2>
+        <p>Transparante tarieven voor al onze diensten.</p>
+
+        <div class="pricing-cards">
+            <div class="card">
+                <h2>Basispakket</h2>
                 <p>€99 / maand</p>
-                <p>Beschrijving van standaarddiensten.</p>
+                <ul>
+                    <li>Dienst 1</li>
+                    <li>Dienst 2</li>
+                    <li>Dienst 3</li>
+                </ul>
+                <a href="contact.html" class="cta-btn-small">Afspraak maken</a>
             </div>
-            <div class="prijs-card">
-                <h2>Premium</h2>
+            <div class="card">
+                <h2>Standaardpakket</h2>
                 <p>€199 / maand</p>
-                <p>Beschrijving van premiumdiensten.</p>
+                <ul>
+                    <li>Dienst 1</li>
+                    <li>Dienst 2</li>
+                    <li>Dienst 3</li>
+                    <li>Dienst 4</li>
+                </ul>
+                <a href="contact.html" class="cta-btn-small">Afspraak maken</a>
             </div>
-            <div class="prijs-card">
-                <h2>Op maat</h2>
-                <p>Prijs op aanvraag</p>
-                <p>Volledig afgestemd op uw behoeften.</p>
+            <div class="card">
+                <h2>Premium</h2>
+                <p>€299 / maand</p>
+                <ul>
+                    <li>Alles uit Standaard</li>
+                    <li>Extra service</li>
+                    <li>24/7 support</li>
+                </ul>
+                <a href="contact.html" class="cta-btn-small">Afspraak maken</a>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
+    <footer>
+        <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
     </footer>
-
 </body>
 </html>
