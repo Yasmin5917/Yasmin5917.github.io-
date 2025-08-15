@@ -1,38 +1,27 @@
-// Sticky header shadow
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-    if(window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-// Header shrink on scroll
-window.addEventListener('scroll', function() {
+// Zorg dat het script pas laadt als de DOM volledig is geladen
+document.addEventListener('DOMContentLoaded', () => {
+    
     const header = document.querySelector('header');
-    if(window.scrollY > 50){
-        header.style.padding = '10px 50px';
-        header.style.background = 'rgba(0, 0, 0, 0.8)';
-    } else {
-        header.style.padding = '15px 50px';
-        header.style.background = 'rgba(0, 0, 0, 0.5)';
-    }
-});
+    const navLinks = document.querySelectorAll('header nav ul li a');
 
-// Fade-in on scroll
-const faders = document.querySelectorAll('.fade-in');
-const options = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-    entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
-        entry.target.style.animationPlayState = 'running';
-        appearOnScroll.unobserve(entry.target);
+    // Menu transparantie aanpassen bij scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+        } else {
+            header.style.background = 'rgba(255, 255, 255, 0.85)';
+            header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        }
     });
-}, options);
 
-faders.forEach(fader => {
-    fader.style.animationPlayState = 'paused';
-    appearOnScroll.observe(fader);
+    // Active link highlight op basis van URL
+    const current = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+        if(link.getAttribute('href') === current) {
+            link.style.color = '#0077cc';
+            link.style.fontWeight = '700';
+        }
+    });
+
 });
