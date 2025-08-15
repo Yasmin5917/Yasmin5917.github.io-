@@ -1,78 +1,62 @@
-/* ===========================
-   BODY EN PAGINA STRUCTUUR
-=========================== */
-body.dark {
+/* =======================
+   ALGEMENE STIJLEN
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Altijd minstens schermhoogte */
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
 main {
-  flex: 1; /* Main vult beschikbare ruimte */
+  flex: 1;
 }
 
-/* ===========================
+/* =======================
    NAVBAR
-=========================== */
+======================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: linear-gradient(to right, #004e92, #000428);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  padding: 15px 50px;
+  background-color: #0a3d62;
+  color: white;
+  position: sticky;
+  top: 0;
   z-index: 100;
 }
 
-.logo img {
-  height: 150px;   /* Groter logo desktop */
-  width: auto;
-  display: block;
+.navbar .logo img {
+  height: 60px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+  gap: 30px;
 }
 
-.nav-links li {
-  list-style: none;
-}
-
-.nav-links a {
-  color: white;
+.nav-links li a {
   text-decoration: none;
+  color: white;
   font-weight: 500;
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: 5px;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.nav-links a.active {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.btn-cta {
-  background-color: #00b4db;
-  color: white !important;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.btn-cta:hover {
-  background-color: #0093c4;
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Hamburger menu */
@@ -88,23 +72,21 @@ main {
   height: 3px;
   background-color: white;
   border-radius: 2px;
-  transition: all 0.3s ease;
 }
 
-/* ===========================
-   HERO SECTION
-=========================== */
+/* =======================
+   HERO SECTIE
+======================= */
 .hero {
-  padding: 80px 20px;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
+  padding: 100px 20px;
   text-align: center;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(to right, #0a3d62, #1e90ff);
+  color: white;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .hero p {
@@ -113,58 +95,65 @@ main {
   margin: 0 auto;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
-.footer {
-  background: linear-gradient(to right, #004e92, #000428);
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: white;
+/* =======================
+   CONTENT SECTIES
+======================= */
+.section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ===========================
-   RESPONSIVE STYLING
-=========================== */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =======================
+   FOOTER
+======================= */
+.footer {
+  background-color: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
+    background-color: #0a3d62;
     position: absolute;
-    top: 120px;
+    top: 70px;
     right: 0;
-    background: #002d4f;
     width: 200px;
-    padding: 20px;
     border-radius: 0 0 0 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
 
   .nav-links.show {
     display: flex;
-    animation: slideDown 0.3s ease forwards;
   }
 
-  .logo img {
-    height: 100px;  /* Groter logo mobiel */
+  .menu-toggle {
+    display: flex;
   }
-}
 
-/* ===========================
-   ANIMATIE VOOR MOBIEL MENU
-=========================== */
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
+  .hero h1 {
+    font-size: 2rem;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .hero p {
+    font-size: 1rem;
   }
 }
