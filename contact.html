@@ -3,48 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Jouw Bedrijf</title>
+    <title>Contact - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header / Navigatie -->
 <header>
-    <div class="logo">
-        <img src="logo.png" alt="Logo" height="50">
-    </div>
+    <img src="logo.png" alt="Logo" class="logo">
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projecten.html">Projecten</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
+        <a href="index.html">Home</a>
+        <a href="projecten.html">Projecten</a>
+        <a href="prijzen.html">Prijzen</a>
+        <a href="werkwijze.html">Werkwijze</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<!-- Hero sectie -->
-<section class="hero hero-contact">
-    <h1>Neem Contact Op</h1>
-    <p>Vul het formulier in en we nemen zo snel mogelijk contact met je op.</p>
+<section>
+    <div class="container">
+        <h2>Contacteer Ons</h2>
+        <form>
+            <input type="text" placeholder="Naam" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Bericht" rows="5" required></textarea>
+            <button type="submit">Verstuur</button>
+        </form>
+    </div>
 </section>
 
-<!-- Contactformulier sectie -->
-<section id="contact">
-    <form action="#" method="POST">
-        <input type="text" name="naam" placeholder="Naam" required>
-        <input type="email" name="email" placeholder="E-mail" required>
-        <input type="text" name="onderwerp" placeholder="Onderwerp" required>
-        <textarea name="bericht" rows="6" placeholder="Bericht" required></textarea>
-        <button type="submit">Verstuur</button>
-    </form>
-</section>
-
-<!-- Footer -->
 <footer>
-    &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
+    &copy; 2025 Mijn Website | Alle rechten voorbehouden
 </footer>
-<script src="script.js"></script>
 
 </body>
 </html>
