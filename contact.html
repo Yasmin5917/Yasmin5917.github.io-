@@ -3,44 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="werkwijze.html">Werkwijze</a></li>
                 <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
                 <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div>
-            <h1>Contacteer Ons</h1>
-            <p>Wij helpen je graag verder</p>
-        </div>
-    </section>
-
     <section>
-        <h2>Neem contact op</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Naam" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="5" placeholder="Bericht" required></textarea>
+        <h2 class="fade-in">Contact</h2>
+        <p class="fade-in">Vul het formulier in en wij nemen zo snel mogelijk contact met u op.</p>
+
+        <form class="fade-in">
+            <input type="text" placeholder="Naam" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Bericht" rows="6" required></textarea>
             <button type="submit">Verstuur</button>
         </form>
     </section>
 
     <footer>
-        &copy; 2025 Mijn Bedrijf. Alle rechten voorbehouden.
+        &copy; 2025 Mijn Website | Alle rechten voorbehouden
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
