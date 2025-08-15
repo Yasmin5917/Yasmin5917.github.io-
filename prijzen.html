@@ -3,50 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prijzen</title>
+  <title>Prijzen | Mijn Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="werkwijze.html">Werkwijze</a></li>
+        <li><a href="prijzen.html">Prijzen</a></li>
+        <li><a href="projecten.html">Projecten</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-  <div class="logo">MijnLogo</div>
-  <div class="menu-toggle">☰</div>
-  <ul>
-    <li><a href="werkwijze.html">Werkwijze</a></li>
-    <li><a href="prijzen.html">Prijzen</a></li>
-    <li><a href="projecten.html">Projecten</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<section id="prijzen">
-  <h2>Onze Prijzen</h2>
-  <div class="prijzen-grid">
-    <div class="prijskaart">
-      <h3>Basis</h3>
-      <p>€100</p>
-      <p>Korte omschrijving</p>
+  <section>
+    <h2>Onze Prijzen</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Basis</h3>
+        <p>€199 - Ideaal voor kleine projecten of starters.</p>
+      </div>
+      <div class="card">
+        <h3>Standaard</h3>
+        <p>€399 - Perfect voor middelgrote projecten.</p>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p>€699 - Voor grote projecten en volledige ondersteuning.</p>
+      </div>
+      <div class="card">
+        <h3>Op Maat</h3>
+        <p>Prijs op aanvraag - Volledig aangepast aan uw wensen.</p>
+      </div>
     </div>
-    <div class="prijskaart">
-      <h3>Standaard</h3>
-      <p>€200</p>
-      <p>Korte omschrijving</p>
-    </div>
-    <div class="prijskaart">
-      <h3>Premium</h3>
-      <p>€300</p>
-      <p>Korte omschrijving</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('nav ul');
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-</script>
-
+  <footer>
+    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+  </footer>
 </body>
 </html>
