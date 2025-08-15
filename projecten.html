@@ -3,51 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecten - Mijn Website</title>
+    <title>Projecten | Mijn Website</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="nav.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo"><img src="logo.png" alt="Logo"></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="projecten.html" class="active">Projecten</a></li>
-            <li><a href="prijzen.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger"><span></span><span></span><span></span></div>
-    </nav>
 
-    <!-- Projecten Section -->
-    <section class="projecten">
-        <div class="container">
-            <h2>Onze Projecten</h2>
-            <div class="grid">
-                <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project Alpha</h3>
-                    <p>Succesvol afgerond project met innovatieve oplossingen.</p>
-                </div>
-                <div class="project-card">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project Beta</h3>
-                    <p>Efficiënt projectbeheer en klanttevredenheid gegarandeerd.</p>
-                </div>
-                <div class="project-card">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Project Gamma</h3>
-                    <p>Creatieve aanpak en resultaatgerichte uitvoering.</p>
-                </div>
-            </div>
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Mijn Logo"></a>
         </div>
-    </section>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="projecten.html" class="active">Projecten</a></li>
+                <li><a href="werkwijze.html">Werkwijze</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
-    </footer>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Onze Projecten</h1>
+        <p>Bekijk enkele van onze recente werken</p>
+    </div>
+</section>
+
+<section class="container" style="padding:60px 0;">
+    <h2 style="text-align:center; margin-bottom:40px;">Projecten</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+        <div style="flex:1 1 300px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Project A</h3>
+            <p>Website voor een middelgroot bedrijf.</p>
+        </div>
+        <div style="flex:1 1 300px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Project B</h3>
+            <p>Ontwikkeling van een webshop met integraties.</p>
+        </div>
+        <div style="flex:1 1 300px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Project C</h3>
+            <p>Mobiele applicatie voor interne bedrijfsprocessen.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+</footer>
+
 </body>
 </html>
