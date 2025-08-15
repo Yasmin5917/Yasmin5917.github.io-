@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkwijze</title>
+    <title>Werkwijze - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="nav.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="prijzen.html">Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
 
-    <section class="section">
-        <h2>Onze Werkwijze</h2>
-        <div class="steps">
-            <div class="step">
-                <h3>Stap 1</h3>
-                <p>Intake en analyse van uw wensen.</p>
-            </div>
-            <div class="step">
-                <h3>Stap 2</h3>
-                <p>Planning en ontwerp van het project.</p>
-            </div>
-            <div class="step">
-                <h3>Stap 3</h3>
-                <p>Uitvoering en kwaliteitscontrole.</p>
-            </div>
-            <div class="step">
-                <h3>Stap 4</h3>
-                <p>Oplevering en nazorg.</p>
+    <!-- Werkwijze Section -->
+    <section class="werkwijze">
+        <div class="container">
+            <h2>Onze Werkwijze</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Analyse</h3>
+                    <p>We beginnen met een grondige analyse van uw behoeften en doelstellingen.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Planning</h3>
+                    <p>We creëren een helder plan van aanpak met duidelijke stappen.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Uitvoering</h3>
+                    <p>Onze experts voeren het plan professioneel en efficiënt uit.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Evaluatie</h3>
+                    <p>We evalueren samen de resultaten en optimaliseren waar nodig.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="nav.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
