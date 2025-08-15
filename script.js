@@ -8,6 +8,18 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Header shrink on scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if(window.scrollY > 50){
+        header.style.padding = '10px 50px';
+        header.style.background = 'rgba(0, 0, 0, 0.8)';
+    } else {
+        header.style.padding = '15px 50px';
+        header.style.background = 'rgba(0, 0, 0, 0.5)';
+    }
+});
+
 // Fade-in on scroll
 const faders = document.querySelectorAll('.fade-in');
 const options = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
