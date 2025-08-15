@@ -3,61 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Mijn Website</title>
+    <title>Home | Mijn Website</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="nav.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+
+<!-- Header -->
+<header class="header">
+    <div class="container header-container">
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <a href="index.html"><img src="logo.png" alt="Mijn Logo"></a>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="projecten.html">Projecten</a></li>
-            <li><a href="prijzen.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="werkwijze.html">Werkwijze</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welkom bij Onze Website</h1>
-            <p>Professionele oplossingen voor uw projecten</p>
-            <a href="contact.html" class="btn">Maak een afspraak</a>
-        </div>
-    </section>
+<!-- Hero Sectie -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Welkom bij Mijn Website</h1>
+        <p>Professionele oplossingen voor jouw projecten</p>
+    </div>
+</section>
 
-    <!-- Diensten -->
-    <section class="diensten">
-        <h2>Onze Diensten</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Consulting</h3>
-                <p>Strategisch advies voor uw bedrijf.</p>
-            </div>
-            <div class="card">
-                <h3>Project Management</h3>
-                <p>Efficiëntie en resultaatgericht werken.</p>
-            </div>
-            <div class="card">
-                <h3>Support</h3>
-                <p>24/7 ondersteuning voor al uw vragen.</p>
-            </div>
+<!-- Diensten / Sectie -->
+<section class="container" style="padding:60px 0;">
+    <h2 style="text-align:center; margin-bottom:40px;">Onze Diensten</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Consulting</h3>
+            <p>Advies op maat voor jouw bedrijf en projecten.</p>
         </div>
-    </section>
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Design</h3>
+            <p>Strak en professioneel design voor websites en apps.</p>
+        </div>
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Ontwikkeling</h3>
+            <p>Websites en applicaties die precies werken zoals jij wilt.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
-    </footer>
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+</footer>
+
 </body>
 </html>
