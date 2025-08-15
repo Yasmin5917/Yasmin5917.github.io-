@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prijzen</title>
+    <title>Prijzen - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="nav.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="werkwijze.html">Werkwijze</a></li>
-                <li><a href="prijzen.html" class="active">Prijzen</a></li>
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="prijzen.html" class="active">Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
 
-    <section class="section">
-        <h2>Onze Prijzen</h2>
-        <div class="pricing-cards">
-            <div class="card">
-                <h3>Basic</h3>
-                <p>€199 / project</p>
-            </div>
-            <div class="card">
-                <h3>Standard</h3>
-                <p>€399 / project</p>
-            </div>
-            <div class="card">
-                <h3>Premium</h3>
-                <p>€699 / project</p>
+    <!-- Prijzen Section -->
+    <section class="prijzen">
+        <div class="container">
+            <h2>Onze Prijzen</h2>
+            <div class="pricing-cards">
+                <div class="card">
+                    <h3>Basis</h3>
+                    <p class="price">€99 / maand</p>
+                    <ul>
+                        <li>Analyse & advies</li>
+                        <li>Projectplanning</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Kies dit pakket</a>
+                </div>
+                <div class="card">
+                    <h3>Standaard</h3>
+                    <p class="price">€199 / maand</p>
+                    <ul>
+                        <li>Alles van Basis</li>
+                        <li>Project management</li>
+                        <li>Telefonische support</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Kies dit pakket</a>
+                </div>
+                <div class="card">
+                    <h3>Premium</h3>
+                    <p class="price">€299 / maand</p>
+                    <ul>
+                        <li>Alles van Standaard</li>
+                        <li>24/7 support</li>
+                        <li>Persoonlijke begeleiding</li>
+                    </ul>
+                    <a href="contact.html" class="btn">Kies dit pakket</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="nav.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
