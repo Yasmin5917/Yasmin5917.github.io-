@@ -3,35 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecten</title>
+    <title>Projecten - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="nav.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="werkwijze.html">Werkwijze</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="projecten.html" class="active">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="projecten.html" class="active">Projecten</a></li>
+            <li><a href="prijzen.html">Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
 
-    <section class="section">
-        <h2>Onze Projecten</h2>
-        <div class="projects-grid">
-            <div class="project">Project 1</div>
-            <div class="project">Project 2</div>
-            <div class="project">Project 3</div>
-            <div class="project">Project 4</div>
+    <!-- Projecten Section -->
+    <section class="projecten">
+        <div class="container">
+            <h2>Onze Projecten</h2>
+            <div class="grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project Alpha</h3>
+                    <p>Succesvol afgerond project met innovatieve oplossingen.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project Beta</h3>
+                    <p>Efficiënt projectbeheer en klanttevredenheid gegarandeerd.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project Gamma</h3>
+                    <p>Creatieve aanpak en resultaatgerichte uitvoering.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="nav.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
