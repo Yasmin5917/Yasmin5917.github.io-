@@ -1,4 +1,3 @@
-// Zorg dat het script pas laadt als de DOM volledig is geladen
 document.addEventListener('DOMContentLoaded', () => {
     
     const header = document.querySelector('header');
@@ -7,21 +6,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu transparantie aanpassen bij scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+            header.style.background = 'rgba(0, 0, 0, 0.85)';
+            header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.3)';
         } else {
-            header.style.background = 'rgba(255, 255, 255, 0.85)';
+            header.style.background = 'rgba(0, 0, 0, 0.5)';
             header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
         }
+
+        // Sectie animatie trigger
+        document.querySelectorAll('.fade-in').forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (top < windowHeight - 100) {
+                section.classList.add('visible');
+            }
+        });
     });
 
-    // Active link highlight op basis van URL
+    // Active link highlight
     const current = window.location.pathname.split("/").pop();
     navLinks.forEach(link => {
         if(link.getAttribute('href') === current) {
-            link.style.color = '#0077cc';
-            link.style.fontWeight = '700';
+            link.classList.add('active');
         }
     });
 
+    // Smooth scroll voor interne links
+    navLinks.forEach(link => {
+        if(link.hash) {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(link.hash).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
 });
