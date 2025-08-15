@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkwijze - Mijn Website</title>
+    <title>Werkwijze | Mijn Website</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="nav.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo"><img src="logo.png" alt="Logo"></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
-            <li><a href="projecten.html">Projecten</a></li>
-            <li><a href="prijzen.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger"><span></span><span></span><span></span></div>
-    </nav>
 
-    <!-- Werkwijze Section -->
-    <section class="werkwijze">
-        <div class="container">
-            <h2>Onze Werkwijze</h2>
-            <div class="steps">
-                <div class="step">
-                    <h3>1. Analyse</h3>
-                    <p>We beginnen met een grondige analyse van uw behoeften en doelstellingen.</p>
-                </div>
-                <div class="step">
-                    <h3>2. Planning</h3>
-                    <p>We creëren een helder plan van aanpak met duidelijke stappen.</p>
-                </div>
-                <div class="step">
-                    <h3>3. Uitvoering</h3>
-                    <p>Onze experts voeren het plan professioneel en efficiënt uit.</p>
-                </div>
-                <div class="step">
-                    <h3>4. Evaluatie</h3>
-                    <p>We evalueren samen de resultaten en optimaliseren waar nodig.</p>
-                </div>
-            </div>
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Mijn Logo"></a>
         </div>
-    </section>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
-    </footer>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Onze Werkwijze</h1>
+        <p>Professioneel, gestructureerd en transparant</p>
+    </div>
+</section>
+
+<section class="container" style="padding:60px 0;">
+    <h2 style="text-align:center; margin-bottom:40px;">Hoe wij te werk gaan</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Stap 1: Advies</h3>
+            <p>We luisteren naar jouw wensen en adviseren.</p>
+        </div>
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Stap 2: Ontwerp</h3>
+            <p>We maken een strak en overzichtelijk design.</p>
+        </div>
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Stap 3: Ontwikkeling</h3>
+            <p>We bouwen het project professioneel en stabiel.</p>
+        </div>
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Stap 4: Oplevering</h3>
+            <p>Het project wordt opgeleverd en getest.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+</footer>
+
 </body>
 </html>
