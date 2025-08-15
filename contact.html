@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Mijn Website</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,19 +20,23 @@
         </nav>
     </header>
 
-    <section>
+    <section class="hero">
         <h1>Contact</h1>
-        <p>Neem contact met ons op via het onderstaande formulier.</p>
-        <form class="contact-form">
-            <input type="text" placeholder="Naam" required>
-            <input type="email" placeholder="E-mail" required>
-            <textarea rows="5" placeholder="Bericht" required></textarea>
+        <p>Neem contact met ons op via het formulier hieronder</p>
+    </section>
+
+    <section>
+        <h2>Contactformulier</h2>
+        <form>
+            <input type="text" name="naam" placeholder="Naam" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="bericht" placeholder="Bericht" rows="5" required></textarea>
             <button type="submit">Verstuur</button>
         </form>
     </section>
 
     <footer>
-        &copy; 2025 Mijn Website | Alle rechten voorbehouden
+        &copy; 2025 Mijn Bedrijf | Alle rechten voorbehouden
     </footer>
 </body>
 </html>
