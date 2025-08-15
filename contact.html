@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Jouw Bedrijf</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="werkwijze.html">Werkwijze</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <img src="logo.png" alt="Logo" class="logo">
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="projecten.html">Projecten</a></li>
-            <li><a href="prijzen.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <section class="hero">
+        <div>
+            <h1>Contacteer Ons</h1>
+            <p>Wij helpen je graag verder</p>
+        </div>
+    </section>
 
-<section>
-    <h1>Contacteer Ons</h1>
-    <div class="contact-form">
-        <input type="text" placeholder="Naam" required>
-        <input type="email" placeholder="E-mail" required>
-        <textarea placeholder="Bericht" rows="5" required></textarea>
-        <button>Verstuur</button>
-    </div>
-</section>
+    <section>
+        <h2>Neem contact op</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Naam" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Bericht" required></textarea>
+            <button type="submit">Verstuur</button>
+        </form>
+    </section>
 
-<footer>
-    &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
-</footer>
+    <footer>
+        &copy; 2025 Mijn Bedrijf. Alle rechten voorbehouden.
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
