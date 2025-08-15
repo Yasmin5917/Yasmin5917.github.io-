@@ -1,162 +1,125 @@
-/* =============== Reset & basis =============== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { height: 100%; }
-body { font-family: "Inter", Arial, sans-serif; line-height: 1.6; }
-
-/* =============== Thema variabelen =============== */
-:root{
-  --bg: #f8fafc;
-  --text: #111827;
-  --muted: #6b7280;
-
-  --card: #ffffff;
-  --border: #e5e7eb;
-
-  --nav-bg: #ffffff;
-  --link: #111827;
-
-  --accent: #ffcc00;
-  --accent-contrast: #111111; /* tekst op accent */
-
-  --cta-bg: #111111;
-  --cta-text: #ffffff;
-
-  --hero-start: #ffffff;
-  --hero-end: #f3f4f6;
+/* Algemene body styling */
+body.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Dark thema (alleen actief als <body class="dark">) */
-body.dark{
-  --bg: #121212;
-  --text: #e5e7eb;
-  --muted: #a3a3a3;
-
-  --card: #1c1c1c;
-  --border: #2a2a2a;
-
-  --nav-bg: #1b1b1b;
-  --link: #e5e7eb;
-
-  --accent: #ffcc00;
-  --accent-contrast: #121212;
-
-  --cta-bg: #ffcc00;
-  --cta-text: #121212;
-
-  --hero-start: #1b1b1b;
-  --hero-end: #121212;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(to right, #004e92, #000428); /* Blauwe zee kleuren */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 }
 
-/* =============== Basiskleuren =============== */
-body{ background: var(--bg); color: var(--text); }
-
-/* Containers */
-.page-wrapper, .container{
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 24px;
+.logo img {
+  height: 70px; /* Logo groter */
 }
 
-/* =============== Navbar =============== */
-.navbar{
-  position: sticky; top: 0; z-index: 1000;
-  background: var(--nav-bg);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 24px;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-.logo img{ height: 64px; width: auto; display: block; }
-
-.menu-toggle{ display: none; flex-direction: column; gap: 6px; cursor: pointer; }
-.menu-toggle div{ width: 26px; height: 3px; background: var(--link); border-radius: 2px; }
-
-.nav-links{
-  list-style: none; /* GEEN bolletjes */
-  display: flex; align-items: center; gap: 24px;
+.nav-links li {
+  list-style: none;
 }
-.nav-links li{ list-style: none; }
-.nav-links a{
+
+.nav-links a {
+  color: white;
   text-decoration: none;
-  color: var(--link);
-  font-weight: 600;
-  padding: 8px 10px;
-  border-radius: 8px;
-  transition: transform .15s ease, background-color .2s ease, color .2s ease;
-}
-.nav-links a:hover,
-.nav-links a.active{
-  background: var(--accent);
-  color: var(--accent-contrast);
-  transform: translateY(-1px);
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-.btn-cta{
-  display: inline-block;
-  background: var(--cta-bg);
-  color: var(--cta-text) !important;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-weight: 700;
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* =============== Hero =============== */
-.hero{
+.btn-cta {
+  background-color: #00b4db;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.btn-cta:hover {
+  background-color: #0093c4;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
   text-align: center;
-  padding: 96px 24px;
-  background: linear-gradient(180deg, var(--hero-start), var(--hero-end));
-  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
-.hero h1{ font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 12px; }
-.hero p{ color: var(--muted); max-width: 720px; margin: 0 auto; }
 
-/* =============== Werkwijze lijst =============== */
-.werkwijze-list{
-  counter-reset: step;
-  list-style: none; /* GEEN bolletjes */
-  display: grid; gap: 16px;
-  padding-left: 0;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
-.werkwijze-list li{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px 20px 20px 56px;
-  position: relative;
-}
-.werkwijze-list li::before{
-  counter-increment: step;
-  content: counter(step);
-  position: absolute; left: 16px; top: 20px;
-  width: 28px; height: 28px; line-height: 28px; text-align: center;
-  border-radius: 50%;
-  background: var(--accent); color: var(--accent-contrast);
-  font-weight: 800;
-}
-.step-title{ font-weight: 800; margin-bottom: 6px; }
 
-/* =============== Footer =============== */
-.footer{
-  margin-top: 40px;
-  background: var(--nav-bg);
-  border-top: 1px solid var(--border);
-  color: var(--muted);
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(to right, #004e92, #000428);
+  padding: 20px;
   text-align: center;
-  padding: 24px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
 }
 
-/* =============== Responsive =============== */
-@media (max-width: 900px){
-  .navbar{ flex-wrap: wrap; }
-  .menu-toggle{ display: flex; }
-  .nav-links{
-    display: none; /* wordt getoggled door JS */
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    padding-top: 8px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
   }
-  .nav-links.show{ display: flex; }
-  .nav-links li a{ width: 100%; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #002d4f;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
