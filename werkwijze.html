@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Werkwijze | Jouw Website</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Mobiel menu toggle
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    });
+  </script>
 </head>
 <body class="dark">
 
@@ -14,6 +25,7 @@
       <div class="logo">
         <a href="index.html"><img src="logo.png" alt="Logo" class="big-logo" /></a>
       </div>
+
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
@@ -22,6 +34,13 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="contact.html" class="btn-cta">Afspraak maken</a></li>
       </ul>
+
+      <!-- Hamburger menu voor mobiel -->
+      <div class="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </nav>
 
