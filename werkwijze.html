@@ -3,47 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Werkwijze</title>
+  <title>Home | Mijn Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="werkwijze.html">Werkwijze</a></li>
+        <li><a href="prijzen.html">Prijzen</a></li>
+        <li><a href="projecten.html">Projecten</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-  <div class="logo">MijnLogo</div>
-  <div class="menu-toggle">☰</div>
-  <ul>
-    <li><a href="werkwijze.html">Werkwijze</a></li>
-    <li><a href="prijzen.html">Prijzen</a></li>
-    <li><a href="projecten.html">Projecten</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <section class="hero fade-in">
+    <h1>Welkom bij Mijn Website</h1>
+    <p>Professionele oplossingen voor uw projecten met kwaliteit en stijl. Bekijk onze werkwijze, prijzen en projecten hieronder.</p>
+  </section>
 
-<section id="proces">
-  <h2>Onze Werkwijze</h2>
-  <div class="proces-grid">
-    <div class="stap">
-      <h3>Stap 1</h3>
-      <p>Uitleg van de eerste stap.</p>
+  <section class="cards fade-in">
+    <div class="card">
+      <h3>Onze Werkwijze</h3>
+      <p>Bekijk ons proces in 3-4 stappen en ontdek hoe wij efficiënt werken.</p>
     </div>
-    <div class="stap">
-      <h3>Stap 2</h3>
-      <p>Uitleg van de tweede stap.</p>
+    <div class="card">
+      <h3>Prijzen</h3>
+      <p>Transparante en aantrekkelijke prijskaartjes voor al onze diensten.</p>
     </div>
-    <div class="stap">
-      <h3>Stap 3</h3>
-      <p>Uitleg van de derde stap.</p>
+    <div class="card">
+      <h3>Projecten</h3>
+      <p>Een portfolio met voorbeeldprojecten die onze kwaliteit tonen.</p>
     </div>
-  </div>
-</section>
+    <div class="card">
+      <h3>Contact</h3>
+      <p>Neem contact op via ons professionele formulier voor vragen of offertes.</p>
+    </div>
+  </section>
 
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('nav ul');
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-</script>
-
+  <footer>
+    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+  </footer>
 </body>
 </html>
