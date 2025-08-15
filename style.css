@@ -1,4 +1,6 @@
-/* Algemene body styling */
+/* ===========================
+   Algemene body styling
+=========================== */
 body.dark {
   background-color: #1a1a1a;
   color: #fff;
@@ -7,18 +9,22 @@ body.dark {
   padding: 0;
 }
 
-/* NAVBAR */
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: linear-gradient(to right, #004e92, #000428); /* Blauwe zee kleuren */
+  background: linear-gradient(to right, #004e92, #000428);
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 100;
 }
 
 .logo img {
-  height: 70px; /* Logo groter */
+  height: 70px;
 }
 
 .nav-links {
@@ -39,11 +45,15 @@ body.dark {
   font-weight: 500;
   padding: 8px 14px;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .btn-cta {
@@ -51,13 +61,16 @@ body.dark {
   color: white !important;
   padding: 8px 16px;
   border-radius: 6px;
+  font-weight: bold;
 }
 
 .btn-cta:hover {
   background-color: #0093c4;
 }
 
-/* HAMBURGER MENU */
+/* ===========================
+   HAMBURGER MENU
+=========================== */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -69,9 +82,13 @@ body.dark {
   width: 25px;
   height: 3px;
   background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* HERO */
+/* ===========================
+   HERO SECTION
+=========================== */
 .hero {
   padding: 80px 20px;
   background: linear-gradient(to right, #1e3c72, #2a5298);
@@ -91,7 +108,9 @@ body.dark {
   margin: 0 auto;
 }
 
-/* FOOTER */
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
   background: linear-gradient(to right, #004e92, #000428);
   padding: 20px;
@@ -99,9 +118,12 @@ body.dark {
   font-size: 0.9rem;
   border-top: 1px solid rgba(255,255,255,0.1);
   box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+  color: white;
 }
 
-/* RESPONSIVE */
+/* ===========================
+   RESPONSIVE STYLING
+=========================== */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -117,9 +139,25 @@ body.dark {
     width: 200px;
     padding: 20px;
     border-radius: 0 0 0 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
 
   .nav-links.show {
     display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+}
+
+/* ===========================
+   Animatie voor mobiel menu
+=========================== */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
