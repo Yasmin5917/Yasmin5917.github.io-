@@ -32,7 +32,7 @@ a {
 }
 
 .logo img {
-  height: 150px; /* groter logo */
+  height: 150px; /* groter logo overal */
   width: auto;
   display: block;
 }
@@ -288,7 +288,7 @@ a {
   }
 
   .logo img {
-    height: 120px; /* mobiel logo */
+    height: 150px; /* mobiel logo hetzelfde als desktop */
   }
 }
 
