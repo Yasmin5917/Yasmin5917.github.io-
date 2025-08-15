@@ -1,323 +1,178 @@
-/* ===========================
-   ALGEMENE BODY STYLING
-=========================== */
-body {
+/* --- ALGEMENE RESET --- */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
   color: #333;
-  line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ===========================
-   NAVBAR
-=========================== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background: linear-gradient(to right, #004e92, #000428);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-  position: fixed;
-  width: 100%;
+/* --- NAVBAR --- */
+nav {
+  background-color: #002d4f;
+  padding: 15px 30px;
+  position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
-.logo img {
-  height: 120px;
-  width: auto;
-  display: block;
+nav .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.nav-links {
+nav ul {
   list-style: none;
   display: flex;
+  justify-content: center; /* horizontaal gecentreerd */
   gap: 30px;
-  margin: 0;
-  padding: 0;
 }
 
-.nav-links li {}
-
-.nav-links a {
-  color: white;
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
   font-weight: 500;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: color 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  background: rgba(255,255,255,0.2);
+nav ul li a:hover {
+  color: #ffcc00;
 }
 
-.btn-cta {
-  background-color: #00b4db;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.btn-cta:hover {
-  background-color: #0093c4;
-}
-
-/* Hamburger menu */
+/* --- RESPONSIVE NAVBAR --- */
 .menu-toggle {
   display: none;
-  flex-direction: column;
-  gap: 5px;
+  font-size: 28px;
+  color: #fff;
   cursor: pointer;
-}
-
-.menu-toggle div {
-  width: 30px;
-  height: 4px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* ===========================
-   HERO SECTION
-=========================== */
-.hero {
-  padding: 150px 20px 100px;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  text-align: center;
-  color: white;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ===========================
-   SECTIES
-=========================== */
-.section {
-  padding: 80px 50px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.2rem;
-  color: #004e92;
-}
-
-.section p {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  font-size: 1.1rem;
-}
-
-/* ===========================
-   WERKWIJZE
-=========================== */
-.process-steps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.step {
-  background: white;
-  border-radius: 10px;
-  padding: 30px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.step:hover {
-  transform: translateY(-5px);
-}
-
-.step h3 {
-  margin-bottom: 15px;
-  color: #004e92;
-}
-
-/* ===========================
-   PRIJZEN
-=========================== */
-.prices {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.price-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  padding: 30px;
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.price-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.price-card h3 {
-  margin-bottom: 15px;
-  color: #004e92;
-}
-
-.price-card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-/* ===========================
-   PROJECTEN
-=========================== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.project-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-.project-card h4 {
-  padding: 15px;
-  color: #004e92;
-}
-
-/* ===========================
-   CONTACT
-=========================== */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  width: 100%;
-}
-
-.contact-form button {
-  padding: 12px;
-  border: none;
-  background-color: #004e92;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #002f5c;
-}
-
-/* ===========================
-   FOOTER
-=========================== */
-.footer {
-  background: linear-gradient(to right, #004e92, #000428);
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: white;
-  margin-top: 50px;
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 15px 30px;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links {
+  nav ul {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 140px;
-    right: 0;
-    background: #002d4f;
-    width: 220px;
-    padding: 20px;
-    border-radius: 0 0 0 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #002d4f;
+    padding-top: 100px;
+    gap: 20px;
+    text-align: center;
+    z-index: 9999;
   }
 
-  .nav-links.show {
+  nav ul.show {
     display: flex;
-    animation: slideDown 0.3s ease forwards;
   }
 
-  .logo img {
-    height: 100px;
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
   }
 }
 
-@keyframes slideDown {
-  0% {opacity:0; transform: translateY(-20px);}
-  100% {opacity:1; transform: translateY(0);}
+/* --- SECTIES --- */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #002d4f;
+}
+
+/* Werkwijze (proces in 3-4 stappen) */
+#werkwijze .stap {
+  display: inline-block;
+  width: 220px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#werkwijze .stap h3 {
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+/* Prijzen (prijskaartjes) */
+#prijzen .prijskaart {
+  display: inline-block;
+  width: 220px;
+  margin: 15px;
+  padding: 25px;
+  background-color: #ffcc00;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #002d4f;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Projecten (portfolio) */
+#projecten .project {
+  display: inline-block;
+  width: 250px;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#projecten .project img {
+  width: 100%;
+  height: auto;
+}
+
+#projecten .project p {
+  padding: 15px;
+}
+
+/* Contact (formulier) */
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#contact form button {
+  padding: 12px 25px;
+  background-color: #002d4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+  background-color: #ff6600;
 }
