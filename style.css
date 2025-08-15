@@ -27,7 +27,8 @@ header {
 }
 
 header img {
-    height: 50px;
+    height: 80px; /* groter logo */
+    width: auto;  /* behoudt verhouding */
 }
 
 nav ul {
