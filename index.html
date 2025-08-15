@@ -1,87 +1,49 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mijn Website</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Mijn Website</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+  <img src="logo.png" alt="Logo">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="werkwijze.html">Werkwijze</a></li>
+      <li><a href="prijzen.html">Prijzen</a></li>
+      <li><a href="projecten.html">Projecten</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-<nav>
-  <div class="logo">MijnLogo</div>
-  <div class="menu-toggle">☰</div>
-  <ul>
-    <li><a href="#werkwijze">Werkwijze</a></li>
-    <li><a href="#prijzen">Prijzen</a></li>
-    <li><a href="#projecten">Projecten</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<section class="hero fade-in">
+  <h1>Welkom bij Mijn Website</h1>
+  <p>Professionele oplossingen voor al uw projecten met de hoogste kwaliteit en service.</p>
+  <a href="contact.html" class="btn-primary">Neem Contact Op</a>
+  <a href="projecten.html" class="btn-secondary">Bekijk Projecten</a>
+</section>
 
-<section id="werkwijze">
-  <h2>Werkwijze</h2>
-  <div class="stappen">
-    <div class="stap">
-      <h3>Stap 1</h3>
-      <p>Beschrijving van stap 1.</p>
-    </div>
-    <div class="stap">
-      <h3>Stap 2</h3>
-      <p>Beschrijving van stap 2.</p>
-    </div>
-    <div class="stap">
-      <h3>Stap 3</h3>
-      <p>Beschrijving van stap 3.</p>
-    </div>
+<section class="cards fade-in">
+  <div class="card">
+    <h3>Onze Missie</h3>
+    <p>Wij leveren innovatieve en betrouwbare oplossingen voor uw bedrijf.</p>
+  </div>
+  <div class="card">
+    <h3>Onze Visie</h3>
+    <p>Uw succes is ons succes, daarom streven we naar perfectie in alles wat we doen.</p>
+  </div>
+  <div class="card">
+    <h3>Onze Waarden</h3>
+    <p>Integriteit, kwaliteit en klanttevredenheid staan altijd centraal.</p>
   </div>
 </section>
 
-<section id="prijzen">
-  <h2>Prijzen</h2>
-  <div class="prijskaartjes">
-    <div class="prijskaart">
-      <h3>Basis</h3>
-      <p>€49 / maand</p>
-    </div>
-    <div class="prijskaart">
-      <h3>Pro</h3>
-      <p>€99 / maand</p>
-    </div>
-    <div class="prijskaart">
-      <h3>Premium</h3>
-      <p>€149 / maand</p>
-    </div>
-  </div>
-</section>
-
-<section id="projecten">
-  <h2>Projecten</h2>
-  <div class="projecten-grid">
-    <div class="project"><img src="voorbeeld1.jpg" alt="Project 1"><p>Project 1</p></div>
-    <div class="project"><img src="voorbeeld2.jpg" alt="Project 2"><p>Project 2</p></div>
-    <div class="project"><img src="voorbeeld3.jpg" alt="Project 3"><p>Project 3</p></div>
-    <div class="project"><img src="voorbeeld4.jpg" alt="Project 4"><p>Project 4</p></div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <form>
-    <input type="text" placeholder="Naam" required>
-    <input type="email" placeholder="E-mail" required>
-    <textarea placeholder="Bericht" rows="5" required></textarea>
-    <button type="submit">Verstuur</button>
-  </form>
-</section>
-
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('nav ul');
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-</script>
-
+<footer>
+  &copy; 2025 Mijn Website | Alle rechten voorbehouden
+</footer>
 </body>
 </html>
