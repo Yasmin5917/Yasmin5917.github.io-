@@ -3,56 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prijzen | Mijn Website</title>
+    <title>Prijzen - Jouw Bedrijf</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-    <div class="container header-container">
-        <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="Mijn Logo"></a>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prijzen.html" class="active">Prijzen</a></li>
+                    <li><a href="projecten.html">Projecten</a></li>
+                    <li><a href="werkwijze.html">Werkwijze</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="prijzen.html" class="active">Prijzen</a></li>
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="werkwijze.html">Werkwijze</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<section class="hero">
-    <div class="hero-text">
+    <section class="container">
         <h1>Onze Prijzen</h1>
-        <p>Duidelijk en transparant voor elk project</p>
-    </div>
-</section>
+        <div class="prijzen-grid">
+            <div class="prijs-card">
+                <h2>Basis</h2>
+                <p>€49 / maand</p>
+                <p>Beschrijving van basisdiensten.</p>
+            </div>
+            <div class="prijs-card">
+                <h2>Standaard</h2>
+                <p>€99 / maand</p>
+                <p>Beschrijving van standaarddiensten.</p>
+            </div>
+            <div class="prijs-card">
+                <h2>Premium</h2>
+                <p>€199 / maand</p>
+                <p>Beschrijving van premiumdiensten.</p>
+            </div>
+            <div class="prijs-card">
+                <h2>Op maat</h2>
+                <p>Prijs op aanvraag</p>
+                <p>Volledig afgestemd op uw behoeften.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="container" style="padding:60px 0;">
-    <h2 style="text-align:center; margin-bottom:40px;">Prijsopties</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
-        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
-            <h3>Basispakket</h3>
-            <p>€500 - Perfect voor kleine projecten</p>
-        </div>
-        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
-            <h3>Standaardpakket</h3>
-            <p>€1200 - Voor middelgrote projecten</p>
-        </div>
-        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
-            <h3>Premium pakket</h3>
-            <p>€2500 - Voor volledige, complexe projecten</p>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
-</footer>
+    <footer class="footer">
+        &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
+    </footer>
 
 </body>
 </html>
