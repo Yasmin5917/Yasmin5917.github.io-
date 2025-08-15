@@ -5,37 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="werkwijze.html">Werkwijze</a></li>
                 <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <section>
-        <h2 class="fade-in">Contact</h2>
-        <p class="fade-in">Vul het formulier in en wij nemen zo snel mogelijk contact met u op.</p>
-
-        <form class="fade-in">
-            <input type="text" placeholder="Naam" required>
-            <input type="email" placeholder="E-mail" required>
-            <textarea placeholder="Bericht" rows="6" required></textarea>
-            <button type="submit">Verstuur</button>
-        </form>
-    </section>
-
+    <main>
+        <section class="contact-form-section">
+            <h2>Neem contact op</h2>
+            <form class="contact-form">
+                <label>Naam</label>
+                <input type="text" placeholder="Jouw naam">
+                <label>Email</label>
+                <input type="email" placeholder="Jouw email">
+                <label>Bericht</label>
+                <textarea placeholder="Jouw bericht"></textarea>
+                <button type="submit">Verstuur</button>
+            </form>
+        </section>
+    </main>
     <footer>
-        &copy; 2025 Mijn Website | Alle rechten voorbehouden
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
     </footer>
 </body>
 </html>
