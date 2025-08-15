@@ -3,66 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prijzen - Mijn Website</title>
+    <title>Prijzen | Mijn Website</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="nav.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo"><img src="logo.png" alt="Logo"></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="projecten.html">Projecten</a></li>
-            <li><a href="prijzen.html" class="active">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger"><span></span><span></span><span></span></div>
-    </nav>
 
-    <!-- Prijzen Section -->
-    <section class="prijzen">
-        <div class="container">
-            <h2>Onze Prijzen</h2>
-            <div class="pricing-cards">
-                <div class="card">
-                    <h3>Basis</h3>
-                    <p class="price">€99 / maand</p>
-                    <ul>
-                        <li>Analyse & advies</li>
-                        <li>Projectplanning</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="contact.html" class="btn">Kies dit pakket</a>
-                </div>
-                <div class="card">
-                    <h3>Standaard</h3>
-                    <p class="price">€199 / maand</p>
-                    <ul>
-                        <li>Alles van Basis</li>
-                        <li>Project management</li>
-                        <li>Telefonische support</li>
-                    </ul>
-                    <a href="contact.html" class="btn">Kies dit pakket</a>
-                </div>
-                <div class="card">
-                    <h3>Premium</h3>
-                    <p class="price">€299 / maand</p>
-                    <ul>
-                        <li>Alles van Standaard</li>
-                        <li>24/7 support</li>
-                        <li>Persoonlijke begeleiding</li>
-                    </ul>
-                    <a href="contact.html" class="btn">Kies dit pakket</a>
-                </div>
-            </div>
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Mijn Logo"></a>
         </div>
-    </section>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prijzen.html" class="active">Prijzen</a></li>
+                <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="werkwijze.html">Werkwijze</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
-    </footer>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Onze Prijzen</h1>
+        <p>Duidelijk en transparant voor elk project</p>
+    </div>
+</section>
+
+<section class="container" style="padding:60px 0;">
+    <h2 style="text-align:center; margin-bottom:40px;">Prijsopties</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Basispakket</h3>
+            <p>€500 - Perfect voor kleine projecten</p>
+        </div>
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Standaardpakket</h3>
+            <p>€1200 - Voor middelgrote projecten</p>
+        </div>
+        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
+            <h3>Premium pakket</h3>
+            <p>€2500 - Voor volledige, complexe projecten</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+</footer>
+
 </body>
 </html>
