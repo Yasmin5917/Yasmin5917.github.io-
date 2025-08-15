@@ -3,37 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prijzen - Mijn Website</title>
+    <title>Mijn Bedrijf - Prijzen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <img src="logo.png" alt="Logo" class="logo">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projecten.html">Projecten</a>
-        <a href="prijzen.html">Prijzen</a>
-        <a href="werkwijze.html">Werkwijze</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <!-- Navigatie -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">MijnLogo</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prijzen.html" class="active">Prijzen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="afspraak.html">Afspraak maken</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section>
-    <div class="container">
-        <h2>Onze Prijzen</h2>
-        <p>Wij bieden transparante prijzen zonder verborgen kosten. Kies het pakket dat het beste bij uw wensen past.</p>
-        <ul>
-            <li>Pakket Basis - €100</li>
-            <li>Pakket Standaard - €200</li>
-            <li>Pakket Premium - €350</li>
-        </ul>
-    </div>
-</section>
+    <!-- Prijzen sectie -->
+    <main>
+        <section class="content-container">
+            <h1>Onze Prijzen</h1>
+            <table class="price-table">
+                <tr>
+                    <th>Dienst</th>
+                    <th>Prijs</th>
+                </tr>
+                <tr>
+                    <td>Consult</td>
+                    <td>€50</td>
+                </tr>
+                <tr>
+                    <td>Volledige service</td>
+                    <td>€150</td>
+                </tr>
+                <tr>
+                    <td>Premium pakket</td>
+                    <td>€250</td>
+                </tr>
+            </table>
+        </section>
+    </main>
 
-<footer>
-    &copy; 2025 Mijn Website | Alle rechten voorbehouden
-</footer>
+    <footer>
+        <p>© 2025 Mijn Bedrijf. Alle rechten voorbehouden.</p>
+    </footer>
 
 </body>
 </html>
