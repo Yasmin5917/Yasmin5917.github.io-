@@ -24,7 +24,9 @@ body.dark {
 }
 
 .logo img {
-  height: 70px;
+  height: 100px;   /* Groter logo voor desktop */
+  width: auto;
+  display: block;
 }
 
 .nav-links {
@@ -68,9 +70,7 @@ body.dark {
   background-color: #0093c4;
 }
 
-/* ===========================
-   HAMBURGER MENU
-=========================== */
+/* Hamburger menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -133,7 +133,7 @@ body.dark {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 110px;  /* Iets lager zodat logo niet overlapt */
     right: 0;
     background: #002d4f;
     width: 200px;
@@ -145,6 +145,10 @@ body.dark {
   .nav-links.show {
     display: flex;
     animation: slideDown 0.3s ease forwards;
+  }
+
+  .logo img {
+    height: 70px;  /* Kleinere hoogte voor mobiel */
   }
 }
 
