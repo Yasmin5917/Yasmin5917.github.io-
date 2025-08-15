@@ -3,65 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Mijn Website</title>
+    <title>Contact - Jouw Bedrijf</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="header">
-    <div class="container header-container">
+    <header class="navbar">
         <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="Mijn Logo"></a>
+            <img src="logo.png" alt="Logo">
         </div>
-        <nav class="nav">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
                 <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
                 <li><a href="werkwijze.html">Werkwijze</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </div>
-</header>
+    </header>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>Neem Contact Op</h1>
-        <p>Wij staan klaar om je vragen te beantwoorden</p>
-    </div>
-</section>
+    <section class="contact-page">
+        <h1>Neem contact met ons op</h1>
+        <p>Vul onderstaand formulier in of bel ons direct.</p>
 
-<section class="container" style="padding:60px 0;">
-    <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center;">
-        <!-- Contactinformatie -->
-        <div style="flex:1 1 300px; background: rgba(20,30,50,0.85); padding:30px; border-radius:12px;">
-            <h2>Contactinformatie</h2>
-            <p><strong>Adres:</strong> Voorbeeldstraat 12, 1234 AB, Stad</p>
-            <p><strong>Telefoon:</strong> +31 6 12345678</p>
-            <p><strong>Email:</strong> info@mijnwebsite.nl</p>
-            <p><strong>Openingstijden:</strong><br>
-               Ma-Vr: 09:00 - 18:00<br>
-               Za: 10:00 - 16:00</p>
-        </div>
+        <form action="#" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Naam" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="tel" name="phone" placeholder="Telefoon">
+            <textarea name="message" placeholder="Bericht" required></textarea>
+            <button type="submit">Verstuur</button>
+        </form>
+    </section>
 
-        <!-- Contactformulier -->
-        <div style="flex:1 1 300px; background: rgba(20,30,50,0.85); padding:30px; border-radius:12px;">
-            <h2>Stuur ons een bericht</h2>
-            <form action="#" method="post" style="display:flex; flex-direction:column; gap:15px;">
-                <input type="text" name="naam" placeholder="Naam" required style="padding:10px; border-radius:6px; border:none;">
-                <input type="email" name="email" placeholder="Email" required style="padding:10px; border-radius:6px; border:none;">
-                <input type="text" name="onderwerp" placeholder="Onderwerp" required style="padding:10px; border-radius:6px; border:none;">
-                <textarea name="bericht" placeholder="Bericht" rows="5" required style="padding:10px; border-radius:6px; border:none;"></textarea>
-                <button type="submit" style="padding:12px; border:none; border-radius:6px; background:#ff6600; color:white; cursor:pointer;">Verstuur</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
-</footer>
-
+    <footer>
+        <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
