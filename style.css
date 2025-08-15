@@ -156,3 +156,17 @@ button {
 button:hover {
     background: #007bbd;
 }
+/* Sticky navbar */
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Smooth scroll (voor browsers die dit niet standaard ondersteunen) */
+html {
+    scroll-behavior: smooth;
+}
