@@ -1,201 +1,127 @@
-/* Algemene body instellingen */
-body {
-    font-family: 'Arial', sans-serif;
+/* Algemene instellingen */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f7fa;
-    color: #1b1b1b;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Header */
+body {
+    background-color: #f4f6f8;
+    color: #111;
+    line-height: 1.6;
+}
+
+/* Header en navigatie */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background-color: #0a3d62; /* donkerblauw */
-    color: white;
+    padding: 20px 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-header .logo {
-    height: 80px; /* logo groter maar menu niet */
+header img.logo {
+    height: 60px; /* Logo groter */
 }
 
-header nav ul {
-    display: flex;
-    gap: 30px;
+nav ul {
     list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-header nav a {
-    color: white;
+nav ul li a {
     text-decoration: none;
-    font-weight: bold;
+    color: #111;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-header nav a:hover {
-    color: #38ada9; /* subtiel aqua effect */
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #0077cc; /* Blauwe zee tint */
+    color: white;
+    padding: 100px 60px;
+    text-align: center;
+    border-bottom: 5px solid #005fa3;
 }
 
 /* Secties */
 section {
-    padding: 80px 5%;
-    border-bottom: 1px solid #d0e1f9; /* subtiele blauwe scheiding */
-    background-color: #ffffff;
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
     margin-bottom: 40px;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
-}
-
-/* Hero */
-.hero {
     text-align: center;
-    background-color: #38ada9; /* lichte zee blauwe achtergrond */
-    color: white;
-    border-radius: 8px;
-    padding: 100px 5%;
-    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #0077cc;
 }
 
-/* Steps / Werkwijze */
-.steps {
-    display: flex;
-    flex-wrap: wrap;
+/* Grid voor projecten/prijzen */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    justify-content: center;
 }
 
-.step-card {
-    background-color: #f5f7fa;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    flex: 1 1 250px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.step-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-/* Prijzen */
-.prices {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
-
-.price-card {
-    background-color: #ffffff;
-    border: 2px solid #38ada9;
+.card {
+    background: #ffffff;
+    padding: 20px;
     border-radius: 10px;
-    padding: 40px 20px;
-    text-align: center;
-    flex: 1 1 250px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.price-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-.price-card button {
-    margin-top: 15px;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0a3d62;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.price-card button:hover {
-    background-color: #38ada9;
-}
-
-/* Projecten */
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
-
-.project-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    flex: 1 1 300px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 15px;
-    text-align: center;
-}
-
-/* Contact form */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+/* Formulier */
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-width: 600px;
+    margin: auto;
 }
 
-.contact-form input, .contact-form textarea {
+input, textarea {
     padding: 12px;
     border-radius: 5px;
-    border: 1px solid #38ada9;
-    font-size: 16px;
-    resize: none;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
-.contact-form button {
-    padding: 12px;
+button {
+    background-color: #0077cc;
+    color: white;
+    padding: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #0a3d62;
-    color: white;
-    font-size: 16px;
     cursor: pointer;
+    font-weight: 600;
     transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #38ada9;
+button:hover {
+    background-color: #005fa3;
 }
 
 /* Footer */
 footer {
+    background-color: #111;
+    color: #fff;
     text-align: center;
-    padding: 30px 5%;
-    background-color: #0a3d62;
-    color: white;
-}
-
-/* Responsive */
-@media(max-width: 768px){
-    .steps, .prices, .projects {
-        flex-direction: column;
-        gap: 20px;
-    }
+    padding: 30px 60px;
+    margin-top: 60px;
 }
