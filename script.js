@@ -1,25 +1,24 @@
-// Header scroll effect
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if(window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+// Selecteer het formulier
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // voorkomt dat de pagina refresh
+
+    // Haal waarden op uit het formulier
+    const naam = form.naam.value.trim();
+    const email = form.email.value.trim();
+    const onderwerp = form.onderwerp.value.trim();
+    const bericht = form.bericht.value.trim();
+
+    // Eenvoudige validatie
+    if (!naam || !email || !onderwerp || !bericht) {
+        alert("Vul alle velden correct in!");
+        return;
     }
-});
 
-// Fade-in effect
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    });
-}, appearOptions);
+    // Simuleer succesvolle verzending
+    alert("Bedankt voor je bericht, " + naam + "! We nemen snel contact met je op.");
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+    // Reset het formulier
+    form.reset();
 });
