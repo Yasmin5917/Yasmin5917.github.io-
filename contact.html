@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="werkwijze.html">Werkwijze</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Contact</h1>
-        <p>Neem contact met ons op via het formulier hieronder</p>
-    </section>
+<header>
+  <div class="logo">
+    <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="werkwijze.html">Werkwijze</a></li>
+      <li><a href="prijzen.html">Prijzen</a></li>
+      <li><a href="projecten.html">Projecten</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section>
-        <h2>Contactformulier</h2>
-        <form>
-            <input type="text" name="naam" placeholder="Naam" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="bericht" placeholder="Bericht" rows="5" required></textarea>
-            <button type="submit">Verstuur</button>
-        </form>
-    </section>
+<section>
+  <h2>Neem Contact Op</h2>
+  <form action="#" method="post" style="display: grid; gap: 15px; max-width: 400px;">
+    <input type="text" name="naam" placeholder="Uw naam" required>
+    <input type="email" name="email" placeholder="Uw e-mail" required>
+    <textarea name="bericht" placeholder="Uw bericht" rows="5" required></textarea>
+    <button type="submit" style="background: #00bcd4; padding: 10px; border: none; color: white; cursor: pointer; font-weight: bold;">Verzenden</button>
+  </form>
+</section>
 
-    <footer>
-        &copy; 2025 Mijn Bedrijf | Alle rechten voorbehouden
-    </footer>
+<footer>
+  <p>© 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+</footer>
+
 </body>
 </html>
