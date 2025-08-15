@@ -3,60 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkwijze | Mijn Website</title>
+    <title>Werkwijze - Jouw Bedrijf</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-    <div class="container header-container">
-        <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="Mijn Logo"></a>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Logo"></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prijzen.html">Prijzen</a></li>
+                    <li><a href="projecten.html">Projecten</a></li>
+                    <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<section class="hero">
-    <div class="hero-text">
+    <section class="container">
         <h1>Onze Werkwijze</h1>
-        <p>Professioneel, gestructureerd en transparant</p>
-    </div>
-</section>
+        <ol class="werkwijze-steps">
+            <li>
+                <h2>Stap 1: Intake</h2>
+                <p>We luisteren naar uw wensen en behoeften.</p>
+            </li>
+            <li>
+                <h2>Stap 2: Voorstel</h2>
+                <p>We maken een passend voorstel en offerte.</p>
+            </li>
+            <li>
+                <h2>Stap 3: Uitvoering</h2>
+                <p>We voeren het project professioneel uit.</p>
+            </li>
+            <li>
+                <h2>Stap 4: Oplevering</h2>
+                <p>We leveren het project op en evalueren samen.</p>
+            </li>
+        </ol>
+    </section>
 
-<section class="container" style="padding:60px 0;">
-    <h2 style="text-align:center; margin-bottom:40px;">Hoe wij te werk gaan</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
-        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
-            <h3>Stap 1: Advies</h3>
-            <p>We luisteren naar jouw wensen en adviseren.</p>
-        </div>
-        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
-            <h3>Stap 2: Ontwerp</h3>
-            <p>We maken een strak en overzichtelijk design.</p>
-        </div>
-        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
-            <h3>Stap 3: Ontwikkeling</h3>
-            <p>We bouwen het project professioneel en stabiel.</p>
-        </div>
-        <div style="flex:1 1 250px; background: rgba(20,30,50,0.85); padding:20px; border-radius:12px; text-align:center;">
-            <h3>Stap 4: Oplevering</h3>
-            <p>Het project wordt opgeleverd en getest.</p>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
-</footer>
+    <footer class="footer">
+        &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
+    </footer>
 
 </body>
 </html>
