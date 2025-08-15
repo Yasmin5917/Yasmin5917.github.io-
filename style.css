@@ -8,18 +8,23 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #e0e0e0;
+    background-color: #0f172a; /* donkerblauwe achtergrond */
 }
 
 /* Header */
 header {
-    background-color: #2c3e50;
+    background-color: rgba(15,23,42,0.95); /* doorzichtige donkerblauw */
     color: #fff;
-    padding: 20px 40px;
+    padding: 15px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 header .logo {
@@ -29,60 +34,69 @@ header .logo {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #f39c12;
+    color: #38bdf8; /* lichte blauwe hover */
 }
 
 /* Hero sectie */
 .hero {
     background: url('hero.jpg') no-repeat center center/cover;
-    height: 60vh;
+    height: 70vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #ffffffcc;
     text-align: center;
+    padding-top: 80px;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1.5rem;
+    max-width: 700px;
 }
 
 /* Secties */
 section {
-    padding: 60px 40px;
+    padding: 80px 50px;
     text-align: center;
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #38bdf8;
 }
 
 /* Werkwijze stappen */
 .werkwijze-step {
-    background-color: #fff;
+    background-color: #1e293b; /* donkerblauw kaart */
     margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    max-width: 600px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    max-width: 650px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.werkwijze-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
 }
 
 /* Projecten */
@@ -90,77 +104,100 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .project {
-    background-color: #fff;
-    width: 300px;
-    border-radius: 10px;
+    background-color: #1e293b;
+    width: 320px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
 }
 
 .project img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
 
 .project h3 {
-    padding: 10px;
+    padding: 12px;
+    color: #38bdf8;
 }
 
 .project p {
-    padding: 0 10px 10px 10px;
+    padding: 0 12px 12px 12px;
+    color: #e0e0e0;
 }
 
 /* Prijzen */
 .prijs-card {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 400px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #1e293b;
+    padding: 25px;
+    margin: 25px auto;
+    border-radius: 12px;
+    max-width: 420px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prijs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
 }
 
 /* Contactformulier */
 .contact-form {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background-color: #1e293b;
+    color: #e0e0e0;
     font-size: 1rem;
 }
 
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
 .contact-form button {
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    background-color: #2c3e50;
-    color: #fff;
+    border-radius: 8px;
+    background-color: #38bdf8;
+    color: #0f172a;
     font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #f39c12;
+    background-color: #0ea5e9;
+    transform: translateY(-3px);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: #fff;
+    padding: 25px;
+    background-color: #0f172a;
+    color: #94a3b8;
 }
