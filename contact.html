@@ -7,53 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero -->
-    <section class="hero hero-contact">
-        <h1>Neem Contact Op</h1>
-        <p>Heeft u vragen of wilt u een afspraak maken? Vul het formulier in of bel ons.</p>
-    </section>
+<header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="prijzen.html">Prijzen</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Contact Formulier -->
-    <section id="contact-form">
-        <h2>Contactformulier</h2>
-        <form action="#" method="POST">
-            <label for="naam">Naam</label>
-            <input type="text" id="naam" name="naam" placeholder="Uw naam" required>
+<section class="hero hero-contact">
+    <h1>Neem Contact Op</h1>
+    <p>Stuur ons een bericht of maak een afspraak. Wij helpen je graag verder!</p>
+</section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Uw email" required>
+<section id="contact-form">
+    <h2>Contactformulier</h2>
+    <form action="#" method="post">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required>
 
-            <label for="bericht">Bericht</label>
-            <textarea id="bericht" name="bericht" placeholder="Uw bericht" required></textarea>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
 
-            <button type="submit">Verstuur</button>
-        </form>
-    </section>
+        <label for="bericht">Bericht:</label>
+        <textarea id="bericht" name="bericht" rows="5" required></textarea>
 
-    <!-- Contact Info -->
-    <section id="contact-info">
-        <h2>Onze Contactgegevens</h2>
-        <p><strong>Telefoon:</strong> 012-3456789</p>
-        <p><strong>Email:</strong> info@mijnwebsite.nl</p>
-        <p><strong>Adres:</strong> Straatnaam 123, 1234 AB Stad</p>
-    </section>
+        <button type="submit">Verstuur</button>
+    </form>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 Mijn Website | Alle rechten voorbehouden
-    </footer>
+<footer>
+    &copy; 2025 Mijn Website. Alle rechten voorbehouden.
+</footer>
+
 </body>
 </html>
