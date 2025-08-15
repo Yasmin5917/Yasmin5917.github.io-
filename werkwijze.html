@@ -3,45 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkwijze</title>
+    <title>Werkwijze - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="werkwijze.html">Werkwijze</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
                 <li><a href="projecten.html">Projecten</a></li>
+                <li><a href="prijzen.html">Prijzen</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <section class="hero">
-        <div>
-            <h1>Onze Werkwijze</h1>
-            <p>Hoe wij projecten professioneel aanpakken</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Stap voor Stap</h2>
-        <p>Hier kan je uitleggen hoe je te werk gaat, bijvoorbeeld:</p>
-        <ul>
-            <li>Consultatie en analyse</li>
-            <li>Planning en ontwerp</li>
-            <li>Uitvoering en controle</li>
-            <li>Oplevering en feedback</li>
-        </ul>
-    </section>
-
+    <main>
+        <section class="process">
+            <h2>Onze Werkwijze</h2>
+            <div class="steps">
+                <div class="step">Stap 1: Idee</div>
+                <div class="step">Stap 2: Ontwerp</div>
+                <div class="step">Stap 3: Uitvoering</div>
+                <div class="step">Stap 4: Oplevering</div>
+            </div>
+        </section>
+    </main>
     <footer>
-        &copy; 2025 Mijn Bedrijf. Alle rechten voorbehouden.
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
