@@ -1,4 +1,4 @@
-/* Algemene stijlen */
+/* Algemene reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +7,8 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #0a0a23;
     color: #fff;
-    line-height: 1.6;
 }
 
 /* Header en navigatie */
@@ -21,19 +20,22 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: rgba(0, 0, 50, 0.7); /* donkerblauwe doorzichtige achtergrond */
+    background-color: rgba(0, 0, 20, 0.8);
     z-index: 1000;
 }
 
 .logo img {
     height: 50px;
-    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: #fff;
     text-decoration: none;
-    margin-left: 30px;
+    color: #fff;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -43,11 +45,30 @@ body {
     color: #1e90ff;
 }
 
-/* Prijzen sectie */
-.prijzen {
-    padding: 120px 50px 50px 50px; /* extra padding top voor vaste header */
-    background: url('images/background.jpg') no-repeat center center/cover;
-    min-height: 100vh;
+/* Hero sectie (home) */
+.hero {
+    height: 100vh;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Secties algemene styling */
+section {
+    padding: 100px 50px;
 }
 
 .container {
@@ -55,64 +76,129 @@ body {
     margin: 0 auto;
 }
 
-.prijzen h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: #1e90ff;
+/* Werkwijze sectie */
+.werkwijze {
+    background: url('images/werkwijze-bg.jpg') no-repeat center center/cover;
+    min-height: 100vh;
 }
 
-.prijs-cards {
+.stappen-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 50px;
 }
 
-.prijs-card {
+.stap-card {
     background-color: rgba(0, 0, 50, 0.8);
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.prijs-card:hover {
+.stap-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.prijs-card h3 {
+.stap-card h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
     color: #1e90ff;
 }
 
-.prijs-card p {
+.stap-card p {
+    font-size: 1rem;
+}
+
+/* Projecten sectie */
+.projecten {
+    background-color: #0a0a23;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.project-card {
+    flex: 1 1 300px;
+    background-color: rgba(0, 0, 50, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin: 15px;
+    color: #1e90ff;
 }
 
-.prijs-card ul {
-    list-style: none;
+.project-card p {
+    margin: 0 15px 15px 15px;
+}
+
+/* Contact sectie */
+.contact {
+    background: url('images/contact-bg.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+.contact form {
+    background-color: rgba(0, 0, 50, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
     margin-bottom: 20px;
-}
-
-.prijs-card ul li {
-    margin: 10px 0;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 10px 25px;
-    color: #fff;
-    background-color: #1e90ff;
     border-radius: 5px;
-    text-decoration: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 15px 30px;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: #104e8b;
+.contact form button:hover {
+    background-color: #63b3ed;
+}
+
+/* Footer */
+footer {
+    background-color: #02021f;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    color: #aaa;
 }
