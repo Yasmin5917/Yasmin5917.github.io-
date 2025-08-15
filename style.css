@@ -1,152 +1,228 @@
-/* ===== Algemene instellingen ===== */
+/* ===== Algemene Stijlen ===== */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #222;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
 
-/* ===== Header ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 50px;
+}
+
+/* ===== Header & Navigatie ===== */
 .header {
-    position: fixed;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.85); /* Doorzichtig wit */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     z-index: 1000;
-    padding: 10px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
 
 .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 15px 20px;
 }
 
 .logo img {
-    height: 60px; /* Pas logo grootte aan */
+    height: 50px;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .nav ul li a {
     text-decoration: none;
-    color: #222;
-    font-weight: bold;
-    transition: 0.3s;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
 .nav ul li a:hover,
 .nav ul li a.active {
-    color: #ff6600;
+    background-color: #007BFF;
+    color: white;
 }
 
-/* ===== Hero Section ===== */
+/* ===== Hero sectie (optioneel) ===== */
 .hero {
-    background: url('background.jpg') no-repeat center center/cover;
-    height: 90vh;
+    width: 100%;
+    height: 400px;
+    background: url('hero.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* ===== Prijzen pagina ===== */
+.prijzen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.prijs-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
     text-align: center;
-    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.4);
+.prijs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-.hero-text {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
+.prijs-card h2 {
+    color: #007BFF;
     margin-bottom: 15px;
 }
 
-.hero-text p {
-    font-size: 1.2rem;
+.prijs-card p {
+    margin-bottom: 10px;
 }
 
-/* ===== Secties ===== */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
+/* ===== Projecten pagina ===== */
+.projecten-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
 
-/* ===== Contact en Formulieren ===== */
-form input, form textarea {
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.project-card h2 {
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* ===== Werkwijze pagina ===== */
+.werkwijze-steps {
+    list-style: none;
+    margin-top: 40px;
+    counter-reset: step;
+}
+
+.werkwijze-steps li {
+    margin-bottom: 30px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.werkwijze-steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #007BFF;
+    color: white;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* ===== Contactpagina ===== */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    max-width: 600px;
+    margin: 40px auto 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 12px;
+    margin-bottom: 20px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 1rem;
 }
 
-form button {
-    background-color: #ff6600;
+.contact-form button {
+    background-color: #007BFF;
     color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 12px;
     border-radius: 6px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #e65c00;
+.contact-form button:hover {
+    background-color: #0056b3;
 }
 
 /* ===== Footer ===== */
 .footer {
     text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
-    margin-top: 60px;
+    padding: 25px 0;
+    background-color: #f1f1f1;
+    color: #555;
+    margin-top: 50px;
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsiveness ===== */
 @media (max-width: 768px) {
     .nav ul {
         flex-direction: column;
-        background: rgba(255,255,255,0.95);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        display: none;
+        gap: 10px;
     }
-
-    .nav ul.show {
-        display: flex;
-    }
-
-    .nav ul li {
-        padding: 15px;
-        text-align: center;
+    .container {
+        margin: 120px 15px 50px;
     }
 }
