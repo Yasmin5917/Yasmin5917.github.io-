@@ -1,100 +1,66 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Werkwijze | Jouw Website</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    // Mobiel menu toggle
-    document.addEventListener("DOMContentLoaded", function() {
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
-
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-      });
-    });
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Werkwijze - Jouw Bedrijf</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
-
-  <!-- Navigatie -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Logo" class="big-logo" /></a>
-      </div>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
-        <li><a href="prijzen.html">Prijzen</a></li>
-        <li><a href="projecten.html">Projecten</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="contact.html" class="btn-cta">Afspraak maken</a></li>
-      </ul>
-
-      <!-- Hamburger menu voor mobiel -->
-      <div class="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+<body>
+  <header class="navbar">
+    <div class="logo"><img src="logo.png" alt="Logo"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="werkwijze.html" class="active">Werkwijze</a></li>
+      <li><a href="prijzen.html">Prijzen</a></li>
+      <li><a href="projecten.html">Projecten</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hoofdinhoud -->
   <main>
-    <div class="container page-wrapper">
-      <section class="intro-section">
-        <h1>Mijn werkwijze</h1>
-        <p>Hier lees je stap voor stap hoe ik te werk ga om jouw perfecte website te maken.</p>
-      </section>
+    <section class="hero">
+      <h1>Onze Werkwijze</h1>
+      <p>Wij werken gestructureerd en professioneel, van concept tot oplevering.</p>
+    </section>
 
-      <ol class="werkwijze-list">
-        <li>
-          <h2>Kennismakingsgesprek</h2>
-          <p>In een eerste gesprek bespreken we jouw wensen en doelen voor de website.</p>
-        </li>
-        <li>
-          <h2>Wireframes & concept</h2>
-          <p>Ik maak een overzichtelijke schets van de website structuur en layout.</p>
-        </li>
-        <li>
-          <h2>Ontwerp & akkoord</h2>
-          <p>We werken samen aan het design totdat jij helemaal tevreden bent.</p>
-        </li>
-        <li>
-          <h2>Technische ontwikkeling</h2>
-          <p>Ik bouw de website, zorg voor snelheid en optimale functionaliteit.</p>
-        </li>
-        <li>
-          <h2>Content & SEO</h2>
-          <p>Samen vullen we de website met teksten en optimaliseren we deze voor zoekmachines.</p>
-        </li>
-        <li>
-          <h2>Testen & livegang</h2>
-          <p>De website wordt getest en daarna online gezet.</p>
-        </li>
-        <li>
-          <h2>Beveiliging</h2>
-          <p>Ik zorg dat de website veilig is met SSL en updates.</p>
-        </li>
-        <li>
-          <h2>Onderhoud & ondersteuning</h2>
-          <p>Na livegang blijf ik de website updaten en ondersteunen.</p>
-        </li>
-      </ol>
-    </div>
+    <section class="section">
+      <h2>Stap voor Stap</h2>
+      <div class="prijzen-container">
+        <div class="prijs-kaart">
+          <h3>1. Analyse</h3>
+          <p>We begrijpen jouw behoeften door uitgebreid onderzoek en gesprekken.</p>
+        </div>
+        <div class="prijs-kaart">
+          <h3>2. Strategie</h3>
+          <p>We ontwikkelen een plan op maat dat jouw doelen maximaal ondersteunt.</p>
+        </div>
+        <div class="prijs-kaart">
+          <h3>3. Implementatie</h3>
+          <p>Onze experts voeren het plan professioneel en efficiënt uit.</p>
+        </div>
+        <div class="prijs-kaart">
+          <h3>4. Evaluatie</h3>
+          <p>We meten resultaten en optimaliseren waar nodig voor het beste resultaat.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Jouw Website. Alle rechten voorbehouden.</p>
-    </div>
+    &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
