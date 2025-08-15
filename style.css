@@ -24,7 +24,7 @@ body.dark {
 }
 
 .logo img {
-  height: 100px;   /* Groter logo voor desktop */
+  height: 150px;   /* Groter logo voor desktop */
   width: auto;
   display: block;
 }
@@ -133,7 +133,7 @@ body.dark {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 110px;  /* Iets lager zodat logo niet overlapt */
+    top: 120px;  /* Iets lager zodat logo niet overlapt */
     right: 0;
     background: #002d4f;
     width: 200px;
@@ -148,7 +148,7 @@ body.dark {
   }
 
   .logo img {
-    height: 70px;  /* Kleinere hoogte voor mobiel */
+    height: 100px;  /* Groter logo voor mobiel */
   }
 }
 
