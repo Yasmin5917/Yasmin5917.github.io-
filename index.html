@@ -3,99 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Professionele Website</title>
+    <title>Home - Mijn Website</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="nav.js"></script>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="logo.png" alt="Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="werkwijze.html">Werkwijze</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="projecten.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
+            <li><a href="prijzen.html">Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
-    <!-- HERO SECTION -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>Welkom bij Onze Professionele Website</h1>
-            <p>We leveren kwaliteit en innovatie in elk project.</p>
-            <a href="contact.html" class="btn-primary">Afspraak Maken</a>
+        <div class="hero-content">
+            <h1>Welkom bij Onze Website</h1>
+            <p>Professionele oplossingen voor uw projecten</p>
+            <a href="contact.html" class="btn">Maak een afspraak</a>
         </div>
     </section>
 
-    <!-- WERKWIJZE SECTION -->
-    <section id="werkwijze" class="section">
-        <h2>Onze Werkwijze</h2>
-        <div class="steps">
-            <div class="step">
-                <h3>Stap 1</h3>
-                <p>Intake en analyse van uw wensen.</p>
-            </div>
-            <div class="step">
-                <h3>Stap 2</h3>
-                <p>Planning en ontwerp van het project.</p>
-            </div>
-            <div class="step">
-                <h3>Stap 3</h3>
-                <p>Uitvoering en kwaliteitscontrole.</p>
-            </div>
-            <div class="step">
-                <h3>Stap 4</h3>
-                <p>Oplevering en nazorg.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRIJZEN SECTION -->
-    <section id="prijzen" class="section">
-        <h2>Onze Prijzen</h2>
-        <div class="pricing-cards">
+    <!-- Diensten -->
+    <section class="diensten">
+        <h2>Onze Diensten</h2>
+        <div class="cards">
             <div class="card">
-                <h3>Basic</h3>
-                <p>€199 / project</p>
+                <h3>Consulting</h3>
+                <p>Strategisch advies voor uw bedrijf.</p>
             </div>
             <div class="card">
-                <h3>Standard</h3>
-                <p>€399 / project</p>
+                <h3>Project Management</h3>
+                <p>Efficiëntie en resultaatgericht werken.</p>
             </div>
             <div class="card">
-                <h3>Premium</h3>
-                <p>€699 / project</p>
+                <h3>Support</h3>
+                <p>24/7 ondersteuning voor al uw vragen.</p>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTEN SECTION -->
-    <section id="projecten" class="section">
-        <h2>Onze Projecten</h2>
-        <div class="projects-grid">
-            <div class="project">Project 1</div>
-            <div class="project">Project 2</div>
-            <div class="project">Project 3</div>
-            <div class="project">Project 4</div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <form action="contact.html" method="POST">
-            <input type="text" placeholder="Naam" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Bericht" required></textarea>
-            <button type="submit">Verstuur</button>
-        </form>
-    </section>
-
-    <script src="nav.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mijn Website. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
