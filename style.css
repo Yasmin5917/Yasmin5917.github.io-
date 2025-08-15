@@ -1,110 +1,118 @@
-/* Algemene instellingen */
+/* Algemene stijlen */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #0d1b2a; /* Donkerblauw */
-    color: #f5f5f5;
+    background-color: #121212;
+    color: #fff;
     line-height: 1.6;
 }
 
-/* Header */
-header {
+/* Header en navigatie */
+.main-header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    background: rgba(13, 27, 42, 0.95); /* Donkerblauw transparant */
-    backdrop-filter: blur(6px);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 15px 50px;
+    background: rgba(0, 0, 50, 0.7); /* donkerblauwe doorzichtige achtergrond */
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
-header img {
+.logo img {
     height: 50px;
-    margin-right: 40px;
+    object-fit: contain;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: #f5f5f5;
+.nav-links a {
+    color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
+    margin-left: 30px;
+    font-weight: bold;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #4cc9f0; /* Lichtblauw accent */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #1e90ff;
 }
 
-/* Hero sectie */
-.hero {
-    height: 100vh;
-    background: url('achtergrond.jpg') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 60px;
-    color: white;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+/* Prijzen sectie */
+.prijzen {
+    padding: 120px 50px 50px 50px; /* extra padding top voor vaste header */
+    background: url('images/background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 500px;
-}
-
-/* Containers voor content */
 .container {
     max-width: 1200px;
-    margin: 120px auto;
-    padding: 20px;
-    background: #1b263b; /* Iets lichtere blauw */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    margin: 0 auto;
 }
 
-/* Knoppen */
-.btn {
-    display: inline-block;
-    background: #4cc9f0;
-    color: #0d1b2a;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background: #3bb2d6;
-}
-
-/* Footer */
-footer {
-    background: #1b263b;
-    color: #f5f5f5;
-    padding: 20px 0;
+.prijzen h2 {
     text-align: center;
-    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #1e90ff;
+}
+
+.prijs-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.prijs-card {
+    background-color: rgba(0, 0, 50, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.prijs-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.prijs-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1e90ff;
+}
+
+.prijs-card p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.prijs-card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.prijs-card ul li {
+    margin: 10px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #fff;
+    background-color: #1e90ff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #104e8b;
 }
