@@ -3,53 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Bedrijf - Prijzen</title>
+    <title>Prijzen - Jouw Bedrijf</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigatie -->
-    <header>
-        <nav class="navbar">
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-content">
             <div class="logo">
-                <a href="index.html">MijnLogo</a>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo van Jouw Bedrijf">
+                </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="prijzen.html" class="active">Prijzen</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="afspraak.html">Afspraak maken</a></li>
-            </ul>
-        </nav>
+            <nav class="nav-links" aria-label="Hoofdmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="werkwijze.html">Werkwijze</a></li>
+                    <li><a href="projecten.html">Projecten</a></li>
+                    <li><a href="prijzen.html" class="active">Prijzen</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Prijzen sectie -->
-    <main>
-        <section class="content-container">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
             <h1>Onze Prijzen</h1>
-            <table class="price-table">
-                <tr>
-                    <th>Dienst</th>
-                    <th>Prijs</th>
-                </tr>
-                <tr>
-                    <td>Consult</td>
-                    <td>€50</td>
-                </tr>
-                <tr>
-                    <td>Volledige service</td>
-                    <td>€150</td>
-                </tr>
-                <tr>
-                    <td>Premium pakket</td>
-                    <td>€250</td>
-                </tr>
-            </table>
+            <p>Duidelijke en eerlijke tarieven voor onze diensten.</p>
+        </div>
+    </section>
+
+    <!-- Prijzentabel -->
+    <main>
+        <section class="container pricing">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p class="price">€199</p>
+                <ul>
+                    <li>Basispakket</li>
+                    <li>1 project</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="contact.html" class="btn-primary">Kies dit pakket</a>
+            </div>
+
+            <div class="pricing-card highlight">
+                <h3>Professioneel</h3>
+                <p class="price">€499</p>
+                <ul>
+                    <li>Uitgebreid pakket</li>
+                    <li>Tot 5 projecten</li>
+                    <li>Persoonlijk contact</li>
+                </ul>
+                <a href="contact.html" class="btn-primary">Kies dit pakket</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Premium</h3>
+                <p class="price">€999</p>
+                <ul>
+                    <li>Alles inclusief</li>
+                    <li>Onbeperkte projecten</li>
+                    <li>24/7 support</li>
+                </ul>
+                <a href="contact.html" class="btn-primary">Kies dit pakket</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2025 Mijn Bedrijf. Alle rechten voorbehouden.</p>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+        </div>
     </footer>
 
 </body>
