@@ -1,3 +1,4 @@
+/* ALGEMENE STIJLEN */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,6 +14,7 @@ body {
     padding: 20px 0;
 }
 
+/* HEADER EN NAVIGATIE */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -49,7 +51,7 @@ body {
     text-decoration: underline;
 }
 
-/* HAMBURGER */
+/* HAMBURGER MENU */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -80,10 +82,12 @@ body {
     font-size: 1.2em;
 }
 
-.intro h2, .prijzen h2 {
+/* SECTIE TITELS */
+.intro h2, .prijzen h2, .werkwijze h2, .projecten h2, .contact h2 {
     text-align: center;
 }
 
+/* PRIJZEN KAARTEN */
 .prijs-kaarten {
     display: flex;
     flex-wrap: wrap;
@@ -110,6 +114,7 @@ body {
     margin: 10px 0;
 }
 
+/* FOOTER */
 footer {
     background-color: #0077cc;
     color: white;
@@ -143,7 +148,7 @@ footer {
         display: flex;
     }
 
-    .prijs-kaarten {
+    .prijs-kaarten, .projecten-lijst {
         flex-direction: column;
         align-items: center;
     }
