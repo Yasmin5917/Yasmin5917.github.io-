@@ -1,24 +1,8 @@
-// Selecteer het formulier
-const form = document.querySelector('form');
+m// Selecteer de menu toggle en de navigatie
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links ul');
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); // voorkomt dat de pagina refresh
-
-    // Haal waarden op uit het formulier
-    const naam = form.naam.value.trim();
-    const email = form.email.value.trim();
-    const onderwerp = form.onderwerp.value.trim();
-    const bericht = form.bericht.value.trim();
-
-    // Eenvoudige validatie
-    if (!naam || !email || !onderwerp || !bericht) {
-        alert("Vul alle velden correct in!");
-        return;
-    }
-
-    // Simuleer succesvolle verzending
-    alert("Bedankt voor je bericht, " + naam + "! We nemen snel contact met je op.");
-
-    // Reset het formulier
-    form.reset();
+// Voeg een klik-event toe aan de toggle
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Toggle de 'active'-klasse
 });
