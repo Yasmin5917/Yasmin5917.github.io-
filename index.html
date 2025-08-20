@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="main-header">
     <div class="logo">
         <img src="images/logo.png" alt="Logo">
@@ -20,7 +19,7 @@
         <span></span>
     </div>
 
-    <nav class="nav-links">
+    <nav class="nav-links" id="nav-links">
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="werkwijze.html">Werkwijze</a></li>
@@ -30,19 +29,16 @@
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <h1>Welkom bij Jouw Bedrijf</h1>
     <p>Wij leveren professionele oplossingen voor al uw projecten.</p>
 </section>
 
-<!-- OVER ONS -->
 <section class="intro container">
     <h2>Over Ons</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in neque eget justo malesuada semper.</p>
 </section>
 
-<!-- PRIJZEN -->
 <section class="prijzen container">
     <h2>Onze Prijzen</h2>
     <div class="prijs-kaarten">
@@ -64,20 +60,20 @@
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
 </footer>
 
-<!-- JS voor hamburger menu -->
+<!-- JS -->
 <script>
 const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const navLinks = document.getElementById('nav-links');
 
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     menuToggle.classList.toggle('active');
 });
 </script>
+
 </body>
 </html>
