@@ -1,8 +1,12 @@
-m// Selecteer de menu toggle en de navigatie
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links ul');
+// Selecteer de hamburger en het navigatiemenu
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
 
-// Voeg een klik-event toe aan de toggle
+// Voeg een klik-event toe aan de hamburger
 menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); // Toggle de 'active'-klasse
+    // Toggle de 'active' class voor het menu (om te laten zien/verbergen)
+    navLinks.classList.toggle('active');
+
+    // Toggle de 'active' class voor de hamburger zelf (animatie)
+    menuToggle.classList.toggle('active');
 });
