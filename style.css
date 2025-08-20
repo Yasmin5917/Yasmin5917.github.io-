@@ -85,6 +85,7 @@ body {
         right: 0;
         width: 200px;
         display: none;
+        padding: 1rem;
     }
 
     .nav-links ul.active {
@@ -124,6 +125,7 @@ body {
     font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s ease;
+    display: inline-block;
 }
 
 .btn-primary:hover {
@@ -131,7 +133,7 @@ body {
 }
 
 /* ==============================
-   Secties
+   Secties algemeen
 ============================== */
 section {
     padding: 3rem 0;
@@ -166,6 +168,11 @@ section p {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
 }
 
 .step h3 {
@@ -204,6 +211,60 @@ section p {
     padding: 1rem;
 }
 
+.project-card h3 {
+    color: #1e3a5f;
+}
+
+/* ==============================
+   Prijzenpagina
+============================== */
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.pricing-card h3 {
+    color: #1e3a5f;
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card ul li {
+    margin: 0.5rem 0;
+}
+
+.pricing-card.highlight {
+    border: 2px solid #ffd700;
+    transform: scale(1.05);
+}
+
 /* ==============================
    Contactpagina (formulier)
 ============================== */
@@ -229,6 +290,11 @@ section p {
     margin-bottom: 1.2rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
 }
 
 .contact-form button {
