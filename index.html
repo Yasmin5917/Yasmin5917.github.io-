@@ -6,32 +6,17 @@
   <meta name="description" content="Jouw Bedrijf levert professionele oplossingen voor projecten. Bekijk onze werkwijze, projecten en prijzen." />
   <title>Home | Jouw Bedrijf</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Open Graph (voor betere weergave op social media) -->
-  <meta property="og:title" content="Jouw Bedrijf - Professionele oplossingen" />
-  <meta property="og:description" content="Bekijk onze werkwijze, projecten en prijzen." />
-  <meta property="og:image" content="images/logo.png" />
-  <meta property="og:type" content="website" />
 </head>
 <body>
-
   <!-- Header -->
   <header class="main-header">
     <div class="logo">
-      <a href="index.html" aria-label="Homepagina">
-        <img src="images/logo.png" alt="Logo van Jouw Bedrijf" />
-      </a>
+      <a href="index.html"><img src="images/logo.png" alt="Logo Jouw Bedrijf"></a>
     </div>
-
-    <!-- Mobiel menu -->
     <button class="menu-toggle" id="mobile-menu" aria-label="Menu openen/sluiten">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
-
-    <!-- Navigatie -->
-    <nav class="nav-links" id="nav-links" aria-label="Hoofdmenu">
+    <nav class="nav-links" id="nav-links">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="werkwijze.html">Werkwijze</a></li>
@@ -42,7 +27,7 @@
     </nav>
   </header>
 
-  <!-- Hero sectie -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
       <h1>Welkom bij Jouw Bedrijf</h1>
@@ -51,54 +36,18 @@
     </div>
   </section>
 
-  <!-- Introductie -->
+  <!-- Intro -->
   <main>
     <section class="intro container">
       <h2>Over Ons</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in neque eget justo malesuada semper.</p>
     </section>
-
-    <!-- Prijzen -->
-    <section class="prijzen container">
-      <h2>Onze Prijzen</h2>
-      <div class="prijs-kaarten">
-        <article class="kaart">
-          <h3>Basis Pakket</h3>
-          <p class="prijs">€199</p>
-          <p>Perfect voor kleine projecten.</p>
-        </article>
-        <article class="kaart">
-          <h3>Standaard Pakket</h3>
-          <p class="prijs">€399</p>
-          <p>Voor middelgrote projecten met extra opties.</p>
-        </article>
-        <article class="kaart">
-          <h3>Premium Pakket</h3>
-          <p class="prijs">€699</p>
-          <p>Uitgebreide oplossingen voor grote projecten.</p>
-        </article>
-      </div>
-    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
-    </div>
+    <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuToggle = document.getElementById("mobile-menu");
-      const navLinks = document.getElementById("nav-links");
-
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        menuToggle.classList.toggle("active");
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
