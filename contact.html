@@ -24,22 +24,22 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h1>Contact</h1>
-    <p>Neem gerust contact met ons op via onderstaand formulier:</p>
-    <form class="contact-form">
-      <label for="naam">Naam</label>
-      <input type="text" id="naam" name="naam" required>
+<main class="container">
+  <h1>Contact</h1>
+  <p>Neem gerust contact met ons op via onderstaand formulier:</p>
+  <form class="contact-form" action="contact.php" method="POST">
+    <label for="naam">Naam</label>
+    <input type="text" id="naam" name="naam" required>
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" required>
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
 
-      <label for="bericht">Bericht</label>
-      <textarea id="bericht" name="bericht" rows="5" required></textarea>
+    <label for="bericht">Bericht</label>
+    <textarea id="bericht" name="bericht" rows="5" required></textarea>
 
-      <button type="submit" class="btn-primary">Verstuur</button>
-    </form>
-  </main>
+    <button type="submit" class="btn-primary">Verstuur</button>
+  </form>
+</main>
 
   <footer>
     <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
