@@ -25,3 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeEls.forEach((el) => observer.observe(el));
 });
+// Parallax effect voor hero
+const hero = document.querySelector(".hero-bg");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  if (hero) {
+    hero.style.transform = `translateY(${scrollY * 0.3}px)`; // langzaam scrollen
+  }
+});
+
