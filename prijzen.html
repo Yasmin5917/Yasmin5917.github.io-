@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prijzen - Jouw Bedrijf</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ontdek onze prijsopties: basis, standaard en premium pakketten." />
+  <title>Prijzen | Jouw Bedrijf</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header class="main-header">
+  <header class="main-header">
     <div class="logo">
-        <img src="images/logo.png" alt="Logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo Jouw Bedrijf"></a>
     </div>
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <nav class="nav-links">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="projecten.html">Projecten</a></li>
-            <li><a href="prijzen.html" class="active">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <button class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="werkwijze.html">Werkwijze</a></li>
+        <li><a href="projecten.html">Projecten</a></li>
+        <li><a href="prijzen.html" class="active">Prijzen</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
+  <main class="container">
     <h1>Onze Prijzen</h1>
-    <p>Transparant en eerlijk, zonder verrassingen.</p>
-</section>
-
-<section class="intro container">
-    <h2>Prijsopties</h2>
-    <div class="pricing">
-        <div class="price-item">
-            <h3>Basis Pakket</h3>
-            <p>€250 - inclusief basisdiensten</p>
-        </div>
-        <div class="price-item">
-            <h3>Standaard Pakket</h3>
-            <p>€500 - inclusief extra services</p>
-        </div>
-        <div class="price-item">
-            <h3>Premium Pakket</h3>
-            <p>€1000 - volledig pakket met alles inbegrepen</p>
-        </div>
+    <div class="prijs-kaarten">
+      <article class="kaart">
+        <h2>Basis Pakket</h2>
+        <p class="prijs">€199</p>
+        <p>Perfect voor kleine projecten.</p>
+      </article>
+      <article class="kaart">
+        <h2>Standaard Pakket</h2>
+        <p class="prijs">€399</p>
+        <p>Voor middelgrote projecten met extra opties.</p>
+      </article>
+      <article class="kaart">
+        <h2>Premium Pakket</h2>
+        <p class="prijs">€699</p>
+        <p>Uitgebreide oplossingen voor grote projecten.</p>
+      </article>
     </div>
-</section>
+  </main>
 
-<footer>
-    &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
-</footer>
+  <footer>
+    <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
