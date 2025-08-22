@@ -7,8 +7,8 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #0d1117; /* donkerblauw-zwart */
-  color: #c9d1d9; /* lichtgrijs tekst */
+  background: #0d1117;
+  color: #c9d1d9;
   line-height: 1.6;
 }
 
@@ -51,7 +51,7 @@ body {
 
 .nav-links ul li a.active,
 .nav-links ul li a:hover {
-  color: #1f6feb; /* oceaan blauw accent */
+  color: #1f6feb;
 }
 
 /* ---------- MOBIEL MENU ---------- */
@@ -115,12 +115,13 @@ body {
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
   display: inline-block;
 }
 
 .btn-primary:hover {
-  background: #388bfd; /* lichtere blauw tint */
+  background: #388bfd;
+  transform: scale(1.05);
 }
 
 /* ---------- SECTIES ---------- */
@@ -222,10 +223,13 @@ p {
   border-color: #1f6feb;
 }
 
-.contact-form button {
-  margin-top: 1rem;
-  border: none;
-  cursor: pointer;
+/* ---------- FOOTER ---------- */
+footer {
+  background: #161b22;
+  color: #8b949e;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #30363d;
 }
 
 /* ---------- ANIMATIES ---------- */
@@ -242,24 +246,4 @@ html {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Hover effecten voor knoppen */
-.btn-primary {
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: #388bfd;
-  transform: scale(1.05);
-}
-
-
-/* ---------- FOOTER ---------- */
-footer {
-  background: #161b22;
-  color: #8b949e;
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid #30363d;
 }
