@@ -1,12 +1,26 @@
-// Selecteer de hamburger en het navigatiemenu
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("mobile-menu");
+  const navLinks = document.getElementById("nav-links");
 
-// Voeg een klik-event toe aan de hamburger
-menuToggle.addEventListener('click', () => {
-    // Toggle de 'active' class voor het menu (om te laten zien/verbergen)
-    navLinks.classList.toggle('active');
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
 
-    // Toggle de 'active' class voor de hamburger zelf (animatie)
-    menuToggle.classList.toggle('active');
+  // Fade-in animatie bij scroll
+  const fadeEls = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // niet opnieuw animeren
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  fadeEls.forEach((el) => observer.observe(el));
 });
