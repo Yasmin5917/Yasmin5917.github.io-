@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("mobile-menu");
   const navLinks = document.getElementById("nav-links");
 
+  // Menu toggle voor mobiel
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
     menuToggle.classList.toggle("active");
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // niet opnieuw animeren
+          observer.unobserve(entry.target);
         }
       });
     },
