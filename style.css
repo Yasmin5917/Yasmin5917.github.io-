@@ -1,14 +1,17 @@
-/* Basisstijl */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0d1117; /* donkerblauw-zwart */
+  color: #c9d1d9; /* lichtgrijs tekst */
   line-height: 1.6;
-  color: #333;
 }
+
 .container {
   width: 90%;
   max-width: 1100px;
@@ -16,55 +19,67 @@ body {
   padding: 2rem 0;
 }
 
-/* Header */
+/* ---------- HEADER ---------- */
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #004aad;
+  background: #161b22;
   padding: 1rem 2rem;
+  border-bottom: 1px solid #30363d;
 }
+
 .main-header .logo img {
   height: 50px;
 }
+
 .nav-links ul {
   display: flex;
   list-style: none;
 }
+
 .nav-links ul li {
   margin-left: 2rem;
 }
+
 .nav-links ul li a {
-  color: white;
+  color: #c9d1d9;
   text-decoration: none;
-  font-weight: bold;
-}
-.nav-links ul li a.active,
-.nav-links ul li a:hover {
-  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Mobiel menu */
+.nav-links ul li a.active,
+.nav-links ul li a:hover {
+  color: #1f6feb; /* oceaan blauw accent */
+}
+
+/* ---------- MOBIEL MENU ---------- */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
 }
+
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background: white;
+  background: #c9d1d9;
   margin: 4px 0;
 }
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #004aad;
+    background: #161b22;
     position: absolute;
     top: 70px;
     right: 0;
     width: 200px;
+    padding: 1rem;
+    border: 1px solid #30363d;
+    border-radius: 8px;
   }
   .nav-links.active {
     display: flex;
@@ -74,91 +89,150 @@ body {
   }
 }
 
-/* Hero */
+/* ---------- HERO ---------- */
 .hero {
-  background: url("images/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(135deg, #0d1117, #161b22);
   color: white;
   text-align: center;
   padding: 6rem 2rem;
+  border-bottom: 1px solid #30363d;
 }
+
 .hero h1 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
+
 .hero p {
-  margin: 1rem 0;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
+
 .btn-primary {
-  background: #ff6600;
+  background: #1f6feb;
   color: white;
   padding: 0.8rem 1.5rem;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
+  transition: background 0.3s ease;
+  display: inline-block;
 }
 
-/* Secties */
+.btn-primary:hover {
+  background: #388bfd; /* lichtere blauw tint */
+}
+
+/* ---------- SECTIES ---------- */
 h1, h2, h3 {
   margin-bottom: 1rem;
+  color: #f0f6fc;
 }
+
 p {
   margin-bottom: 1rem;
 }
 
-/* Projecten */
+/* ---------- PROJECTEN ---------- */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-.project img {
-  width: 100%;
+
+.project {
+  background: #161b22;
+  padding: 1.5rem;
   border-radius: 8px;
+  border: 1px solid #30363d;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Prijzen */
+.project:hover {
+  transform: translateY(-5px);
+  border-color: #1f6feb;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* ---------- PRIJZEN ---------- */
 .prijs-kaarten {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
+
 .kaart {
   flex: 1;
-  background: #f9f9f9;
+  background: #161b22;
   padding: 2rem;
   border-radius: 8px;
+  border: 1px solid #30363d;
   text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
+
+.kaart:hover {
+  transform: translateY(-5px);
+  border-color: #1f6feb;
+}
+
 .kaart h2 {
   margin-bottom: 0.5rem;
+  color: #f0f6fc;
 }
+
 .prijs {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #1f6feb;
   margin: 1rem 0;
 }
 
-/* Contactformulier */
+/* ---------- CONTACT FORM ---------- */
 .contact-form {
   display: flex;
   flex-direction: column;
+  background: #161b22;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #30363d;
 }
+
 .contact-form label {
   margin: 0.5rem 0 0.2rem;
 }
+
 .contact-form input,
 .contact-form textarea {
   padding: 0.8rem;
-  border: 1px solid #ccc;
+  border: 1px solid #30363d;
   border-radius: 5px;
-}
-.contact-form button {
-  margin-top: 1rem;
+  background: #0d1117;
+  color: #c9d1d9;
 }
 
-/* Footer */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1f6feb;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
-  background: #222;
-  color: white;
+  background: #161b22;
+  color: #8b949e;
   text-align: center;
   padding: 1rem;
+  border-top: 1px solid #30363d;
 }
