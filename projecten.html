@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecten - Jouw Bedrijf</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bekijk een selectie van onze afgeronde projecten bij Jouw Bedrijf." />
+  <title>Projecten | Jouw Bedrijf</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header class="main-header">
+  <header class="main-header">
     <div class="logo">
-        <img src="images/logo.png" alt="Logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo Jouw Bedrijf"></a>
     </div>
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <nav class="nav-links">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="projecten.html" class="active">Projecten</a></li>
-            <li><a href="prijzen.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <button class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="werkwijze.html">Werkwijze</a></li>
+        <li><a href="projecten.html" class="active">Projecten</a></li>
+        <li><a href="prijzen.html">Prijzen</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
+  <main class="container">
     <h1>Onze Projecten</h1>
-    <p>Bekijk een selectie van onze afgeronde projecten.</p>
-</section>
-
-<section class="intro container">
-    <h2>Projecten overzicht</h2>
-    <div class="projects">
-        <div class="project-item">
-            <img src="images/project1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Korte omschrijving van Project 1.</p>
-        </div>
-        <div class="project-item">
-            <img src="images/project2.jpg" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Korte omschrijving van Project 2.</p>
-        </div>
-        <div class="project-item">
-            <img src="images/project3.jpg" alt="Project 3">
-            <h3>Project 3</h3>
-            <p>Korte omschrijving van Project 3.</p>
-        </div>
+    <div class="project-grid">
+      <article class="project">
+        <img src="images/project1.jpg" alt="Project 1">
+        <h2>Project 1</h2>
+        <p>Korte beschrijving van dit project.</p>
+      </article>
+      <article class="project">
+        <img src="images/project2.jpg" alt="Project 2">
+        <h2>Project 2</h2>
+        <p>Korte beschrijving van dit project.</p>
+      </article>
+      <article class="project">
+        <img src="images/project3.jpg" alt="Project 3">
+        <h2>Project 3</h2>
+        <p>Korte beschrijving van dit project.</p>
+      </article>
     </div>
-</section>
+  </main>
 
-<footer>
-    &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
-</footer>
+  <footer>
+    <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
