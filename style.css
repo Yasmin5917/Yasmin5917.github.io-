@@ -223,6 +223,7 @@ p {
   border-color: #1f6feb;
 }
 
+
 /* ---------- FOOTER ---------- */
 footer {
   background: #161b22;
@@ -247,3 +248,33 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+.hero {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-bottom: 1px solid #30363d;
+  overflow: hidden; /* zorgt dat bg niet buiten sectie komt */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+  transform: translateY(0px);
+  transition: transform 0.2s ease-out;
+  opacity: 0.3; /* licht transparant voor leesbaarheid */
+}
+
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 1;
+}
+
