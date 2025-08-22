@@ -1,81 +1,104 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Jouw Bedrijf</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jouw Bedrijf levert professionele oplossingen voor projecten. Bekijk onze werkwijze, projecten en prijzen." />
+  <title>Home | Jouw Bedrijf</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph (voor betere weergave op social media) -->
+  <meta property="og:title" content="Jouw Bedrijf - Professionele oplossingen" />
+  <meta property="og:description" content="Bekijk onze werkwijze, projecten en prijzen." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:type" content="website" />
 </head>
 <body>
 
-<header class="main-header">
+  <!-- Header -->
+  <header class="main-header">
     <div class="logo">
-        <img src="images/logo.png" alt="Logo">
+      <a href="index.html" aria-label="Homepagina">
+        <img src="images/logo.png" alt="Logo van Jouw Bedrijf" />
+      </a>
     </div>
 
-    <div class="menu-toggle" id="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <!-- Mobiel menu -->
+    <button class="menu-toggle" id="mobile-menu" aria-label="Menu openen/sluiten">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <nav class="nav-links" id="nav-links">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="werkwijze.html">Werkwijze</a></li>
-            <li><a href="projecten.html">Projecten</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <!-- Navigatie -->
+    <nav class="nav-links" id="nav-links" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="werkwijze.html">Werkwijze</a></li>
+        <li><a href="projecten.html">Projecten</a></li>
+        <li><a href="prijzen.html">Prijzen</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
-    <h1>Welkom bij Jouw Bedrijf</h1>
-    <p>Wij leveren professionele oplossingen voor al uw projecten.</p>
-</section>
-
-<section class="intro container">
-    <h2>Over Ons</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in neque eget justo malesuada semper.</p>
-</section>
-
-<section class="prijzen container">
-    <h2>Onze Prijzen</h2>
-    <div class="prijs-kaarten">
-        <div class="kaart">
-            <h3>Basis Pakket</h3>
-            <p>€199</p>
-            <p>Perfect voor kleine projecten.</p>
-        </div>
-        <div class="kaart">
-            <h3>Standaard Pakket</h3>
-            <p>€399</p>
-            <p>Voor middelgrote projecten met extra opties.</p>
-        </div>
-        <div class="kaart">
-            <h3>Premium Pakket</h3>
-            <p>€699</p>
-            <p>Uitgebreide oplossingen voor grote projecten.</p>
-        </div>
+  <!-- Hero sectie -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welkom bij Jouw Bedrijf</h1>
+      <p>Wij leveren professionele oplossingen voor al uw projecten.</p>
+      <a href="contact.html" class="btn-primary">Neem contact op</a>
     </div>
-</section>
+  </section>
 
-<footer>
-    &copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.
-</footer>
+  <!-- Introductie -->
+  <main>
+    <section class="intro container">
+      <h2>Over Ons</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in neque eget justo malesuada semper.</p>
+    </section>
 
-<!-- JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
+    <!-- Prijzen -->
+    <section class="prijzen container">
+      <h2>Onze Prijzen</h2>
+      <div class="prijs-kaarten">
+        <article class="kaart">
+          <h3>Basis Pakket</h3>
+          <p class="prijs">€199</p>
+          <p>Perfect voor kleine projecten.</p>
+        </article>
+        <article class="kaart">
+          <h3>Standaard Pakket</h3>
+          <p class="prijs">€399</p>
+          <p>Voor middelgrote projecten met extra opties.</p>
+        </article>
+        <article class="kaart">
+          <h3>Premium Pakket</h3>
+          <p class="prijs">€699</p>
+          <p>Uitgebreide oplossingen voor grote projecten.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById("mobile-menu");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      });
     });
-});
-</script>
-
+  </script>
 </body>
 </html>
