@@ -54,6 +54,14 @@ body {
   color: #1f6feb;
 }
 
+/* ---------Logo ----- */
+
+.logo {
+    width: 150px;   /* Pas aan naar gewenste grootte */
+    height: auto;   /* Verhouding behouden */
+}
+
+
 /* ---------- MOBIEL MENU ---------- */
 .menu-toggle {
   display: none;
