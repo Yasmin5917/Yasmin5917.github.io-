@@ -19,10 +19,10 @@ body { font-family: "Segoe UI", Arial, sans-serif; background: #0d1117; color: #
 .main-header .logo img,
 img.logo {
   display: block;
-  max-height: 450px; /* groter en goed leesbaar */
+  max-height: 500px; /* groter en goed leesbaar */
   height: auto;
 }
-@media (max-width: 768px) { .main-header .logo img { max-height: 450px; } }
+@media (max-width: 768px) { .main-header .logo img { max-height: 500px; } }
 @media (max-width: 480px) { .main-header .logo img { max-height: 50px; } }
 
 /* NAV */
