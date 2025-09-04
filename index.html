@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Welkom bij Jouw Bedrijf, professionele oplossingen voor al uw projecten." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welkom bij Jouw Bedrijf, professionele oplossingen voor al uw projecten.">
   <title>Home | Jouw Bedrijf</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,14 +15,11 @@
       <img src="logo.png" alt="Logo Jouw Bedrijf" class="logo">
     </a>
   </div>
-
-  <!-- Hamburger menu -->
   <button class="menu-toggle" id="mobile-menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
-
   <nav class="nav-links" id="nav-links">
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -34,8 +31,8 @@
   </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero fade-in">
+<!-- HERO -->
+<section class="hero">
   <div class="hero-bg"></div>
   <h1>Welkom bij Jouw Bedrijf</h1>
   <p>Wij leveren professionele oplossingen voor al uw projecten.</p>
@@ -43,26 +40,26 @@
 </section>
 
 <!-- OVER ONS -->
-<section class="intro container fade-in">
+<section class="intro container">
   <h2>Over Ons</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in neque eget justo malesuada semper.</p>
 </section>
 
 <!-- PRIJZEN -->
-<section class="prijzen container fade-in">
+<section class="prijzen container">
   <h2>Onze Prijzen</h2>
   <div class="prijs-kaarten">
-    <div class="kaart fade-in">
+    <div class="kaart">
       <h2>Basis Pakket</h2>
       <p class="prijs">€199</p>
       <p>Perfect voor kleine projecten.</p>
     </div>
-    <div class="kaart fade-in">
+    <div class="kaart">
       <h2>Standaard Pakket</h2>
       <p class="prijs">€399</p>
       <p>Voor middelgrote projecten met extra opties.</p>
     </div>
-    <div class="kaart fade-in">
+    <div class="kaart">
       <h2>Premium Pakket</h2>
       <p class="prijs">€699</p>
       <p>Uitgebreide oplossingen voor grote projecten.</p>
@@ -74,14 +71,15 @@
   <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
 </footer>
 
-<!-- Script voor mobiel menu -->
 <script>
   const menuToggle = document.getElementById('mobile-menu');
   const navLinks = document.getElementById('nav-links');
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
 </script>
 
 </body>
