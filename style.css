@@ -9,7 +9,7 @@ body { font-family: "Segoe UI", Arial, sans-serif; background: #0d1117; color: #
   justify-content: space-between;
   align-items: center;
   background: #161b22;
-  padding: 0.3rem 2rem; /* compacter menu */
+  padding: 0.4rem 2rem; /* compacter menu */
   border-bottom: 1px solid #30363d;
   position: relative;
   z-index: 1000;
