@@ -1,4 +1,4 @@
-/* Reset */
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -27,12 +27,15 @@ body {
   background: #161b22;
   padding: 1rem 2rem;
   border-bottom: 1px solid #30363d;
+  position: relative;
+  z-index: 1000;
 }
 
 .main-header .logo img {
   height: 50px;
 }
 
+/* NAV LINKS */
 .nav-links ul {
   display: flex;
   list-style: none;
@@ -54,29 +57,26 @@ body {
   color: #1f6feb;
 }
 
-
-/* Basislogo */
+/* ---------- LOGO RESPONSIVE ---------- */
 .logo {
-    max-width: 200px;   /* Maximale breedte van het logo */
-    width: 100%;        /* Past zich aan de container aan */
-    height: auto;       /* Verhouding behouden */
+    max-width: 200px;
+    width: 100%;
+    height: auto;
 }
 
-/* Optioneel: specifieke aanpassing voor kleinere schermen */
 @media (max-width: 768px) {
     .logo {
-        max-width: 150px; /* Kleinere schermen: logo iets kleiner */
+        max-width: 150px;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        max-width: 120px; /* Mobiel: nog kleiner */
+        max-width: 120px;
     }
 }
 
-
-/* ---------- MOBIEL MENU ---------- */
+/* ---------- HAMBURGER MENU ---------- */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -90,46 +90,71 @@ body {
   margin: 4px 0;
 }
 
+/* MOBIEL MENU */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #161b22;
     position: absolute;
     top: 70px;
-    right: 0;
+    right: 2rem;
     width: 200px;
+    background: #161b22;
     padding: 1rem;
     border: 1px solid #30363d;
     border-radius: 8px;
   }
+
   .nav-links.active {
     display: flex;
   }
+
   .menu-toggle {
     display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li {
+    margin-left: 0;
+    margin-bottom: 1rem;
   }
 }
 
 /* ---------- HERO ---------- */
 .hero {
+  position: relative;
   background: linear-gradient(135deg, #0d1117, #161b22);
   color: white;
   text-align: center;
   padding: 6rem 2rem;
   border-bottom: 1px solid #30363d;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+  transform: translateY(0px);
+  transition: transform 0.2s ease-out;
+  opacity: 0.3;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 1;
 }
 
+/* ---------- BUTTON ---------- */
 .btn-primary {
   background: #1f6feb;
   color: white;
@@ -245,7 +270,6 @@ p {
   border-color: #1f6feb;
 }
 
-
 /* ---------- FOOTER ---------- */
 footer {
   background: #161b22;
@@ -270,33 +294,3 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
-
-.hero {
-  position: relative;
-  color: white;
-  text-align: center;
-  padding: 6rem 2rem;
-  border-bottom: 1px solid #30363d;
-  overflow: hidden; /* zorgt dat bg niet buiten sectie komt */
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
-  z-index: 0;
-  transform: translateY(0px);
-  transition: transform 0.2s ease-out;
-  opacity: 0.3; /* licht transparant voor leesbaarheid */
-}
-
-.hero h1,
-.hero p,
-.hero a {
-  position: relative;
-  z-index: 1;
-}
-
