@@ -8,13 +8,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ---------- HEADER ---------- -->
   <header class="main-header">
     <div class="logo">
       <a href="index.html">
         <img src="logo.png" alt="Logo Jouw Bedrijf" class="logo">
       </a>
     </div>
-    <button class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></button>
+
+    <!-- Hamburger menu -->
+    <button class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav class="nav-links" id="nav-links">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -26,7 +34,7 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- ---------- HERO SECTION ---------- -->
   <section class="hero fade-in">
     <div class="hero-bg"></div> <!-- Parallax achtergrond -->
     <h1>Welkom bij Jouw Bedrijf</h1>
@@ -34,13 +42,13 @@
     <a href="contact.html" class="btn-primary">Neem contact op</a>
   </section>
 
-  <!-- OVER ONS -->
+  <!-- ---------- OVER ONS ---------- -->
   <section class="intro container fade-in">
     <h2>Over Ons</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in neque eget justo malesuada semper.</p>
   </section>
 
-  <!-- PRIJZEN -->
+  <!-- ---------- PRIJZEN ---------- -->
   <section class="prijzen container fade-in">
     <h2>Onze Prijzen</h2>
     <div class="prijs-kaarten">
@@ -62,10 +70,20 @@
     </div>
   </section>
 
+  <!-- ---------- FOOTER ---------- -->
   <footer>
     <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ---------- SCRIPT ---------- -->
+  <script>
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
