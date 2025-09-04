@@ -54,11 +54,25 @@ body {
   color: #1f6feb;
 }
 
-/* ---------Logo ----- */
 
+/* Basislogo */
 .logo {
-    width: 300px;   /* Pas aan naar gewenste grootte */
-    height: 300px;   /* Verhouding behouden */
+    max-width: 200px;   /* Maximale breedte van het logo */
+    width: 100%;        /* Past zich aan de container aan */
+    height: auto;       /* Verhouding behouden */
+}
+
+/* Optioneel: specifieke aanpassing voor kleinere schermen */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px; /* Kleinere schermen: logo iets kleiner */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 120px; /* Mobiel: nog kleiner */
+    }
 }
 
 
