@@ -58,7 +58,7 @@ body {
 
 .logo {
     width: 300px;   /* Pas aan naar gewenste grootte */
-    height: auto;   /* Verhouding behouden */
+    height: 300px;   /* Verhouding behouden */
 }
 
 
