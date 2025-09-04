@@ -1,37 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ---------------- MOBIEL MENU ----------------
   const menuToggle = document.getElementById("mobile-menu");
   const navLinks = document.getElementById("nav-links");
 
-  // Menu toggle voor mobiel
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    menuToggle.classList.toggle("active");
-  });
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active"); // menu openen/sluiten
+      menuToggle.classList.toggle("active"); // hamburger animatie
+    });
+  }
 
-  // Fade-in animatie bij scroll
+  // ---------------- FADE-IN ANIMATIES ----------------
   const fadeEls = document.querySelectorAll(".fade-in");
+  if (fadeEls.length) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // alleen één keer animatie
+          }
+        });
+      },
+      { threshold: 0.2 } // start animatie als 20% zichtbaar
+    );
+    fadeEls.forEach((el) => observer.observe(el));
+  }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  fadeEls.forEach((el) => observer.observe(el));
-});
-// Parallax effect voor hero
-const hero = document.querySelector(".hero-bg");
-
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
+  // ---------------- PARALLAX HERO ----------------
+  const hero = document.querySelector(".hero-bg");
   if (hero) {
-    hero.style.transform = `translateY(${scrollY * 0.3}px)`; // langzaam scrollen
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      hero.style.transform = `translateY(${scrollY * 0.2}px)`; // langzame beweging
+    });
   }
 });
-
