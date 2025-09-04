@@ -22,7 +22,7 @@ img.logo {
   max-height: 100px; /* groter en goed leesbaar */
   height: auto;
 }
-@media (max-width: 768px) { .main-header .logo img { max-height: 100px; } }
+@media (max-width: 768px) { .main-header .logo img { max-height: 120px; } }
 @media (max-width: 480px) { .main-header .logo img { max-height: 50px; } }
 
 /* NAV */
