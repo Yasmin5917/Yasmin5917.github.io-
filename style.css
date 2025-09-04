@@ -33,7 +33,7 @@ img.logo {
   font-weight: 500;
   transition: color 0.3s ease;
   padding: 0.3rem 0; /* compacter menu-items */
-  line-height: 1.5;
+  line-height: 2;
 }
 .nav-links ul li a.active,
 .nav-links ul li a:hover { color: #1f6feb; }
