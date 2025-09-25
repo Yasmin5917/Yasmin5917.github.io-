@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bekijk een selectie van onze afgeronde projecten bij Jouw Bedrijf." />
-  <title>Projecten | Jouw Bedrijf</title>
+  <meta name="description" content="Bekijk een selectie van onze afgeronde WordPress websites, dashboards en digitale projecten bij Jouw IT & Webbedrijf." />
+  <title>Projecten | Jouw IT & Webbedrijf</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="main-header">
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="Logo Jouw Bedrijf"></a>
+      <a href="index.html"><img src="images/logo.png" alt="Logo Jouw IT & Webbedrijf"></a>
     </div>
     <button class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></button>
     <nav class="nav-links" id="nav-links">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="werkwijze.html">Werkwijze</a></li>
+        <li><a href="diensten.html">Diensten</a></li>
         <li><a href="projecten.html" class="active">Projecten</a></li>
         <li><a href="prijzen.html">Prijzen</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -24,29 +26,43 @@
     </nav>
   </header>
 
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <div class="hero-bg"></div>
+    <h1>Onze Projecten</h1>
+    <p>Een selectie van websites, dashboards en andere digitale oplossingen die we hebben gerealiseerd.</p>
+  </section>
+
+  <!-- PROJECTEN GRID -->
   <main class="container">
-    <h1 class="fade-in">Onze Projecten</h1>
     <div class="project-grid">
       <article class="project fade-in">
-        <img src="images/project1.jpg" alt="Project 1">
-        <h2>Project 1</h2>
-        <p>Korte beschrijving van dit project.</p>
+        <img src="images/project1.jpg" alt="WordPress website Project 1">
+        <h2>WordPress Website Project</h2>
+        <p>Een maatwerk WordPress website voor een lokale onderneming, inclusief responsive design en SEO-optimalisatie.</p>
       </article>
       <article class="project fade-in">
-        <img src="images/project2.jpg" alt="Project 2">
-        <h2>Project 2</h2>
-        <p>Korte beschrijving van dit project.</p>
+        <img src="images/project2.jpg" alt="Power BI Dashboard Project 2">
+        <h2>Power BI Dashboard</h2>
+        <p>Interactief dashboard voor inzicht in bedrijfsdata, met real-time analyses en visualisaties.</p>
       </article>
       <article class="project fade-in">
-        <img src="images/project3.jpg" alt="Project 3">
-        <h2>Project 3</h2>
-        <p>Korte beschrijving van dit project.</p>
+        <img src="images/project3.jpg" alt="Wireframe & Platform Website Project 3">
+        <h2>Wireframe & Platform Website</h2>
+        <p>Wireframe en ontwikkelde website op een ander platform, afgestemd op de specifieke wensen van de klant.</p>
       </article>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta fade-in" style="text-align:center; margin-top:2rem;">
+      <p>Wilt u ook een digitaal project realiseren?</p>
+      <a href="contact.html" class="btn-primary">Neem contact op</a>
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025 Jouw IT & Webbedrijf. Alle rechten voorbehouden.</p>
   </footer>
 
   <script src="script.js"></script>
