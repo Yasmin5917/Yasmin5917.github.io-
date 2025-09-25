@@ -1,17 +1,23 @@
-// Sticky navbar
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if(window.scrollY > 0) {
+document.addEventListener("DOMContentLoaded", () => {
+  // ---------------- STICKY NAVBAR ----------------
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 0) {
         navbar.classList.add('sticky');
-    } else {
+      } else {
         navbar.classList.remove('sticky');
-    }
-});
+      }
+    });
+  }
 
-// Hamburger toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+  // ---------------- HAMBURGER TOGGLE ----------------
+  const menuToggle = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active'); // voor animatie van hamburger
+    });
+  }
 });
