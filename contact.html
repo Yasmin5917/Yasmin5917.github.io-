@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Neem contact op met Jouw Bedrijf voor professionele oplossingen." />
-  <title>Contact | Jouw Bedrijf</title>
+  <meta name="description" content="Neem contact op met Jouw IT & Webbedrijf voor WordPress websites, dashboards en digitale oplossingen." />
+  <title>Contact | Jouw IT & Webbedrijf</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="main-header">
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="Logo Jouw Bedrijf"></a>
+      <a href="index.html"><img src="images/logo.png" alt="Logo Jouw IT & Webbedrijf"></a>
     </div>
     <button class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></button>
     <nav class="nav-links" id="nav-links">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="werkwijze.html">Werkwijze</a></li>
+        <li><a href="diensten.html">Diensten</a></li>
         <li><a href="projecten.html">Projecten</a></li>
         <li><a href="prijzen.html">Prijzen</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
@@ -24,25 +26,54 @@
     </nav>
   </header>
 
-  <main class="container">
-    <h1 class="fade-in">Contact</h1>
-    <p class="fade-in">Neem gerust contact met ons op via onderstaand formulier:</p>
-    <form class="contact-form fade-in" action="contact.php" method="POST">
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <div class="hero-bg"></div>
+    <h1>Neem contact op</h1>
+    <p>Wij helpen u graag met uw digitale projecten: websites, dashboards en support.</p>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="contact-info container fade-in">
+    <h2>Onze gegevens</h2>
+    <p>Heeft u vragen of wilt u een project bespreken? Neem contact op via onderstaand formulier of via de volgende gegevens:</p>
+    <ul>
+      <li>📧 E-mail: <a href="mailto:info@jouwbedrijf.nl">info@jouwbedrijf.nl</a></li>
+      <li>📞 Telefoon: +31 6 12345678</li>
+      <li>📍 Adres: Straatnaam 123, 1000 AA Stad</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-form-section container fade-in">
+    <h2>Contactformulier</h2>
+    <form class="contact-form" action="contact.php" method="POST">
       <label for="naam">Naam</label>
-      <input type="text" id="naam" name="naam" required>
+      <input type="text" id="naam" name="naam" placeholder="Uw naam" required>
 
       <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" placeholder="Uw e-mailadres" required>
+
+      <label for="onderwerp">Onderwerp</label>
+      <input type="text" id="onderwerp" name="onderwerp" placeholder="Onderwerp van uw bericht" required>
 
       <label for="bericht">Bericht</label>
-      <textarea id="bericht" name="bericht" rows="5" required></textarea>
+      <textarea id="bericht" name="bericht" rows="5" placeholder="Typ hier uw bericht..." required></textarea>
 
       <button type="submit" class="btn-primary">Verstuur</button>
     </form>
-  </main>
+  </section>
 
+  <!-- CTA -->
+  <section class="cta container fade-in">
+    <h2>Direct aan de slag?</h2>
+    <p>Wilt u uw website of dashboard realiseren? Neem contact met ons op en wij bespreken uw wensen.</p>
+    <a href="contact.html" class="btn-primary">Neem contact op</a>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Jouw Bedrijf. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025 Jouw IT & Webbedrijf. Alle rechten voorbehouden.</p>
   </footer>
 
   <script src="script.js"></script>
